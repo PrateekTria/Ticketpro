@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f6f6f6"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="5dp"
+                android:text="User Settings"
+                android:textColor="#FFF"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <ImageView
+                android:id="@+id/voice_search_icon"
+                android:layout_width="@dimen/voice_search_icon_size"
+                android:layout_height="@dimen/voice_search_icon_size"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:onClick="enableVoiceMode"
+                android:src="@drawable/voice_search_disabled"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/background_listview"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Auto Show Keyboard"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Violation Keyboard"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/violationKeyboard_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Location Keyboard"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/locationKeyboard_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Comments Keyboard"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/commentsKeyboard_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Make Keyboard"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/makeKeyboard_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Body Keyboard"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/bodyKeyboard_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Color Keyboard"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/colorKeyboard_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/background_listview"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Other Settings"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Skip Location Edit"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/skipLocation_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Auto Lookup"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/autolookup_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Sticky Wheel Markers"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/stickyMarkers_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Second Location"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/secondLocation_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Accordion Lookup"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/lookup_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Search Contains"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/search_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/background_listview"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Data Backup and GPS"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="Auto Synch Interval"
+                        android:textColor="#000" />
+
+                    <Spinner
+                        android:id="@+id/user_settings_sync_interval"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="Data Retention Period"
+                        android:textColor="#000" />
+
+                    <Spinner
+                        android:id="@+id/user_settings_drp_interval"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="GPS"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/GPS_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Data Backup"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/databackup_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Cached Expiry (Mins)"
+                        android:textColor="#000" />
+
+                    <EditText
+                        android:id="@+id/user_settings_cached_expiry"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Expiry"
+                        android:inputType="number" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Auto Prompt"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/autoPrompt_toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="ALPR Vehicle"
+                        android:textColor="#000" />
+
+                    <ToggleButton
+                        android:id="@+id/alprVehicle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/backBtn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back"
+            android:textColor="#FFF" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:onClick="doneAction"
+            android:text="Done"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,1778 @@
+[
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ticketpro_splash.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ticketpro_splash.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_notification_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_notification_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_logo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/logo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_play.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/play.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_home.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/home.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_change_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/change_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_visibility.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/visibility.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_delete_custom_comment.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_delete_custom_comment.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_footer.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_footer.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_search_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/search_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_error_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/error_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_footer_repeat.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/footer_repeat.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_dial.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/dial.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_logo_small.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/logo_small.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_hotlist.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/hotlist.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_logo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_logo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_s_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/s_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_close_button.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/close_button.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_placard_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/placard_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_progress.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/progress.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_shutter_pressed.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/shutter_pressed.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_void_reason_input_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/void_reason_input_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_colorwheel.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/colorwheel.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_ic_action_clander.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/ic_action_clander.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_ocr_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_ocr_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_ic_action_delete.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalk_vehicle.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalk_vehicle.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticket_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticket_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_ic_stat_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_text_field_orange.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/text_field_orange.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_expiration_entry.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/expiration_entry.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_player_play.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/player_play.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_brightness_control.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/brightness_control.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxxhdpi_car_green.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxxhdpi/car_green.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_phot_arrow_right.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/phot_arrow_right.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_car_green.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/car_green.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_arrow_up_float.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/arrow_up_float.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_settings_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/settings_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_item_violation_event.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/item_violation_event.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photos.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photos.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ips_multispace_input_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ips_multispace_input_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_tablerow_warned.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/tablerow_warned.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_plate_lookup_list_group.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/plate_lookup_list_group.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_splash.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/splash.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_splash.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/splash.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_s_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/s_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_menu_items.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/menu_items.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/anim_pulse.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/anim/pulse.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_parking.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_parking.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_plus_2.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/plus_2.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_special_photo_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_special_photo_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/xml_provider_paths.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/xml/provider_paths.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_full_banner.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_full_banner.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_parking_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/parking_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_text_field_bkg.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/text_field_bkg.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_fragment_countdowntimer_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/fragment_countdowntimer_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_test_network.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/test_network.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-ldpi_logo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-ldpi/logo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photo_chalk_map_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photo_chalk_map_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_search_list_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/search_list_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_logo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/logo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_s_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/s_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_ic_logo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/ic_logo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_debuglog_upload.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/debuglog_upload.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_voice_memo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/voice_memo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_item_view_1.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/item_view_1.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_edit_textfield.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/edit_textfield.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dar_assignment_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dar_assignment_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_system_upload.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/system_upload.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_add_comment_input_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/add_comment_input_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_write_ticket_search.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/write_ticket_search.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/raw_beep.ogg.flat",
+        "source": "com.ticketpro.parking.app-main-41:/raw/beep.ogg"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_3_coulm_status_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_3_coulm_status_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_ic_placard.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/ic_placard.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticket_comment_row_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticket_comment_row_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalk_remove_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalk_remove_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_menu_action_row_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/menu_action_row_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_repeat_bg.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/repeat_bg.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_log_upload.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/log_upload.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_user_list_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/user_list_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_color_green_1.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/color_green_1.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_yellow_round_button.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/yellow_round_button.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_login_user_list_row_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/login_user_list_row_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_flashlight.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/flashlight.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ic_stat_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_delete_custom_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_delete_custom_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalk_map_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalk_map_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxxhdpi_c_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxxhdpi/c_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_juvenile.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/juvenile.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_take_picture_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/take_picture_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticket_history.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticket_history.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_header.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_header.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_ic_stat_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxxhdpi_c_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxxhdpi/c_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_c_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/c_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_auto_lpr.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/auto_lpr.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_background_coloerd_area.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/background_coloerd_area.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_tcpipconfig.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/tcpipconfig.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_tire_bl.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/tire_bl.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_photo_album.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/photo_album.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_messages_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/messages_logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_hour.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/hour.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_add_location_input_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/add_location_input_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_ic_logo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/ic_logo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_close_pressed.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/close_pressed.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_sync.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/sync.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_notifications.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/notifications.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_checked_checkbox_white.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/checked_checkbox_white.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_patrollers_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/patrollers_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_yellow_small.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_yellow_small.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_image_not_found.jpg.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/image_not_found.jpg"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_microphone.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/microphone.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_popup_screen.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_popup_screen.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_voice_search_enabled.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/voice_search_enabled.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photo_chalk_details.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photo_chalk_details.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_add_citizen.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/add_citizen.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_view_chalk_pictures.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/view_chalk_pictures.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_menu_call.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_menu_call.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_specila_map.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_specila_map.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_icon_camera_20.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/icon_camera_20.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ic_action_delete.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_unchecked_checkbox_white.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/unchecked_checkbox_white.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_toast_error.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/toast_error.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_menu_write_ticket.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/menu_write_ticket.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_simple.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/simple.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_voice_search_disabled.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/voice_search_disabled.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_right_arrow_new.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/right_arrow_new.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_ic_action_delete.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_location_entry.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/location_entry.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_messages_row_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/messages_row_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_flash_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_flash_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_color_red_1.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/color_red_1.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ticketpro_header.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ticketpro_header.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_msg.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_msg.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_overlay.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/overlay.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_minus_icon_button.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/minus_icon_button.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_color_orange_1.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/color_orange_1.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_flashlight_disable.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/flashlight_disable.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_list_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/list_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_arrow_down_float.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/arrow_down_float.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_preview.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/preview.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-ldpi_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-ldpi/icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_qrcode_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_qrcode_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_table_col_sep.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/table_col_sep.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_ic_action_delete.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/ic_action_delete.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_c_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/c_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_text_field_focus_bkg.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/text_field_focus_bkg.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_image_view_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/image_view_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_red.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_red.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalked_vehicle_details.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalked_vehicle_details.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_overlay.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_overlay.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_logout_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/logout_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_hotlist_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/hotlist_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_c_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/c_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-ldpi_ticketpro_splash.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-ldpi/ticketpro_splash.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_systembackupimg.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/systembackupimg.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_blue.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_blue.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_minute.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/minute.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_e_u_l_a.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_e_u_l_a.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_chalk_marker.jpg.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/chalk_marker.jpg"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_color_orange.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/color_orange.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_barcode_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_barcode_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_group_indicator.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/group_indicator.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_s_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/s_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/menu_menu_home.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/menu/menu_home.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_log_disabled.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/log_disabled.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_c_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/c_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_add_comment.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/add_comment.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_info.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/info.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_4_column_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_4_column_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-ldpi_ticketpro_header.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-ldpi/ticketpro_header.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_icon_camera_32.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/icon_camera_32.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_shutter_background_pressed.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/shutter_background_pressed.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_error_box.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/error_box.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_map_overlay.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/map_overlay.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_repeat_bg.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/repeat_bg.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_db.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/db.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_5_column_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_5_column_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_brightness.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/brightness.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_ic_action_my_location.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/ic_action_my_location.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_header.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/header.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_ic_placard.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/ic_placard.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_plate_lookup_view_advance.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/plate_lookup_view_advance.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalk_wheel_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalk_wheel_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_expiration_entry_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/expiration_entry_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_mic.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/mic.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_item_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/item_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_scroll_thumb.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/scroll_thumb.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalk_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalk_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_curvesense_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/curvesense_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_map_overlay.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_map_overlay.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_zone_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/zone_logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_compass.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/compass.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_disabled.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_disabled.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_special_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/special_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_tablerow_odd.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/tablerow_odd.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_autofocus_disable.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/autofocus_disable.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_version_update.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/version_update.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_curvesense_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_curvesense_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_memos.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/memos.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_search_result.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/search_result.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_zone_logs_curvesense.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/zone_logs_curvesense.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_voice.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/voice.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxxhdpi_s_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxxhdpi/s_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_prior_ticket.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/prior_ticket.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_location_chalk_previous.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/location_chalk_previous.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_parkeon_platelookup.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/parkeon_platelookup.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_day_activities.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/day_activities.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_header_gradient.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/header_gradient.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dar_activity_task.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dar_activity_task.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_add_maintenance.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/add_maintenance.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_green_status_btn_bk.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/green_status_btn_bk.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ic_logo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ic_logo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_black.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_black.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_arrow_down.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/arrow_down.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_c_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/c_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_logo_small.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/logo_small.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_color_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/color_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalk_comments.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalk_comments.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_tire2.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/tire2.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_spinner_write_ticket.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/spinner_write_ticket.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_edit_ticket.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/edit_ticket.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_blue_small.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_blue_small.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_user_settings.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/user_settings.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_take_picture.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/take_picture.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_stop.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/stop.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photo_chalk.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photo_chalk.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_add_comment_auto.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/add_comment_auto.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/xml_authenticator.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/xml/authenticator.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_camera_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_camera_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_voice_search.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/voice_search.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_tablerow_ticketed.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/tablerow_ticketed.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_bluetoothconfig.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/bluetoothconfig.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticket_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticket_logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/xml_custom_checkbox_white.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/xml/custom_checkbox_white.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_parkmobile.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_parkmobile.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_camera1.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_camera1.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_plate_lookup_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/plate_lookup_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_location_chalk_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/location_chalk_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_write_ticket_popup.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/write_ticket_popup.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photo_chalk_chalking.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photo_chalk_chalking.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_microphone_red.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/microphone_red.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photo_row_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photo_row_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_location_entry_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/location_entry_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_voice_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/voice_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_parking_multispace.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_parking_multispace.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_duty_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/duty_logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_plate_lookup_list_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/plate_lookup_list_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_red_status_btn.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/red_status_btn.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_player_stop.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/player_stop.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_text_field_error.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/text_field_error.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_login_user_password.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/login_user_password.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_curbtrack_zone_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_curbtrack_zone_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_ic_action_name.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/ic_action_name.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxxhdpi_car_red.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxxhdpi/car_red.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ic_placard.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ic_placard.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_simple_spinner_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/simple_spinner_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_vehicle_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/vehicle_logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_menu_main.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/menu_main.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_menu_lookup.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/menu_lookup.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_shutter_background.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/shutter_background.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_flashlight_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/flashlight_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/xml_preferences.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/xml/preferences.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_placard.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_placard.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_login_password.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/login_password.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/anim_push_left_out.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/anim/push_left_out.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_print_setup.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/print_setup.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_date_conf.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/date_conf.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_search_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/search_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_capture.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_capture.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_tire_fl.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/tire_fl.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_zone_logs_multispace.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/zone_logs_multispace.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_banner.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_banner.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi-v24_ic_stat_name.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi-v24/ic_stat_name.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_new_sync_backup.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_new_sync_backup.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_gray_status_btn.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/gray_status_btn.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_tablerow_expired.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/tablerow_expired.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_yellow_status_btn.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/yellow_status_btn.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_vnv_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_vnv_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticket_preview.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticket_preview.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_rect_layout.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/rect_layout.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_notify_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_notify_logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_location_chalk.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/location_chalk.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_parkeon_control_group.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_parkeon_control_group.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_parkmobile_info.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_parkmobile_info.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_system_backup_upload.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/system_backup_upload.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_hotlist_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_hotlist_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/xml_network_security_config.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-ldpi_repeat_bg.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-ldpi/repeat_bg.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_select_state.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/select_state.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_discovery_results.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/discovery_results.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_flashlight_on.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/flashlight_on.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_c_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/c_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_login_user_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/login_user_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_traffic.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/traffic.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_audio_player_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/audio_player_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_autofocus.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/autofocus.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_scan_image.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_scan_image.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dialog_violation_event.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dialog_violation_event.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_search_list_item_multicheck.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/search_list_item_multicheck.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_listview.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_listview.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_chalk_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/chalk_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_car_red.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/car_red.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_shutter_button.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/shutter_button.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_camera.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/camera.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_add_violations.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/add_violations.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_tire_fr.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/tire_fr.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_action_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_action_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_print_preview_special1.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_print_preview_special1.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ticketpro_header.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ticketpro_header.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_phot_arrow_left.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/phot_arrow_left.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ic_action_clander.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ic_action_clander.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_slideout.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/slideout.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_violation.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/violation.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_permission.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_permission.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_group_indicator.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/group_indicator.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_parking_multiplate.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_parking_multiplate.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_s_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/s_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/xml_sync_adapter.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/xml/sync_adapter.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_toyota.jpg.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/toyota.jpg"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/anim_push_left_in.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/anim/push_left_in.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_camera1.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/camera1.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_search_input.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/search_input.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_print_test.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/print_test.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_column_ticketlog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_column_ticketlog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dialog_header.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dialog_header.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_print_special_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_print_special_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_retrieve_chalks.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/retrieve_chalks.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_scroll_track.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/scroll_track.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_view_pictures.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/view_pictures.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_maintenance_logs.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/maintenance_logs.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_idverification.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_idverification.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_tire_br.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/tire_br.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_button_plus_green.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/button_plus_green.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_sysnbackground.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/sysnbackground.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_screen.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_screen.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_gray.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_gray.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_group_header_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/group_header_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_deep_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_deep_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_search.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/search.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_menu_action_group_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/menu_action_group_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_delete_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/delete_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_shape_scroll.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/shape_scroll.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_color_green.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/color_green.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_left_arrow.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/left_arrow.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_main.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/main.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_cale_zone.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_cale_zone.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_simple_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/simple_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_select_expiry_date.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/select_expiry_date.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_group_header_white_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/group_header_white_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_background_button.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/background_button.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxxhdpi_s_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxxhdpi/s_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_flashlight_off.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/flashlight_off.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_stat_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_barcode.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/barcode.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_loading.gif.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/loading.gif"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photo_chalk_map_view_debug.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photo_chalk_map_view_debug.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_menu_save.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_menu_save.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_maintenance_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/maintenance_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_green.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_green.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_print_preview.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/print_preview.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_text_overlay.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/text_overlay.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_write_ticket_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/write_ticket_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/raw_keystore.bks.flat",
+        "source": "com.ticketpro.parking.app-main-41:/raw/keystore.bks"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_quick_photo.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/quick_photo.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_actions.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/actions.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_voice_memo_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/voice_memo_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_action_clander.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_action_clander.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_3_coulm_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_3_coulm_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_ic_placard.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/ic_placard.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_s_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/s_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ocr_capture.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ocr_capture.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dar_equipment.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dar_equipment.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_map_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_map_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_flashlight_auto.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/flashlight_auto.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_ticketlog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_ticketlog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_write_ticket_backup.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/write_ticket_backup.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticket_violations.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticket_violations.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_ic_action_clander.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/ic_action_clander.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_ticket_preview.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_ticket_preview.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_table_row_2_coulm_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/table_row_2_coulm_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_zone_pole_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/zone_pole_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_send_email_input_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/send_email_input_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_comment_add.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/comment_add.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_hotlist_gry.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_hotlist_gry.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_group_child_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/group_child_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_location_chalk_details.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/location_chalk_details.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_yellow.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_yellow.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_s_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/s_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_select_vehicle_make.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/select_vehicle_make.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_login.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/login.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_border.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/border.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_db_upload.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-anydpi/db_upload.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_menu_fragement.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/menu_fragement.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_ic_action_clander.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/ic_action_clander.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_write_ticket.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/write_ticket.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_ocr_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/ocr_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_right_arrow.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/right_arrow.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_c_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/c_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_chalk_on_map_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/chalk_on_map_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_capture_image.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/capture_image.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_ic_action_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/ic_action_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ticket_logs.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ticket_logs.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_database_upload.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/database_upload.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_tablerow_even.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/tablerow_even.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticket_violation_row_item.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticket_violation_row_item.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xhdpi_ic_action_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xhdpi/ic_action_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dialog_hotlist.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dialog_hotlist.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_qrcode.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/qrcode.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_write_ticket_popup_list_row_view.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/write_ticket_popup_list_row_view.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dialog_list_row.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dialog_list_row.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_photo_chalk_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/photo_chalk_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_dar_assignment.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/dar_assignment.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_deep_red.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_deep_red.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_close_icon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/close_icon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_qr_code.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/qr_code.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_trash.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/trash.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_print_preview_special.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_print_preview_special.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_ic_action_delete.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_textinput_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/textinput_dialog.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/anim_fadein.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/anim/fadein.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_special_activity.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/special_activity.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_sidemenu.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/sidemenu.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_shutter.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/shutter.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_lock.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/lock.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_c_marker.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/c_marker.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_comment_balloon.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/comment_balloon.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_sam_trains_activity_info.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/sam_trains_activity_info.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_memos1.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-mdpi/memos1.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_ic_action_name.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ic_action_name.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_write_ticket.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/write_ticket.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_activity_photo_chalk.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/activity_photo_chalk.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_ticketprinter.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/ticketprinter.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_zone_list.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/zone_list.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-xxhdpi_s_marker_selected.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-xxhdpi/s_marker_selected.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-ldpi_login.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-ldpi/login.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_color_red.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/color_red.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-hdpi_hotlist.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/hotlist.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_log_enabled.png.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/log_enabled.png"
+    }
+]

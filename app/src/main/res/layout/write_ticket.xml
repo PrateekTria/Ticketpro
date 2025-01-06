@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/write_ticket_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" >
+
+                <Button
+                    android:id="@+id/home_navigation_btn"
+                    style="@style/ButtonText"
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/sidemenu" >
+                </Button>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/xxxsmall_font_size" />
+
+                <TextView
+                    android:id="@+id/citation_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:text=""
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/xxxsmall_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/lprnotify_logs"
+                    android:layout_width="@dimen/icon_size_width"
+                    android:layout_height="@dimen/icon_size_height"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:minWidth="50dp"
+                    android:onClick="lprnotifyLogsAction"
+                    android:src="@drawable/notifications" />
+
+                <ImageView
+                    android:id="@+id/ticket_logs"
+                    android:layout_width="@dimen/icon_size_width"
+                    android:layout_height="@dimen/icon_size_height"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:minWidth="50dp"
+                    android:onClick="ticketLogsAction"
+                    android:src="@drawable/ticket_logs" />
+
+                <ImageView
+                    android:id="@+id/write_ticket_voicememo"
+                    android:layout_width="@dimen/icon_size_width"
+                    android:layout_height="@dimen/icon_size_height"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:minWidth="50dp"
+                    android:onClick="voiceMemoAction"
+                    android:src="@drawable/mic" />
+                <ImageView
+                    android:id="@+id/status_indicator_image1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/gray_status_btn" />
+                <ImageView
+                    android:id="@+id/status_indicator_image"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:src="@drawable/red_status_btn" />
+
+                <ImageView
+                    android:id="@+id/voice_search_icon"
+                    android:layout_width="@dimen/voice_search_icon_size"
+                    android:layout_height="@dimen/voice_search_icon_size"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginRight="2dp"
+                    android:clickable="true"
+                    android:onClick="enableVoiceMode"
+                    android:src="@drawable/voice_search_disabled"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/write_ticket_st"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/text_field_bkg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="ST"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:onClick="searchStates"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <ImageView
+                    android:id="@+id/write_ticket_states_search"
+                    android:layout_width="@dimen/downarrow_width"
+                    android:layout_height="@dimen/downarrow_height"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/arrow_down"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:paddingLeft="5dp"
+                android:paddingRight="0dp" >
+
+                <EditText
+                    android:id="@+id/write_ticket_plate_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_bkg"
+                    android:hint="PLATE NUMBER"
+                    android:maxLength="45"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionGo|flagNoExtractUi"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:minLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/normal_font_size" >
+                </EditText>
+
+
+                
+                <Button
+	                android:id="@+id/write_ticket_plate_ocr_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="2dp"
+	                android:background="@drawable/btn_ocr_yellow"
+	                android:minWidth="50dp"
+	                android:onClick="plateOCRAction" 
+	                android:visibility="gone"/>
+                <Button
+	                android:id="@+id/write_ticket_hotlist_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="2dp"
+	                android:background="@drawable/btn_hotlist_yellow"
+	                android:minWidth="50dp"
+	                android:visibility="gone"
+	                android:onClick="plateHotListAction"  />
+
+                <Button
+                    android:id="@+id/write_ticket_reg_btn"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/btn_blue"
+                    android:minWidth="50dp"
+                    android:padding="6dp"
+                    android:text="REG"
+                    android:onClick="REGAction"
+                    android:visibility="gone"
+                    android:textColor="#FFF" />
+
+                <Button
+                    android:id="@+id/write_ticket_lpr_btn"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/btn_yellow"
+                    android:minWidth="50dp"
+                    android:onClick="LPRAction"
+                    android:padding="6dp"
+                    android:text="LPR"
+                    android:textColor="#FFF" />
+
+
+                <Button
+                    android:id="@+id/write_ticket_alpr_btn"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/btn_yellow"
+                    android:minWidth="50dp"
+                    android:padding="6dp"
+                    android:visibility="gone"
+                    android:text="ALPR"
+                    android:textColor="#FFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <EditText
+                android:id="@+id/write_ticket_vin_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:background="@drawable/text_field_bkg"
+                android:hint="VIN NUMBER"
+                android:imeOptions="actionGo|flagNoExtractUi"
+                android:inputType="textCapCharacters|textCapWords"
+                android:minLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="0dp"
+                android:textSize="@dimen/normal_font_size" />
+            
+            <Button
+                android:id="@+id/write_ticket_vnv_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_vnv_yellow"
+                android:minWidth="30dp"
+                android:onClick="VinNotVisibleAction" />
+
+            <Button
+                android:id="@+id/vin_barcode_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_qrcode_yellow"
+                android:minWidth="30dp"
+                android:onClick="vinBarcodeAction" />
+            
+            <Button
+                android:id="@+id/write_ticket_ocr_vin_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_ocr_yellow"
+                android:minWidth="40dp"
+                android:onClick="vinOCRAction"
+                android:visibility="gone" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.25">
+
+                <EditText
+                    android:id="@+id/write_ticket_exp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_bkg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="EXP"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:onClick="searchExp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/normal_font_size" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/write_ticket_tm_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="2.6"
+                android:background="@drawable/text_field_bkg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="TM(MM/DD/YY H:M)"
+                android:inputType="datetime"
+                android:longClickable="true"
+                android:minLines="1"
+                android:onClick="TMEditAction"
+                android:paddingLeft="3dp"
+                android:paddingRight="0dp"
+                android:textSize="@dimen/xxxsmall_font_size"></EditText>
+
+            <EditText
+                android:id="@+id/write_ticket_space"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:hint="SPACE"
+                android:imeOptions="actionGo|flagNoExtractUi"
+                android:inputType="textCapCharacters|textCapWords"
+                android:longClickable="true"
+                android:maxLength="5"
+                android:minLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="0dp"
+                android:textSize="@dimen/xxxsmall_font_size"></EditText>
+
+            <Button
+                android:id="@+id/write_t_p"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:background="@drawable/btn_yellow"
+                android:minWidth="50dp"
+                android:padding="6dp"
+                android:text="P"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1.5" >
+
+                <EditText
+                    android:id="@+id/write_ticket_make"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_bkg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="MAKE"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:onClick="searchMake"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <ImageView
+                    android:layout_width="@dimen/downarrow_width"
+                    android:layout_height="@dimen/downarrow_height"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/arrow_down"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/write_ticket_color"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_bkg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="COLOR"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:onClick="searchColor"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <ImageView
+                    android:layout_width="@dimen/downarrow_width"
+                    android:layout_height="@dimen/downarrow_height"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/arrow_down"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/write_ticket_body"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_bkg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="BODY"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:onClick="searchBody"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <EditText
+                    android:id="@+id/write_ticket_meter_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_bkg"
+                    android:hint="METER"
+                    android:maxLength="255"
+                    android:imeOptions="actionGo"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:minLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <Button
+                    android:id="@+id/meter_barcode_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/btn_barcode_yellow"
+                    android:minWidth="56dp"
+                    android:onClick="meterBarcodeAction" />
+
+                <ImageView
+                    android:layout_width="@dimen/downarrow_width"
+                    android:layout_height="@dimen/downarrow_height"
+                    android:layout_marginTop="5dp"
+                    android:baselineAlignBottom="false"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/arrow_down"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <EditText
+                android:id="@+id/write_ticket_permit_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:hint="PERMIT"
+                android:imeOptions="actionGo|flagNoExtractUi"
+                android:inputType="textCapCharacters|textCapWords"
+                android:minLines="1"
+                android:maxLength="255"
+                android:paddingLeft="5dp"
+                android:paddingRight="0dp"
+                android:textSize="@dimen/normal_font_size" />
+
+            <Button
+                android:id="@+id/permit_barcode_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/btn_barcode_yellow"
+                android:minWidth="60dp"
+                android:onClick="permitBarcodeAction" />
+
+            <Button
+                android:id="@+id/write_ticket_gps_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:background="@drawable/btn_yellow"
+                android:minWidth="56dp"
+                android:onClick="gpsAction"
+                android:padding="6dp"
+                android:text="GPS" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <EditText
+                        android:id="@+id/write_ticket_location_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/text_field_bkg"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="LOCATION"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textCapCharacters|textCapWords"
+                        android:longClickable="true"
+                        android:maxLines="1"
+                        android:maxLength="90"
+                        android:onClick="selectLocation"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="0dp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/normal_font_size" />
+
+                    <ProgressBar
+                        android:id="@+id/GPSProcess"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/write_ticket_location_search"
+                    android:layout_width="@dimen/downarrow_width"
+                    android:layout_height="@dimen/downarrow_height"
+                    android:layout_marginTop="2dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/arrow_down"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <Button
+                android:id="@+id/write_ticket_violation_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_yellow"
+                android:minWidth="60dp"
+                android:onClick="viewViolationAction"
+                android:padding="5dp"
+                android:text="V (0)" />
+
+            <Button
+                android:id="@+id/location_gps_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:background="@drawable/btn_yellow"
+                android:minWidth="56dp"
+                android:onClick="gpsAction"
+                android:padding="6dp"
+                android:visibility="gone"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/write_ticket_violation_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:scrollbars="vertical"
+                android:text="NA"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/xxxxsmall_font_size" />
+
+            <Button
+                android:id="@+id/write_ticket_photos_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_yellow"
+                android:drawableLeft="@drawable/icon_camera_32"
+                android:drawablePadding="5dp"
+                android:minWidth="60dp"
+                android:onClick="takePictureAction"
+                android:padding="5dp"
+                android:text="(0)" />
+
+            <ImageView
+                android:id="@+id/write_ticket_camera"
+                android:layout_width="@dimen/icon_size_width"
+                android:layout_height="@dimen/icon_size_height"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:onClick="takePictureAction"
+                android:src="@drawable/camera1"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <Button
+                android:id="@+id/write_ticket_warning_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_yellow"
+                android:minWidth="60dp"
+                android:onClick="warningAction"
+                android:text="W (0)" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/write_ticket_driveaway_chk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:checked="false"
+                    android:text="D-A"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/xxxxsmall_font_size" />
+
+                <!--
+                <CheckBox
+				    android:id="@+id/write_ticket_warn_chk"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="5dp"
+				    android:layout_marginRight="5dp"
+				    android:text="Warn"
+				    android:textColor="#fff"
+				    android:layout_centerVertical="true"
+				    android:textSize="@dimen/normal_font_size" />
+                -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/write_ticket_driveaway_chk"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        style="@style/ButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/btn_yellow"
+                        android:drawableLeft="@drawable/flashlight_icon"
+                        android:minWidth="50dp"
+                        android:onClick="toggleFlashAction" />
+
+                    <ImageView
+                        android:id="@+id/main_user_settings"
+                        android:layout_width="@dimen/icon_size_width"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/btn_yellow"
+                        android:minWidth="50dp"
+                        android:src="@drawable/special_icon" />
+
+                    <ImageView
+                        android:id="@+id/btnPlacard"
+                        style="@style/ButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/btn_blue"
+                        android:src="@drawable/ic_placard"
+                        android:minWidth="50dp"
+                        android:padding="6dp"
+                        android:text="Placard"
+                        android:visibility="gone"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.1"
+            android:background="@drawable/background_footer"
+            android:padding="2dp" >
+
+            <Button
+                android:id="@+id/write_ticket_back_btn"
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yellow"
+                android:onClick="backAction"
+                android:text="Back" />
+
+            <Button
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentEnd="false"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yellow"
+                android:onClick="clearAction"
+                android:text="Clear" />
+
+            <Button
+                android:id="@+id/write_ticket_print_btn"
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:onClick="printAction"
+                android:text="Print" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Panel -->
+
+    <WebView
+        android:id="@+id/print_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

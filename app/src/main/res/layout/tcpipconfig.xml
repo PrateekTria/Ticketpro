@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_banner" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:text="@string/tcpip_printers"
+            android:textColor="#FFF"
+            android:textSize="@dimen/xxxsmall_font_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/ip_address_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_field_bkg"
+            android:ems="10"
+            android:hint="@string/ip_address"
+            android:padding="10dp"
+            android:textSize="@dimen/normal_font_size"
+            android:inputType="textCapCharacters|textCapWords">
+
+            <requestFocus />
+        </EditText>
+        
+        <EditText
+            android:id="@+id/ip_port_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_bkg"
+            android:ems="10"
+            android:hint="@string/port"
+            android:padding="10dp"
+            android:textSize="@dimen/normal_font_size"
+            android:inputType="textCapCharacters|textCapWords">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_footer"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_yellow"
+            android:text="@string/cancel"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_blue"
+            android:text="@string/save"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+    <!-- Bottom bar Ends here -->
+
+</RelativeLayout>

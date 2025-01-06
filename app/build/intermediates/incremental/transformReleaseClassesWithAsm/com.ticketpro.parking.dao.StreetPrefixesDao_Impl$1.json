@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.dao.StreetPrefixesDao_Impl$1","classAnnotations":[],"interfaces":[],"superClasses":["androidx.room.EntityInsertionAdapter","androidx.room.SharedSQLiteStatement","java.lang.Object"]}

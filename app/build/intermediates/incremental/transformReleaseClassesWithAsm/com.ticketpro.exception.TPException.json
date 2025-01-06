@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.exception.TPException","classAnnotations":[],"interfaces":["java.io.Serializable"],"superClasses":["java.lang.Exception","java.lang.Throwable","java.lang.Object"]}

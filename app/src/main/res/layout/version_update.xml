@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <Button
+            android:id="@+id/backBtn"
+            style="@style/ButtonTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="backAction"
+            android:background="@drawable/btn_yellow"
+            android:text="BACK" />
+
+        <Button
+            android:id="@+id/acceptBtn"
+            style="@style/ButtonTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:onClick="acceptAction"
+            android:background="@drawable/btn_blue"
+            android:text="ACCEPT" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

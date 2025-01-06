@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/dialog_voice"
+            android:layout_width="@dimen/abc_action_bar_default_height_material"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:scaleType="center"
+            android:src="@drawable/voice"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="15dp"
+            android:text="Enter Reason"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/layout_top"
+        android:id="@+id/layout_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_screen"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/add_comment_input_dialog_text_field"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="7dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical|top"
+            android:hint="Add Comment Text "
+            android:background="@drawable/border"
+            android:inputType="textCapCharacters|textMultiLine"
+
+            android:lines="8"
+            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz \n"
+            android:maxLength="250"
+            android:maxLines="5"
+            android:minLines="8"
+            android:singleLine="false">
+
+            <requestFocus />
+        </EditText>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add_comment_input_dialog_cancel_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/btn_yellow"
+                android:padding="10dp"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/add_comment_input_dialog_enter_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_blue"
+                android:padding="10dp"
+                android:text="Done" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

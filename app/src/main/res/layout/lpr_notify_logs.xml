@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_screen"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:text="LPRNotify Logs"
+                android:textColor="#FFF"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/voice_search_icon"
+                    android:layout_width="@dimen/voice_search_icon_size"
+                    android:layout_height="@dimen/voice_search_icon_size"
+                    android:clickable="true"
+                    android:onClick="enableVoiceMode"
+                    android:src="@drawable/voice_search_disabled"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TableLayout
+                android:id="@+id/logs_3_table_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/background_listview" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Make"
+                        android:textColor="#FFF" />
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:padding="5dp"
+						android:text="Color"
+						android:textColor="#FFF" />
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:padding="5dp"
+						android:text="Plate"
+						android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Status"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Date/Time"
+                        android:textColor="#FFF" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:padding="3dp" >
+
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+        
+	        <Button
+	            style="@style/ButtonText"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="@dimen/small_button_height"
+	            android:background="@drawable/btn_yellow"
+	            android:onClick="backAction"
+	            android:text="Back"
+	            android:textColor="#FFF" />
+	
+	        <Button
+	            style="@style/ButtonText"
+	            android:layout_width="0dp"
+	            android:layout_weight="1.2"
+	            android:layout_height="@dimen/small_button_height"
+	            android:background="@drawable/btn_yellow"
+	            android:onClick="mapViewAction"
+	            android:text="MapView"
+	            android:textColor="#FFF" />
+	
+	        <Button
+	            style="@style/ButtonText"
+	            android:layout_width="0dp"
+	            android:layout_weight="1.5"
+	            android:layout_height="@dimen/small_button_height"
+	            android:background="@drawable/btn_yellow"
+	            android:onClick="clearAction"
+	            android:text="Remove All"
+	            android:textColor="#FFF" />
+        
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>

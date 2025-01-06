@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/flashlight_led_imgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:src="@drawable/flashlight" />
+
+        <ImageView
+            android:id="@+id/flashlight_mode_imgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:src="@drawable/flashlight_auto" />
+
+        <RelativeLayout
+            android:id="@+id/zoomLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/flashlight_mode_imgview">
+
+            <com.ticketpro.util.VerticalSeekBar
+                android:id="@+id/verticalSeekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_above="@+id/stickyZoom"
+                android:layout_alignParentEnd="true" />
+
+            <CheckBox
+                android:id="@+id/stickyZoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:button="@xml/custom_checkbox_white"
+                android:text="SZ"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:padding="3dp" >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Cancel"
+            android:textColor="#fff" />
+	<CheckBox
+             style="@style/ButtonTextNormal"
+                android:id="@+id/nightModeCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  
+                android:text="Night"  
+                android:layout_marginStart="10dp"
+                android:layout_centerHorizontal="true" 
+                android:visibility="gone"
+                android:layout_centerVertical="true" />
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:onClick="captureAction"
+            android:text="Capture"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</LinearLayout>

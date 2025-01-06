@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_banner"
+	    android:orientation="horizontal" >
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:padding="5dp"
+		    android:paddingLeft="5dp"
+		    android:text="Maintenance Report"
+		    android:textColor="#ffffff"
+		    android:textSize="@dimen/normal_font_size" />
+		
+	</RelativeLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:layout_marginTop="10dp"
+	    android:orientation="vertical" >
+		
+	    <EditText
+            android:id="@+id/item_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:background="@drawable/text_field_bkg"
+            android:hint="MAINTENANCE ITEM"
+            android:singleLine="true"
+            android:inputType="textCapCharacters|textCapWords"
+            android:textSize="@dimen/xxxsmall_font_size" />
+	    
+	    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="3dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/location_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_bkg"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_alignParentStart="true"
+                    android:hint="LOCATION"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textCapCharacters|textCapWords"
+                    android:longClickable="true"
+                    android:maxLines="1"
+                    android:onClick="selectLocation"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/xxxsmall_font_size" />
+
+                <ProgressBar
+                    android:id="@+id/GPSProcess"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+                
+            </RelativeLayout>
+            
+            <Button
+                android:id="@+id/gps_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:minWidth="56dp"
+                android:background="@drawable/btn_yellow"
+                android:onClick="gpsAction"
+                android:padding="6dp"
+                android:text="GPS" />
+            
+        </LinearLayout>
+	    
+	    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Problem Type"
+            android:textColor="#000000"
+            android:textSize="@dimen/xxxsmall_font_size" />
+	    
+	    <Spinner
+               android:id="@+id/problem_type_spinner"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="5dp"
+               android:gravity="left"
+               android:paddingBottom="0dp"
+               android:paddingTop="0dp" />
+	    
+	    
+	    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Comments"
+            android:textColor="#000000"
+            android:textSize="@dimen/xxxsmall_font_size" />
+	    
+	    <EditText
+	        android:id="@+id/comments_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_marginBottom="20dp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_weight="1"
+	        android:background="@drawable/text_field_bkg"
+	        android:gravity="center_vertical|top"
+	        android:hint="COMMENTS"
+	        android:inputType="textCapCharacters|textCapWords"
+	        android:lines="4"
+	        android:maxLines="5"
+	        android:minLines="3"
+	        android:padding="10dp"
+	        android:textSize="@dimen/xxxsmall_font_size" />
+	    
+	</LinearLayout>
+	
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:minHeight="50dp"
+        android:orientation="horizontal" >
+	
+	    <Button
+            android:id="@+id/back_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back" />
+	    
+        <Button
+            android:id="@+id/picture_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+             android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_yellow"
+            android:onClick="pictureAction"
+            android:text="Photos" />
+        
+        <Button
+            android:id="@+id/save_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_blue"
+            android:onClick = "saveAction"
+            android:text="Save" />
+        
+   </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_frame">#DDFFFFFF</color>
+    <color name="photopayButtonBackgroundDisabled">#22FFFFFF</color>
+    <color name="photopayButtonBackgroundNormal">#99FFFFFF</color>
+    <color name="photopayButtonBackgroundPressed">#FFFFFFFF</color>
+    <color name="photopayButtonBorder">#FF000000</color>
+    <color name="photopayButtonForeground">#FF000000</color>
+    <color name="recognized_frame">#DDAAFFAA</color>
+    <string name="Copied">Text copied to clipboard</string>
+    <string name="Copy">Copy</string>
+    <string name="CustomUIForbidden">License does not permit custom camera overlay!</string>
+    <string name="FeatureUnsuportedAndroidVersion">This feature is supported for Android 2.1 and newer</string>
+    <string name="FeatureUnsuportedAutofocus">This feature is not supported on phones without autofocus</string>
+    <string name="FeatureUnsuportedDevice">PDF417.mobi is not supported because of the technical properties of your device</string>
+    <string name="InvalidLicense">Invalid license key!</string>
+    <string name="PPCancel">Cancel</string>
+    <string name="PPUse">Use</string>
+    <string name="ResultList">List of scan results</string>
+    <string name="photopay">PhotoPay Barcode</string>
+    <string name="photopayCameraNotReady">Camera not ready.</string>
+    <string name="photopayErrorInitializing">Failed to initialize native library.</string>
+    <string name="photopayHelpImageDescription">Description</string>
+    <string name="photopayHome">Back</string>
+    <string name="photopayLightOff">Light</string>
+    <string name="photopayLightOn">Light</string>
+    <string name="photopayOK">OK</string>
+    <string name="photopayWarningTitle">Warning</string>
+    <string name="scanBarcode">Start barcode scanning</string>
+</resources>

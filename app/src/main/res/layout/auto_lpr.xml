@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <com.ticketpro.util.TouchImageView
+            android:id="@+id/preview_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+        	android:layout_weight="2"
+        	android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/preview" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_margin="3dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/plate_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:background="@drawable/text_field_bkg"
+                android:gravity="center"
+                android:hint="PLATE"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="5dp"
+                android:textSize="@dimen/xbig_font_size" />
+
+            <EditText
+                android:id="@+id/state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:hint="ST"
+                android:inputType="textCapCharacters|textCapWords"
+                android:onClick="selectStateAction"
+                android:padding="5dp"
+                android:textSize="@dimen/xbig_font_size" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/make"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/text_field_bkg"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="MAKE"
+                android:padding="5dp"
+                android:onClick="selectMakeAction"
+                android:inputType="textCapCharacters|textCapWords"
+                android:textSize="@dimen/xxsmall_font_size" />
+            <EditText
+                android:id="@+id/color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/text_field_bkg"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="COLOR"
+                android:padding="5dp"
+                android:onClick="selectColorAction"
+                android:inputType="textCapCharacters|textCapWords"
+                android:textSize="@dimen/xxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/text_field_bkg"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="BODY"
+                android:padding="5dp"
+                android:onClick="selectBodyAction"
+                android:inputType="textCapCharacters|textCapWords"
+                android:textSize="@dimen/xxsmall_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:padding="1dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/backBtn"
+            style="@style/ButtonTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back"
+            android:textColor="#fff"
+            android:layout_weight="1" />
+		
+        <Button
+             style="@style/ButtonTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:background="@drawable/btn_blue"
+            android:layout_toStartOf="@+id/acceptBtn"
+            android:onClick="retryAction"
+            android:text="Retry"
+            android:textColor="#fff"
+            android:layout_weight="1" />
+        
+        <Button
+            android:id="@+id/acceptBtn"
+             style="@style/ButtonTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:onClick="acceptAction"
+            android:text="Accept"
+            android:textColor="#fff"
+            android:layout_weight="1" />
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Header starts -->
+
+    <include layout="@layout/header" />
+    <!-- Header ends -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_screen"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner" >
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="5dp"
+                android:text="Photo Chalk Details"
+                android:textColor="#FFF"
+                android:textSize="@dimen/xxxsmall_font_size" />
+            
+            <TextView
+                android:id="@+id/current_chalk_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:text="0/0"
+                android:textColor="#FFF"
+                android:textSize="@dimen/xxxsmall_font_size" />
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+	
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+            	
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Location :"
+                    android:textColor="#000"
+                    android:textSize="14dip" />
+                
+            	<TextView
+            	    android:id="@+id/photo_chalk_details_location_textview"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:padding="3dp"
+            	    android:text="NA"
+            	    android:textColor="#000"
+            	    android:textSize="14dip" />
+
+            </LinearLayout>
+            
+             <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+            	
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="GPS :"
+                    android:textColor="#000"
+                    android:textSize="14dip" />
+            	
+                <TextView
+                    android:id="@+id/photo_chalk_details_gps_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="NA"
+                    android:textColor="#000"
+                    android:textSize="14dip" />
+                
+              </LinearLayout> 
+                
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <com.ticketpro.util.TouchImageView
+                    android:id="@+id/photo_chalk_details_main_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="2"
+        			android:adjustViewBounds="true"
+           	 		android:scaleType="fitCenter"
+                    android:src="@drawable/preview" />
+
+                <ImageView
+                    android:id="@+id/photo_chalk_details_next"
+                    android:layout_width="44dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="next"
+                    android:src="@drawable/phot_arrow_right"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/photo_chalk_details_prev"
+                    android:layout_width="44dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="previous"
+                    android:src="@drawable/phot_arrow_left"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:text="Time:"
+                android:textColor="#FFF"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/photo_chalk_detail_time_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="5dp"
+                android:text="NA"
+                android:textColor="#FFF"
+                android:textSize="14dip" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:text="Elasped:"
+                android:textColor="#FFF"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/photo_chalk_details_elasped_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="NA"
+                android:textColor="#FFF"
+                android:textSize="14dip" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp" >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Back"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/chalk_details_ticket_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="false"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_blue"
+            android:onClick="writeTicketAction"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Write Ticket"
+            android:textColor="#FFF" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:onClick="removeAction"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Remove"
+            android:textColor="#FFF" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

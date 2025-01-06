@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.print.N5TicketPrinter$2","classAnnotations":[],"interfaces":[],"superClasses":["com.twotechnologies.n5library.printer.PrtSeekListener","com.twotechnologies.n5library.common.a","android.content.BroadcastReceiver","java.lang.Object"]}

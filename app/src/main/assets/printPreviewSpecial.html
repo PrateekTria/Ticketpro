@@ -1,0 +1,61 @@
+<html>
+<head>
+    <style type="text/css">
+	body{
+		text-align:center;
+		margin-left:1%
+	}
+	table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+   }
+
+   td, th {
+   border: 0px solid #dddddd;
+   text-align: left;
+   padding: 8px;
+   }
+
+
+	td {
+	font-size:15px  !important;
+	}
+
+	#loader{
+		text-align:center;
+		margin-top:100px;
+	}
+	#preview{
+		width:100%;
+		text-align:center;
+		padding:0px;
+		margin:0px;
+	}
+
+	#preview li{
+		list-style:none;
+		display:inline-block;
+		width:100%;
+	}
+
+
+
+
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+
+    <title>Preview</title>
+</head>
+<body>
+<ul id="preview"></ul>
+</body>
+
+<script>
+	function loadHTML(HTML,dir){
+		$('#preview li').remove();
+		$('#preview').append("<li>"+HTML+"</li>").show('slide', {direction: dir}, 300);
+	}
+</script>
+</html>

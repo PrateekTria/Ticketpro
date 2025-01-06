@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout 
+      	android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_marginBottom="@dimen/button_height" >
+    
+    <com.ticketpro.util.TouchImageView 
+        android:id="@+id/touchImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:adjustViewBounds="true" 
+        android:scaleType="fitCenter"
+        />
+</RelativeLayout> 
+<RelativeLayout 
+    android:id="@+id/bottomView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true" >
+     
+    <LinearLayout
+       	android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_footer"  >
+
+        <Button
+            android:id="@+id/take_picture_dialog_cancel_btn"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="false"
+            android:background="@drawable/btn_yellow" 
+            android:text="Close"
+            android:layout_weight="1"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/take_picture_dialog_retake_btn"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:background="@drawable/btn_blue"
+            android:text="Retake"
+            android:textColor="#fff"
+            android:layout_weight="1"
+            android:textSize="@dimen/normal_font_size"  />
+
+        <Button
+            android:id="@+id/take_picture_take_btn"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Take Picture"
+            android:textColor="#fff"
+             android:layout_weight="1"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/take_picture_done_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Done"
+             android:layout_weight="1"
+            android:textColor="#fff"
+            android:textSize="@dimen/normal_font_size"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>
+  
+</RelativeLayout>

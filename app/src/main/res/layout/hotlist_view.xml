@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:background="@drawable/background_screen">
+
+	<!-- Header starts--> 
+   	<include layout="@layout/header"/>
+	<!-- Header ends-->
+
+
+	<!-- Top bar Start here -->
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/background_banner"
+	    android:orientation="horizontal" >
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:padding="5dp"
+		    android:paddingLeft="5dp"
+		    android:text="Hotlist Lookup Result"
+		    android:textColor="#ffffff"
+		    android:textSize="@dimen/xxxsmall_font_size" />
+
+	</RelativeLayout>
+	<!-- Top bar Ends here-->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:orientation="vertical"
+	    android:padding="10dp" >
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="5dp" >
+
+			<TextView
+			    android:id="@+id/voice_memo_status_text"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:minWidth="160dp"
+			    android:paddingRight="20dp"
+			    android:text="Plate Number"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000" />
+
+			<TextView
+			    android:id="@+id/hotlist_lookup_plate_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="NA"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000"
+			    android:textStyle="bold" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="5dp" >
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:minWidth="160dp"
+			    android:paddingRight="20dp"
+			    android:text="Lookup Type"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000" />
+
+			<TextView
+			    android:id="@+id/hotlist_lookup_platetype_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="NA"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000"
+			    android:textStyle="bold" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:id="@+id/hotlist_lookup_begin_date"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="5dp" >
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:minWidth="160dp"
+			    android:paddingRight="20dp"
+			    android:text="Begin Date"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000" />
+
+			<TextView
+			    android:id="@+id/hotlist_lookup_begindate_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="NA"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000"
+			    android:textStyle="bold" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:id="@+id/hotlist_lookup_end_date"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="5dp" >
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:minWidth="160dp"
+			    android:paddingRight="20dp"
+			    android:text="End Date"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000" />
+
+			<TextView
+			    android:id="@+id/hotlist_lookup_enddate_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="NA"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000"
+			    android:textStyle="bold" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:id="@+id/hotlist_lookup_number_of_tickets"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="5dp" >
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:minWidth="160dp"
+			    android:paddingRight="10dp"
+			    android:text="Number of Tickets"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000" />
+
+			<TextView
+			    android:id="@+id/hotlist_lookup_number_of_tickets_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="NA"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000"
+			    android:textStyle="bold" />
+
+		</LinearLayout>
+	
+		<LinearLayout
+		    android:id="@+id/hotlist_lookup_amount_owned"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="5dp" >
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:minWidth="160dp"
+			    android:paddingRight="20dp"
+			    android:text="Amount Owned"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000" />
+
+			<TextView
+			    android:id="@+id/hotlist_lookup_amount_owned_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="NA"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000"
+			    android:textStyle="bold" />
+
+		</LinearLayout>
+		
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="5dp" >
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingRight="20dp"
+			    android:text="Comments"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000" />
+
+			<TextView
+			    android:id="@+id/hotlist_lookup_comments_textview"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="NA"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="#000"
+			    android:textStyle="bold" />
+
+		</LinearLayout>
+	</LinearLayout>
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_footer"
+	    android:padding="5dp" >
+
+		<Button
+		    style="@style/ButtonText"
+		    android:layout_width="wrap_content"
+		    android:layout_height="@dimen/small_button_height"
+		    android:layout_alignParentStart="true"
+		    android:background="@drawable/btn_yellow"
+		    android:onClick="backAction"
+		    android:text="Back"
+		    android:textColor="#fff" />
+
+		<Button
+		    style="@style/ButtonText"
+		    android:layout_width="wrap_content"
+		    android:layout_height="@dimen/small_button_height"
+		    android:layout_alignParentEnd="true"
+		    android:background="@drawable/btn_blue"
+		    android:onClick="actionAction"
+		    android:text="Action"
+		    android:textColor="#fff" />
+
+	</RelativeLayout>
+
+
+</LinearLayout>

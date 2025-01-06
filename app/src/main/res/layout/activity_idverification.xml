@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_screen"
+    android:layout_height="match_parent"
+    tools:context=".activity.IDVerification">
+
+    <RelativeLayout
+        android:id="@+id/rtv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_banner">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:text="USER ID VERIFICATION"
+            android:textColor="#FFF"
+            android:textSize="@dimen/xxxsmall_font_size" />
+
+    </RelativeLayout>
+    <ImageView
+        android:padding="10dp"
+        android:layout_below="@+id/rtv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/logo"
+
+        />
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#11508A"
+            android:textSize="20sp"
+
+            android:text=" USER ID"
+            android:textStyle="bold"
+            android:padding="10dp"
+            />
+        <EditText
+            android:drawableLeft="@drawable/ic_action_name"
+            android:id="@+id/idv.et_rmsid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_field_bkg"
+            android:hint="  ENTER URSER ID XXXXX"
+            android:imeOptions="actionGo|flagNoExtractUi"
+            android:inputType="textCapCharacters|textCapWords"
+            android:padding="10dp"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            android:textSize="@dimen/normal_font_size" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_footer"
+            android:padding="10dp">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/idv.btnBack"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@drawable/btn_yellow"
+                android:text="Back" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/idv.btnClear"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@drawable/btn_yellow"
+                android:text="Clear" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/idv.btnNext"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@drawable/btn_blue"
+                android:text="Next" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

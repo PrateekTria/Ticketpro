@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.service.ServicePhotoPurge","classAnnotations":[],"interfaces":["android.content.ComponentCallbacks","android.content.ComponentCallbacks2"],"superClasses":["androidx.core.app.JobIntentService","android.app.Service","android.content.ContextWrapper","android.content.Context","java.lang.Object"]}

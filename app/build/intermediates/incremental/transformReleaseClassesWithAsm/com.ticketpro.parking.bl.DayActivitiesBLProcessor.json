@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.bl.DayActivitiesBLProcessor","classAnnotations":[],"interfaces":["com.ticketpro.parking.bl.BLProcessor"],"superClasses":["com.ticketpro.parking.bl.BLProcessorImpl","java.lang.Object"]}

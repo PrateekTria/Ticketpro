@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.model.UserSetting","classAnnotations":["androidx.room.Entity"],"interfaces":["java.io.Serializable"],"superClasses":["java.lang.Object"]}

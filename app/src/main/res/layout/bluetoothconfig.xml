@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_banner" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:text="Bluetooth Printers"
+            android:textColor="#FFF"
+            android:textSize="14dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/paired_printer_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_footer"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_yellow"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_blue"
+            android:text="Save"
+            android:textColor="#ffffff"
+            android:textSize="16dip" />
+    </RelativeLayout>
+    <!-- Bottom bar Ends here -->
+
+</RelativeLayout>

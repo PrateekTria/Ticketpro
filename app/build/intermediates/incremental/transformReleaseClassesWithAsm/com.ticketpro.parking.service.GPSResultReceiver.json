@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.service.GPSResultReceiver","classAnnotations":[],"interfaces":["android.os.Parcelable"],"superClasses":["android.os.ResultReceiver","java.lang.Object"]}

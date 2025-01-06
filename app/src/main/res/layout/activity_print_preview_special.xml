@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/background_screen">
+
+    <!-- Header starts-->
+    <include layout="@layout/header"/>
+    <!-- Header ends-->
+
+
+    <!-- Top bar Start here -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_banner"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/home_current_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:text="Activity Summary Reports "
+            android:textColor="#ffffff"
+            android:textSize="@dimen/normal_font_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text=" Select Date"
+                android:drawableLeft="@drawable/ic_action_clander"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/normal_font_size" />
+
+            <ImageView
+                android:id="@+id/voice_search_icon"
+                android:layout_width="@dimen/voice_search_icon_size"
+                android:layout_height="@dimen/voice_search_icon_size"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:onClick="enableVoiceMode"
+                android:src="@drawable/voice_search_disabled" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!-- Top bar Ends here-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/ly_one"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/grayColor"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/ly_one2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rvl_first"
+                android:gravity="center"
+                android:background="@color/grayColor"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_pick_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:clickable="false"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_action_clander"
+
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="  Pick Date  "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:textColor="@color/white" />
+
+
+                <Button
+                    android:id="@+id/btnShowMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/rvl_first"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/white"
+                    android:text="Map"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/preview_webview11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="false"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back"
+            android:textColor="#fff" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:onClick="printAction"
+            android:text="Print"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</LinearLayout>

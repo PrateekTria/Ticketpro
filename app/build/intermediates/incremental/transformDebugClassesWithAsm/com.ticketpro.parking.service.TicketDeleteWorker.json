@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.service.TicketDeleteWorker","classAnnotations":[],"interfaces":[],"superClasses":["androidx.work.Worker","androidx.work.ListenableWorker","java.lang.Object"]}

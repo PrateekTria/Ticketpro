@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_height">0dp</dimen>
+    <dimen name="_1dp">2dp</dimen>
+    <dimen name="_2dp">4dp</dimen>
+    <dimen name="_3dp">5dp</dimen>
+    <dimen name="footer_height">30dp</dimen>
+    <dimen name="button_height">80dp</dimen>
+    <dimen name="small_button_height">74dp</dimen>
+    <dimen name="icon_size_height">72dp</dimen>
+    <dimen name="icon_size_width">72dp</dimen>
+    <dimen name="xbig_font_size">50dp</dimen>
+    <dimen name="big_font_size">44dp</dimen>
+    <dimen name="small_icon_size">44dp</dimen>
+    <dimen name="normal_font_size">42dp</dimen>
+    <dimen name="small_font_size">38dp</dimen>
+    <dimen name="xsmall_font_size">36dp</dimen>
+    <dimen name="xxsmall_font_size">34dp</dimen>
+    <dimen name="xxxsmall_font_size">32dp</dimen>
+    <dimen name="xxxxsmall_font_size">26dp</dimen>
+    <dimen name="search_icon_size">64dp</dimen>
+    <dimen name="user_list_row_height">84dp</dimen>
+    <dimen name="user_list_row_image_height">60dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+    <dimen name="photo_row_height">170dp</dimen>
+    <dimen name="filter_spinner_width">300dp</dimen>
+    <dimen name="voice_search_icon_size">60dp</dimen>
+    <dimen name="xxxsmall_ticketlog_font_size">15dp</dimen>
+    <dimen name="park_mobile_info">25dp</dimen>
+
+</resources>

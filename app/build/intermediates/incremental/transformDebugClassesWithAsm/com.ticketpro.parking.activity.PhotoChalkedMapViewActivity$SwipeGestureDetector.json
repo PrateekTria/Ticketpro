@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.activity.PhotoChalkedMapViewActivity$SwipeGestureDetector","classAnnotations":[],"interfaces":["android.view.GestureDetector$OnContextClickListener","android.view.GestureDetector$OnDoubleTapListener","android.view.GestureDetector$OnGestureListener"],"superClasses":["android.view.GestureDetector$SimpleOnGestureListener","java.lang.Object"]}

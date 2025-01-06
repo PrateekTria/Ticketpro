@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tablerow_even"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        -->
+<!--        >-->
+
+    <ImageView
+        android:id="@+id/tr_status_img"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:minWidth="@dimen/_1dp" />
+
+    <TextView
+        android:id="@+id/spaceName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:paddingStart="5dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/plateNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/vioType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:paddingTop="8dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/entryTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp" />
+
+</LinearLayout>

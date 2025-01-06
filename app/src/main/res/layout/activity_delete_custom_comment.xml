@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cameraContainer1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cameraContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/layout_bo"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/home_current_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="2dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Custome Comments"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/activity_delete_custom_row" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_bo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <CheckBox
+            android:id="@+id/chk_select_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Select All"
+            android:textSize="22dp"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ButtonTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back"
+            android:textColor="#FFF"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_delete_all"
+            style="@style/ButtonTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue"
+            android:text="Delete All"
+            android:textColor="#FFF" />
+    </LinearLayout>
+
+</RelativeLayout>

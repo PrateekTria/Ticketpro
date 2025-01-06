@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_screen"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_banner">
+
+                    <TextView
+                        android:id="@+id/chalkPictureHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="5dp"
+                        android:text="Chalk Pictures"
+                        android:textColor="#FFF"
+                        android:textSize="@dimen/xxxsmall_font_size" />
+
+                    <TextView
+                        android:id="@+id/current_picture_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="5dp"
+                        android:text="0/0"
+                        android:textColor="#FFF"
+                        android:textSize="@dimen/xxxsmall_font_size" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+
+                        android:id="@+id/chalk_picture_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/preview" />
+
+                    <FrameLayout
+                        android:id="@+id/_frame"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/left_arrow" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:src="@drawable/right_arrow" />
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <Button
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/small_button_height"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/btn_yellow"
+                android:onClick="backAction"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Back"
+                android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/takePictureBtn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/small_button_height"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_blue"
+                android:onClick="takePictureAction"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Take New Picture"
+                android:textColor="#FFF" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

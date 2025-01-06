@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.util.TouchImageView$ScaleListener","classAnnotations":[],"interfaces":["android.view.ScaleGestureDetector$OnScaleGestureListener"],"superClasses":["android.view.ScaleGestureDetector$SimpleOnScaleGestureListener","java.lang.Object"]}

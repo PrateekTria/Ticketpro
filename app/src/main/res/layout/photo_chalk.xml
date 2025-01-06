@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chalk_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.70"
+        android:orientation="vertical" >
+
+        <!-- Top bar Start here -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/slider_menu_btn"
+                    style="@style/ButtonText"
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/sidemenu" />
+
+                <TextView
+                    android:id="@+id/chalk_by_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Mark/Chalk Location"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/xxxsmall_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" >
+                
+                <ImageView
+                    android:id="@+id/ticket_logs"
+                    android:layout_width="@dimen/icon_size_width"
+                    android:layout_height="@dimen/icon_size_height"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:minWidth="50dp"
+                    android:onClick="ticketLogsAction"
+                    android:src="@drawable/ticket_logs" />
+
+                <ImageView
+                    android:id="@+id/status_indicator_image"
+                    android:layout_width="@dimen/normal_font_size"
+                    android:layout_height="@dimen/normal_font_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical" 
+                    android:src="@drawable/red_status_btn" />
+
+                <ImageView
+                    android:id="@+id/voice_search_icon"
+                    android:layout_width="@dimen/voice_search_icon_size"
+                    android:layout_height="@dimen/voice_search_icon_size"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:clickable="true"
+                    android:onClick="enableVoiceMode"
+                    android:src="@drawable/voice_search_disabled"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="0.35" >
+
+            <EditText
+                android:id="@+id/photo_chalk_location_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="LOCATION"
+                android:imeOptions="actionGo"
+                android:inputType="textCapCharacters|textCapWords"
+                android:maxLines="1"
+                android:minLines="1"
+                android:onClick="selectLocation"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/normal_font_size" />
+
+            <ProgressBar
+                android:id="@+id/GPSProcess"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="2dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.40"
+            android:minHeight="50dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/photo_chalk_gps_button"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_yellow"
+                android:onClick="gpsAction"
+                android:padding="12dp"
+                android:text="GPS" >
+            </Button>
+
+            <ImageView
+                android:layout_width="@dimen/downarrow_width"
+                android:layout_height="@dimen/downarrow_height"
+                android:layout_marginTop="3dp"
+                android:onClick="selectLocation"
+                android:scaleType="fitStart"
+                android:src="@drawable/arrow_down"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.40"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/photo_chalk_duration_spinner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/photo_chalk_time_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="TIME"
+                android:inputType="textCapCharacters|textCapWords"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/normal_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/photo_chalk_photo_chk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="Photo Chalk"
+                android:textColor="#000"
+                android:textSize="@dimen/xxsmall_font_size" />
+
+            <Button
+                android:id="@+id/photo_chalk_chalking_btn"
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_blue"
+                android:minWidth="130dp"
+                android:onClick="startChalking"
+                android:padding="10dp"
+                android:text="Start Chalking" >
+
+            </Button>
+
+            <Button
+                android:id="@+id/photo_chalk_add_btn"
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_blue"
+                android:minWidth="130dp"
+                android:onClick="addAction"
+                android:padding="10dp"
+                android:text="Add To List" >
+
+            </Button>
+
+            <Button
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue"
+                android:minWidth="130dp"
+                android:onClick="viewListAction"
+                android:padding="10dp"
+                android:text="View List" >
+
+            </Button>
+
+            <Button
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue"
+                android:minWidth="130dp"
+                android:onClick="backAction"
+                android:padding="10dp"
+                android:text="Back" >
+
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/photo_chalk_tire_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="@dimen/xxsmall_font_size" />
+
+            <RelativeLayout
+                android:id="@+id/phot_chalk_circle_panel"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/tire2"
+                android:clickable="true"
+                android:onClick="showChalkWheelDialog" >
+
+                <ImageView
+                    android:id="@+id/chalk_location_c_img"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/c_marker" />
+
+                <ImageView
+                    android:id="@+id/chalk_location_s_img"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="40dp"
+                    android:src="@drawable/s_marker" />
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

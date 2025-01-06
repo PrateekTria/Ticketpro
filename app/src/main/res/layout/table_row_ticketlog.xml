@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/table_row_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_listview"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tr_header1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.3"
+        android:paddingBottom="10dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="10dp"
+        android:text="Header1"
+        android:textColor="#fff"
+        android:textSize="@dimen/xxxsmall_ticketlog_font_size" />
+
+
+    <TextView
+        android:id="@+id/tr_header2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:paddingBottom="10dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="10dp"
+        android:text="Header2"
+        android:textColor="#fff"
+        android:textSize="@dimen/xxxsmall_ticketlog_font_size" />
+
+    <TextView
+        android:id="@+id/tr_header3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="10dp"
+        android:text="Header3"
+        android:textColor="#fff"
+        android:textSize="@dimen/xxxsmall_ticketlog_font_size" />
+
+    <TextView
+        android:id="@+id/tr_header4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="10dp"
+        android:text="Header3"
+        android:visibility="gone"
+        android:textColor="#fff"
+        android:textSize="@dimen/xxxsmall_ticketlog_font_size" />
+
+</TableRow>

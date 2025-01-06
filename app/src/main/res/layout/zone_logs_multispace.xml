@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_screen"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner" >
+
+            <TextView
+                android:id="@+id/zone_info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:padding="3dp"
+                android:layout_marginLeft="10dp"
+                android:text="Lot Info"
+                android:textColor="#FFF"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+	            
+                <CheckBox
+	                android:id="@+id/expiredChk"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+                    android:button="@xml/custom_checkbox_white"
+	                 />
+
+                <TextView
+                    android:id="@+id/expiredTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:text="Expiring"
+                    android:paddingTop="5dp"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/expiringTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#FFF" />
+                
+                <ImageView
+	                android:id="@+id/search_icon"
+	                android:layout_width="@dimen/small_icon_size"
+	                android:layout_height="@dimen/small_icon_size"
+	                android:clickable="true"
+	                android:layout_margin="@dimen/_3dp"
+	                android:layout_gravity="center_vertical"
+	                android:onClick="searchAction"
+                    android:visibility="gone"
+	                android:src="@drawable/search_icon"/>
+                
+                <ImageView
+	                android:id="@+id/voice_search_icon"
+	                android:layout_width="@dimen/voice_search_icon_size"
+	                android:layout_height="@dimen/voice_search_icon_size"
+	                android:clickable="true"
+	                android:onClick="enableVoiceMode"
+	                android:src="@drawable/voice_search_disabled"
+	                android:visibility="gone"
+	                android:layout_gravity="center_vertical" />
+            
+	            </LinearLayout>
+	            
+        </RelativeLayout>
+        
+        <EditText
+             android:id="@+id/searchText"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:background="@drawable/text_field_bkg"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             android:visibility="gone"/>
+        
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TableLayout
+                android:id="@+id/logs_4_table_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/background_listview" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Space"
+                        android:visibility="gone"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Info"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Expire"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Lot #"
+                        android:textColor="#FFF" />
+                    
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:padding="3dp" >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back"
+            android:textColor="#FFF" />
+        
+        <Button
+            android:id="@+id/pageSizeBtn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_blue"
+            android:onClick="changeLot"
+            android:text="Change Lot"
+            android:textColor="#FFF" />
+        
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_yellow"
+            android:onClick="refreshAction"
+            android:text="Refresh"
+            android:textColor="#FFF" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

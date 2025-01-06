@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.activity.AddCommentAutoActivity$CommentAdapter","classAnnotations":[],"interfaces":["android.widget.Adapter","android.widget.ListAdapter","android.widget.SpinnerAdapter"],"superClasses":["android.widget.BaseAdapter","java.lang.Object"]}

@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.service.JSONEntity","classAnnotations":[],"interfaces":["java.lang.Cloneable","org.apache.http.HttpEntity"],"superClasses":["org.apache.http.entity.StringEntity","org.apache.http.entity.AbstractHttpEntity","java.lang.Object"]}

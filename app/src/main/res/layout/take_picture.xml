@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/home_current_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:text="Take Picture"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/take_picture_citation_number_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="#"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/xxxsmall_font_size" />
+
+                <ImageView
+                    android:id="@+id/voice_search_icon"
+                    android:layout_width="@dimen/voice_search_icon_size"
+                    android:layout_height="@dimen/voice_search_icon_size"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:clickable="true"
+                    android:onClick="enableVoiceMode"
+                    android:src="@drawable/voice_search_disabled"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Top bar Ends here -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/flashlight_led_imgview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:src="@drawable/flashlight" />
+
+            <ImageView
+                android:id="@+id/flashlight_mode_imgview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:src="@drawable/flashlight_auto" />
+
+            <com.ticketpro.util.TouchImageView
+                android:id="@+id/touchImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/zoomLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/flashlight_mode_imgview"
+                android:layout_marginRight="10dp">
+
+                <com.ticketpro.util.VerticalSeekBar
+                    android:id="@+id/verticalSeekBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/stickyZoom"
+                    android:layout_alignParentEnd="true" />
+
+                <CheckBox
+                    android:id="@+id/stickyZoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:button="@xml/custom_checkbox_white"
+                    android:text="SZ"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_footer"
+            android:padding="3dp">
+
+            <Button
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="false"
+                android:background="@drawable/btn_yellow"
+                android:onClick="backAction"
+                android:text="Cancel"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/take_picture_retake_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_blue"
+                android:text="Retake"
+                android:textColor="#fff"
+                android:textSize="@dimen/normal_font_size"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/take_picture_take_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_blue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Take Picture"
+                android:textColor="#fff"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/take_picture_done_btn"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_blue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Done"
+                android:textColor="#fff"
+                android:textSize="@dimen/normal_font_size"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- <RelativeLayout
+              android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/button_height"
+            android:layout_marginBottom="@dimen/button_height">
+
+        <com.ticketpro.util.TouchImageView
+            android:id="@+id/touchImageView"
+            android:layout_width="match_parent"
+            android:adjustViewBounds="true"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:scaleType="fitCenter"
+            />
+    </RelativeLayout> -->
+</RelativeLayout>

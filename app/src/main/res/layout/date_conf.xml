@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen" >
+ 
+   
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="5dp"
+                android:text="Please confirm correct date/time"
+                android:textColor="#FFF"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+        </RelativeLayout>
+    
+    </LinearLayout>
+
+     <TextView
+         android:id="@+id/weekdayTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/digitalClock"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="15dp"
+         android:text="NA"
+         android:textAppearance="?android:attr/textAppearanceLarge"
+         android:textColor="#000"
+         android:textSize="36sp" />
+     
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weekdayTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="NA"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000"
+        android:textSize="36sp" />
+
+	<TextView
+		android:id="@+id/juliandateTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/dateTextView"
+		android:layout_centerHorizontal="true"
+		android:padding="5dp"
+		android:text="NA"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="#000"
+		android:textSize="25sp" />
+    
+ 
+   	<RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/background_footer"
+           android:padding="5dp" >
+
+		<Button
+			style="@style/ButtonText"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/button_height"
+			android:layout_alignParentStart="true"
+			android:background="@drawable/btn_yellow"
+			android:onClick="backAction"
+			android:text="Back"
+			android:textColor="#ffffff" />
+           
+         <Button
+             style="@style/ButtonText"
+             android:layout_width="wrap_content"
+             android:layout_height="@dimen/button_height"
+             android:layout_alignParentEnd="true"
+             android:background="@drawable/btn_blue"
+             android:onClick="acceptAction"
+             android:text="Accept"
+             android:textColor="#ffffff" />
+            
+       </RelativeLayout>
+
+   	<DigitalClock
+   	    android:id="@+id/digitalClock"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@+id/analogClock"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_marginTop="18dp"
+   	    android:text="DigitalClock"
+   	    android:textColor="#000"
+   	    android:textSize="36sp" />
+
+	<com.ticketpro.util.AnalogClock
+		android:id="@+id/analogClock"
+		android:layout_width="200dp"
+		android:layout_height="200dp"
+		android:layout_below="@+id/linearLayout1"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="15dp"
+		android:visibility="visible" />
+
+   	 
+</RelativeLayout>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.ticketpro.lpr.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000" />
+
+    <LinearLayout
+        android:id="@+id/result_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/result_view"
+        android:orientation="vertical"
+        android:padding="4dip"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:padding="20dp" >
+
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/preview" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/plate_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/text_field_bkg"
+                        android:gravity="center"
+                        android:hint="PLATE"
+                        android:inputType="textCapCharacters|textCapWords"
+                        android:padding="6dp"
+                        android:textSize="@dimen/xbig_font_size" />
+
+                    <EditText
+                        android:id="@+id/state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_field_bkg"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint="ST"
+                        android:inputType="textCapCharacters|textCapWords"
+                        android:onClick="selectStateAction"
+                        android:padding="6dp"
+                        android:textSize="@dimen/xbig_font_size" />
+                    
+                </LinearLayout>
+               
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                	
+                    <EditText
+                        android:id="@+id/color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/text_field_bkg"
+                        android:hint="COLOR"
+                        android:inputType="textCapCharacters|textCapWords"
+                        android:textSize="@dimen/xxsmall_font_size" />
+                    
+                    <EditText
+                        android:id="@+id/body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/text_field_bkg"
+                        android:hint="BODY"
+                        android:inputType="textCapCharacters|textCapWords"
+                        android:textSize="@dimen/xxsmall_font_size" />
+                    
+                    
+                    <EditText
+                        android:id="@+id/make"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/text_field_bkg"
+                        android:hint="MAKE"
+                        android:inputType="textCapCharacters|textCapWords"
+                        android:textSize="@dimen/xxsmall_font_size" />
+                    
+	                
+                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/retry_btn"
+                        style="@style/ButtonText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_yellow"
+                        android:onClick="retryAction"
+                        android:text="Retry"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/accept_btn"
+                        style="@style/ButtonText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_blue"
+                        android:onClick="acceptAction"
+                        android:text="Accept"
+                        android:textColor="#ffffff" />
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/source_language_text_view_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OCR"
+                        android:textColor="@color/result_minor_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/source_language_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/result_minor_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/translation_language_label_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Translation"
+                        android:textColor="@color/translation_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/translation_language_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[Target language]"
+                        android:textColor="@color/translation_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/ocr_result_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:paddingLeft="12dip"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/result_text"
+                        android:textColorLink="@color/result_text"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/translation_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:clickable="true"
+                        android:paddingLeft="12dip"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/translation_text"
+                        android:textColorLink="@color/translation_text"
+                        android:textSize="22sp" />
+
+                    <LinearLayout
+                        android:id="@+id/indeterminate_progress_indicator_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ProgressBar
+                            android:id="@+id/progress_small"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="12dip"
+                            android:paddingEnd="0dp"
+                            android:paddingTop="10dip"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/camera_button_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/zoomLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="10dp" >
+
+            <com.ticketpro.util.VerticalSeekBar
+                android:id="@+id/verticalSeekbar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/stickyZoom"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/stickyZoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="SZ" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/status_view_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:autoLink="web"
+            android:background="#0000"
+            android:clickable="true"
+            android:text=""
+            android:textColor="@color/status_text"
+            android:textSize="14sp" />
+
+        <com.ticketpro.lpr.camera.ShutterButton
+            android:id="@+id/shutter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dip"
+            android:background="@drawable/shutter_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:scaleType="center"
+            android:visibility="gone" />
+
+        <com.ticketpro.lpr.camera.CloseButton
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="8dip"
+            android:background="@drawable/close_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/status_view_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:autoLink="web"
+            android:background="#0000"
+            android:clickable="true"
+            android:text=""
+            android:textColor="@color/status_text"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/flashlight_led_imgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:src="@drawable/flashlight" />
+    </RelativeLayout>
+
+</FrameLayout>

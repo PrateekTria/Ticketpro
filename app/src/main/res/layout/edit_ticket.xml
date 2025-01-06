@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/write_ticket_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+    
+    <!-- Top bar Start here -->
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_banner"
+	    android:orientation="horizontal" >
+
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" >
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:paddingLeft="5dp"
+		    android:text="Edit Ticket"
+		    android:textColor="#ffffff"
+		    android:textSize="@dimen/xxxsmall_font_size" />
+			
+		 <TextView
+		     android:id="@+id/citation_number"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"
+		     android:layout_gravity="center_vertical"
+		     android:layout_marginLeft="10dp"
+		     android:text="#"
+		     android:textColor="#FFF"
+		     android:textSize="@dimen/xxxsmall_font_size" />
+
+		 </LinearLayout>
+				
+		<ImageView
+		    android:id="@+id/status_indicator_image"
+		    android:layout_width="@dimen/normal_font_size"
+		    android:layout_height="@dimen/normal_font_size"
+		    android:layout_margin="3dp"
+		    android:src="@drawable/red_status_btn" />
+
+	  </LinearLayout>
+    
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical" >
+	
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_marginTop="5dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+	
+			<LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent">
+
+				<EditText
+				    android:id="@+id/write_ticket_st"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="0.2"
+				    android:background="@drawable/text_field_bkg"
+				    android:clickable="false"
+				    android:focusable="false"
+				    android:focusableInTouchMode="false"
+				    android:hint="NA"
+				    android:inputType="textCapCharacters|textCapWords"
+				    android:paddingLeft="5dp"
+				    android:textSize="@dimen/normal_font_size" />
+				    
+				<ImageView
+				    android:id="@+id/write_ticket_states_search"
+				    android:layout_width="@dimen/downarrow_width"
+				    android:layout_height="@dimen/downarrow_height"
+				    android:scaleType="fitStart"
+				    android:src="@drawable/arrow_down"
+				    android:textSize="12dp" />
+    
+			</LinearLayout>
+			
+			<EditText
+			    android:id="@+id/write_ticket_plate_number"
+			    android:layout_width="0dp"
+			    android:layout_height="match_parent"
+			    android:layout_weight="3"
+			    android:background="@drawable/text_field_bkg"
+			    android:clickable="false"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:hint="NA"
+			    android:imeOptions="actionGo"
+			    android:inputType="textCapCharacters|textCapWords"
+			    android:minLines="1"
+			    android:paddingLeft="5dp"
+			    android:textSize="@dimen/normal_font_size" >
+
+			</EditText>
+
+		</LinearLayout>
+		    
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_marginTop="3dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+	
+			<EditText
+			    android:id="@+id/write_ticket_vin_number"
+			    android:layout_width="0dp"
+			    android:layout_height="match_parent"
+			    android:layout_marginRight="3dp"
+			    android:layout_weight="1"
+			    android:background="@drawable/text_field_bkg"
+			    android:clickable="false"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:hint="NA"
+			    android:imeOptions="actionGo"
+			    android:inputType="textCapCharacters|textCapWords"
+			    android:minLines="1"
+			    android:paddingLeft="5dp"
+			    android:textSize="@dimen/normal_font_size" />
+			
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_marginTop="3dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+			    
+			<LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent">
+
+				<EditText
+				    android:id="@+id/write_ticket_exp"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
+				    android:background="@drawable/text_field_bkg"
+				    android:focusable="false"
+				    android:focusableInTouchMode="false"
+				    android:hint="NA"
+				    android:inputType="textCapCharacters|textCapWords"
+				    android:paddingLeft="5dp"
+				    android:textSize="@dimen/normal_font_size" />
+				    
+				<ImageView
+				    android:id="@+id/write_ticket_exp_search"
+				    android:layout_width="@dimen/downarrow_width"
+				    android:layout_height="@dimen/downarrow_height"
+				    android:scaleType="fitStart"
+				    android:src="@drawable/arrow_down"
+				    android:textSize="12dp"/>
+    
+			</LinearLayout>    
+
+			<EditText
+			    android:id="@+id/write_ticket_tm_number"
+			    android:layout_width="0dp"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/text_field_bkg"
+			    android:clickable="false"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:hint="NA"
+			    android:inputType="textCapCharacters|time"
+			    android:minLines="1"
+			    android:paddingLeft="5dp"
+			    android:textSize="@dimen/xxxsmall_font_size" >
+
+			</EditText>
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_marginTop="3dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+			    
+			<LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent">
+
+				<EditText
+				    android:id="@+id/write_ticket_make"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_marginTop="3dp"
+				    android:layout_weight="1"
+				    android:background="@drawable/text_field_bkg"
+				    android:clickable="false"
+				    android:focusable="false"
+				    android:focusableInTouchMode="false"
+				    android:hint="NA"
+				    android:inputType="textCapCharacters|textCapWords"
+				    android:paddingLeft="5dp"
+				    android:textSize="@dimen/normal_font_size" />
+				    
+				<ImageView
+				    android:layout_width="@dimen/downarrow_width"
+				    android:layout_height="@dimen/downarrow_height"
+				    android:layout_marginTop="5dp"
+				    android:scaleType="fitStart"
+				    android:src="@drawable/arrow_down"
+				    android:textSize="12dp" />
+    
+			</LinearLayout>        
+
+			
+			    
+			 <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent">
+
+				<EditText
+				    android:id="@+id/write_ticket_body"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_marginTop="3dp"
+				    android:layout_weight="1"
+				    android:background="@drawable/text_field_bkg"
+				    android:clickable="false"
+				    android:focusable="false"
+				    android:focusableInTouchMode="false"
+				    android:hint="NA"
+				    android:inputType="textCapCharacters|textCapWords"
+				    android:paddingLeft="5dp"
+				    android:textSize="@dimen/normal_font_size" />
+				    
+				<ImageView
+				    android:layout_width="@dimen/downarrow_width"
+				    android:layout_height="@dimen/downarrow_height"
+				    android:layout_marginTop="5dp"
+				    android:scaleType="fitStart"
+				    android:src="@drawable/arrow_down"
+				    android:textSize="12dp" />
+       
+			</LinearLayout>        
+			
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_marginBottom="3dp"
+		    android:layout_marginTop="3dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+	
+				 <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent">
+
+				<EditText
+				    android:id="@+id/write_ticket_color"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
+				    android:background="@drawable/text_field_bkg"
+				    android:clickable="false"
+				    android:focusable="false"
+				    android:focusableInTouchMode="false"
+				    android:hint="NA"
+				    android:inputType="textCapCharacters|textCapWords"
+				    android:onClick="searchColor"
+				    android:paddingLeft="5dp"
+				    android:textSize="@dimen/normal_font_size" />
+				    
+				<ImageView
+				    android:layout_width="@dimen/downarrow_width"
+				    android:layout_height="@dimen/downarrow_height"
+				    android:scaleType="fitStart"
+				    android:src="@drawable/arrow_down"
+				    android:textSize="12dp" />
+       
+			</LinearLayout>            
+
+				
+
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+	
+			<LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" >
+
+			<EditText
+			    android:id="@+id/write_ticket_location_number"
+			    android:layout_width="0dp"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/text_field_bkg"
+			    android:clickable="false"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:hint="NA"
+			    android:imeOptions="actionNext|actionDone"
+			    android:inputType="textCapCharacters|textCapWords"
+			    android:longClickable="false"
+			    android:maxLines="1"
+			    android:paddingLeft="5dp"
+			    android:singleLine="true"
+			    android:textSize="@dimen/normal_font_size" >
+
+			</EditText>
+			
+			<ImageView
+			    android:id="@+id/write_ticket_location_search"
+			    android:layout_width="@dimen/downarrow_width"
+			    android:layout_height="@dimen/downarrow_height"
+			    android:layout_marginTop="2dp"
+			    android:scaleType="fitStart"
+			    android:src="@drawable/arrow_down"
+			    android:textSize="12dp" />
+
+			</LinearLayout>
+			
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_marginTop="5dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+
+				<EditText
+				    android:id="@+id/write_ticket_permit_number"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
+				    android:background="@drawable/text_field_bkg"
+				    android:clickable="false"
+				    android:focusable="false"
+				    android:focusableInTouchMode="false"
+				    android:hint="NA"
+				    android:imeOptions="actionDone"
+				    android:inputType="textCapCharacters|textCapWords"
+				    android:minLines="1"
+				    android:paddingLeft="5dp"
+				    android:textSize="@dimen/normal_font_size" />
+
+				<EditText
+				    android:id="@+id/write_ticket_meter_number"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_marginLeft="3dp"
+				    android:layout_weight="1"
+				    android:background="@drawable/text_field_bkg"
+				    android:clickable="false"
+				    android:focusable="false"
+				    android:focusableInTouchMode="false"
+				    android:hint="NA"
+				    android:imeOptions="actionDone"
+				    android:inputType="textCapCharacters|textCapWords"
+				    android:minLines="1"
+				    android:paddingLeft="5dp"
+				    android:textSize="@dimen/normal_font_size" />
+		
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_marginTop="3dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+	
+				<Button
+				    android:id="@+id/write_ticket_violation_btn"
+				    style="@style/ButtonText"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_margin="@dimen/button_margin"
+				    android:layout_weight="1"
+				    android:background="@drawable/btn_yellow"
+				    android:onClick="viewViolationAction"
+				    android:padding="5dp"
+				    android:text="Violations (0)" />
+					
+				<LinearLayout
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
+				    android:paddingLeft="5dip" >
+
+				<Button
+				    android:id="@+id/write_ticket_photos_btn"
+				    style="@style/ButtonText"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_margin="@dimen/button_margin"
+				    android:background="@drawable/btn_yellow"
+				    android:onClick="viewPhotosAction"
+				    android:padding="5dp"
+				    android:text="Photos (0)" />
+
+				</LinearLayout>
+		
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp" >
+	
+		    	<RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+				<CheckBox
+				    android:id="@+id/write_ticket_driveaway_chk"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:checked="false"
+				    android:text="Drive away"
+				    android:textColor="#fff"
+				    android:layout_centerVertical="true"
+				    android:textSize="@dimen/normal_font_size" />
+				</RelativeLayout>
+				
+		    	<RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+				<CheckBox
+				    android:id="@+id/write_ticket_warn_chk"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="5dp"
+				    android:layout_marginRight="5dp"
+				    android:text="Warn"
+				    android:textColor="#fff"
+				    android:layout_centerVertical="true"
+				    android:textSize="@dimen/normal_font_size" />
+			    </RelativeLayout>
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1.1"
+		    android:background="@drawable/background_footer" >
+
+			<Button
+			    android:id="@+id/write_ticket_back_btn"
+			    style="@style/ButtonText"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_margin="@dimen/button_margin"
+			    android:layout_weight="1"
+			    android:background="@drawable/btn_yellow"
+			    android:onClick="backAction"
+			    android:text="Back" />
+		    
+		    <Button
+		        android:id="@+id/write_ticket_print_btn"
+		        style="@style/ButtonText"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentEnd="true"
+		        android:layout_margin="@dimen/button_margin"
+		        android:layout_weight="1"
+		        android:background="@drawable/btn_blue"
+		        android:onClick="saveAction"
+		        android:text="Save" />
+
+		</LinearLayout>
+	
+		</LinearLayout>
+			
+		
+		
+		
+		<!-- Bottom Panel -->
+
+		<WebView
+		    android:id="@+id/print_webview"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:visibility="invisible" />
+		
+</LinearLayout>

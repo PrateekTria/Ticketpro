@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.util.LongDeserializer","classAnnotations":[],"interfaces":["com.google.gson.JsonDeserializer"],"superClasses":["java.lang.Object"]}

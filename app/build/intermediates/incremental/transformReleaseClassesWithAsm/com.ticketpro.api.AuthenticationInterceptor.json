@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.api.AuthenticationInterceptor","classAnnotations":[],"interfaces":["okhttp3.Interceptor"],"superClasses":["java.lang.Object"]}

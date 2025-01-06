@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">התראה חדשה אחת (%d)</item>
+    <item quantity="two">%d התראות חדשות</item>
+    <item quantity="many">%d התראות חדשות</item>
+    <item quantity="other">%d התראות חדשות</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"ניווט לדף הבית"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"ניווט למעלה"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"עוד אפשרויות"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"סיום"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"הצגת הכול"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"בחירת אפליקציה"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"כבוי"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"מופעל"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+‎"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"מחיקה"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"רווח"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"תפריט+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"חיפוש…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"מחיקת השאילתה"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"שאילתת חיפוש"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"חיפוש"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"שליחת שאילתה"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"חיפוש קולי"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"שיתוף עם"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"שיתוף עם <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"כיווץ"</string>
+    <string name="app_name">סורק ברקודים</string>
+    <string name="app_picker_name">יישומים</string>
+    <string name="bookmark_picker_name">סימניות</string>
+    <string name="bottomsheet_action_expand_halfway">הרחבה עד האמצע</string>
+    <string name="button_add_calendar">הוסף ללוח שנה</string>
+    <string name="button_add_contact">הוספת איש קשר</string>
+    <string name="button_back">חזרה</string>
+    <string name="button_book_search">חיפוש ספר</string>
+    <string name="button_cancel">ביטול</string>
+    <string name="button_custom_product_search">חיפוש מותאם אישית</string>
+    <string name="button_dial">חייג מספר</string>
+    <string name="button_done">סיים</string>
+    <string name="button_email">שלח דואר אלקטרוני</string>
+    <string name="button_get_directions">קבל הוראות הגעה</string>
+    <string name="button_google_shopper">Shopper</string>
+    <string name="button_mms">שלח הודעת מולטימדיה</string>
+    <string name="button_ok">אישור</string>
+    <string name="button_open_browser">פתח את הדפדפן</string>
+    <string name="button_product_search">חיפוש מוצר</string>
+    <string name="button_search_book_contents">חיפוש בתוכן</string>
+    <string name="button_share_app">יישום</string>
+    <string name="button_share_bookmark">סימניה</string>
+    <string name="button_share_by_email">שתף בדואר אלקטרוני</string>
+    <string name="button_share_by_sms">שתף בהודעה</string>
+    <string name="button_share_clipboard">לוח עריכה</string>
+    <string name="button_share_contact">איש קשר</string>
+    <string name="button_show_map">הצג מפה</string>
+    <string name="button_sms">שלח הודעה</string>
+    <string name="button_web_search">חיפוש באינטרנט</string>
+    <string name="button_wifi">התחבר לרשת</string>
+    <string name="character_counter_content_description">הוזנו %1$d תווים מתוך %2$d</string>
+    <string name="character_counter_overflowed_content_description">מגבלת התווים חורגת ב-%1$d מתוך %2$d</string>
+    <string name="clear_text_end_icon_content_description">מחיקת הטקסט</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">הפעל</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">‏האפליקציה %1$s לא תפעל אם לא תפעיל את שירותי Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">‏הפעל את שירותי Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">התקן</string>
+    <string name="common_google_play_services_install_text">‏האפליקציה %1$s לא תפעל ללא שירותי Google Play, שאינם מותקנים במכשיר.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">‏קבל את שירותי Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">‏זמינות של שירותי Google Play</string>
+    <string name="common_google_play_services_notification_ticker">‏שגיאה בשירותי Google Play</string>
+    <string name="common_google_play_services_unknown_issue">‏%1$s נתקלה בבעיה בשירותי Google Play. נסה שוב.</string>
+    <string name="common_google_play_services_unsupported_text">‏%1$s לא תפעל ללא שירותי Google Play, שאינם נתמכים במכשיר שלך.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">עדכון</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">‏%1$s לא יפעל אם לא תעדכן את שירותי Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">‏עדכון שירותי Google Play</string>
+    <string name="common_google_play_services_updating_text">‏האפליקציה %1$s לא תפעל ללא שירותי Google Play, שמתעדכנים כרגע.</string>
+    <string name="common_google_play_services_wear_update_text">‏דרושה גרסה חדשה של שירותי Google Play. הגרסה תתעדכן בעצמה תוך זמן קצר.</string>
+    <string name="common_open_on_phone">פתח בטלפון</string>
+    <string name="common_signin_button_text">כניסה</string>
+    <string name="common_signin_button_text_long">‏היכנס באמצעות Google</string>
+    <string name="contents_contact">פרטי איש קשר</string>
+    <string name="contents_email">כתובת דואר אלקטרוני</string>
+    <string name="contents_location">קואורדינטות גאוגרפיות</string>
+    <string name="contents_phone">מספר טלפון</string>
+    <string name="contents_sms">כתובת SMS</string>
+    <string name="contents_text">טקסט רגיל</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"הקישור הועתק ללוח"</string>
+    <string name="error_icon_content_description">שגיאה</string>
+    <string name="exposed_dropdown_menu_content_description">הצגת התפריט הנפתח</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"העתקת הקישור"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"פתיחה בדפדפן"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"לשיתוף הקישור"</string>
+    <string name="history_clear_one_history_text">נקה</string>
+    <string name="history_clear_text">נקה היסטוריה</string>
+    <string name="history_email_title">היסטוריית סורק הברקודים</string>
+    <string name="history_empty">ריק</string>
+    <string name="history_empty_detail">ברקודים לא נרשמו</string>
+    <string name="history_send">שלח היסטוריה</string>
+    <string name="history_title">היסטוריה</string>
+    <string name="icon_content_description">סמל לתיבת דו-שיח</string>
+    <string name="item_view_role_description">מקש Tab</string>
+    <string name="material_clock_toggle_content_description">יש לבחור ב-AM או ב-PM</string>
+    <string name="material_hour_selection">בחר שעה</string>
+    <string name="material_hour_suffix">השעה %1$s</string>
+    <string name="material_minute_selection">בחר דקות</string>
+    <string name="material_minute_suffix">%1$s דקות</string>
+    <string name="material_timepicker_am">לפנה\"צ</string>
+    <string name="material_timepicker_clock_mode_description">העבר למצב שעון לצורך הזנת השעה</string>
+    <string name="material_timepicker_hour">שעה</string>
+    <string name="material_timepicker_minute">דקה</string>
+    <string name="material_timepicker_pm">אחה\"צ</string>
+    <string name="material_timepicker_select_time">בחר שעה</string>
+    <string name="material_timepicker_text_input_mode_description">העבר למצב קלט טקסט לצורך הזנת השעה</string>
+    <string name="menu_encode_mecard">השתמש MECARD</string>
+    <string name="menu_encode_vcard">השתמש vCard</string>
+    <string name="menu_help">עזרה</string>
+    <string name="menu_history">היסטוריה</string>
+    <string name="menu_settings">הגדרות</string>
+    <string name="menu_share">שתף</string>
+    <string name="msg_bulk_mode_scanned">מצב קבוצה: ברקוד נסרק ונשמר</string>
+    <string name="msg_camera_framework_bug">סליחה, מצלמת האנדרואיד נתקלה בבעיה. ייתכן שיהיה עליך להפעיל מחדש את המכשיר.</string>
+    <string name="msg_default_format">פורמט</string>
+    <string name="msg_default_meta">מטה-נתונים</string>
+    <string name="msg_default_mms_subject">היי</string>
+    <string name="msg_default_status">הצב ברקוד בתוך המלבן כדי לסרוק אותו.</string>
+    <string name="msg_default_time">זמן</string>
+    <string name="msg_default_type">סוג</string>
+    <string name="msg_encode_contents_failed">לא היתה אפשרות לקודד ברקוד מהנתונים שסופקו.</string>
+    <string name="msg_google_books">Google Books</string>
+    <string name="msg_google_product">Google Product Search</string>
+    <string name="msg_google_shopper_missing">Google Shopper לא מותקן.</string>
+    <string name="msg_install_google_shopper">Google Shopper משלבת סריקת ברקודים עם מחירים מקוונים, חוות דעת ועוד בלי לפתוח את הדפדפן. האם ברצונך לנסות זאת?</string>
+    <string name="msg_intent_failed">סליחה, לא ניתן להפעיל את היישום המבוקש. ייתכן שתוכן הברקוד לא תקין.</string>
+    <string name="msg_redirect">נתב מחדש</string>
+    <string name="msg_sbc_book_not_searchable">סליחה, ספר זה אינו ניתן לחיפוש.</string>
+    <string name="msg_sbc_failed">סליחה, החיפוש נתקל בבעיה.</string>
+    <string name="msg_sbc_no_page_returned">לא הוחזר דף</string>
+    <string name="msg_sbc_page">דף</string>
+    <string name="msg_sbc_results">תוצאות</string>
+    <string name="msg_sbc_searching_book">מחפש ספר\u2026</string>
+    <string name="msg_sbc_snippet_unavailable">גזיר לא זמין</string>
+    <string name="msg_sbc_unknown_page">דף לא ידוע</string>
+    <string name="msg_share_explanation">באפשרותך לשתף נתונים על-ידי הצגת ברקוד על המסך וסריקתו עם טלפון אחר.</string>
+    <string name="msg_share_subject_line">הנה התוכן של הברקוד שסרקתי</string>
+    <string name="msg_share_text">או הקלד טקסט כלשהו</string>
+    <string name="msg_sure">האם אתה בטוח?</string>
+    <string name="msg_unmount_usb">סליחה, כרטיס הזכרון אינו נגיש.</string>
+    <string name="mtrl_badge_numberless_content_description">התראה חדשה</string>
+    <string name="mtrl_chip_close_icon_content_description">הסרה של %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description">יותר מ-%1$d התראות חדשות</string>
+    <string name="mtrl_picker_a11y_next_month">מעבר לחודש הבא</string>
+    <string name="mtrl_picker_a11y_prev_month">מעבר לחודש הקודם</string>
+    <string name="mtrl_picker_announce_current_selection">הבחירה הנוכחית: %1$s</string>
+    <string name="mtrl_picker_confirm">@android:string/ok</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">יש לבחור תאריך</string>
+    <string name="mtrl_picker_date_header_unselected">התאריך הנבחר</string>
+    <string name="mtrl_picker_day_of_week_column_header">עמודה של ימים: %1$s</string>
+    <string name="mtrl_picker_invalid_format">פורמט לא חוקי.</string>
+    <string name="mtrl_picker_invalid_format_example">דוגמה: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">יש להשתמש בפורמט: %1$s</string>
+    <string name="mtrl_picker_invalid_range">טווח לא חוקי.</string>
+    <string name="mtrl_picker_navigate_to_year_description">ניווט לשנת %1$s</string>
+    <string name="mtrl_picker_out_of_range">מחוץ לטווח: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">תאריך התחלה – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – תאריך סיום</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">יש לבחור טווח</string>
+    <string name="mtrl_picker_range_header_unselected">תאריך התחלה - תאריך סיום</string>
+    <string name="mtrl_picker_save">שמירה</string>
+    <string name="mtrl_picker_text_input_date_hint">תאריך</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">תאריך סיום</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">תאריך התחלה</string>
+    <string name="mtrl_picker_text_input_day_abbr">י</string>
+    <string name="mtrl_picker_text_input_month_abbr">ח</string>
+    <string name="mtrl_picker_text_input_year_abbr">ש</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">החלפה לשיטת קלט של יומן</string>
+    <string name="mtrl_picker_toggle_to_day_selection">יש להקיש כדי להחליף לבחירת יום</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">החלפה לשיטת קלט של טקסט</string>
+    <string name="mtrl_picker_toggle_to_year_selection">יש להקיש כדי להחליף לבחירת שנה</string>
+    <string name="password_toggle_content_description">הצגת סיסמה</string>
+    <string name="preferences_actions_title">כאשר ברקוד נמצא\u2026</string>
+    <string name="preferences_auto_focus_title">להשתמש במיקוד האוטומטי</string>
+    <string name="preferences_bulk_mode_summary">סורק ושומר ברקודים באופן רציף</string>
+    <string name="preferences_bulk_mode_title">מצב סריקה מרובה</string>
+    <string name="preferences_copy_to_clipboard_title">העתק ללוח</string>
+    <string formatted="false" name="preferences_custom_product_search_summary">החלפות: s% = התוכן, f% = הפורמט, t% = סוג</string>
+    <string name="preferences_custom_product_search_title">כתובת לחיפוש מותאם אישית</string>
+    <string name="preferences_decode_1D_title">ברקודים חד מימדיים</string>
+    <string name="preferences_decode_Data_Matrix_title">מטריצת נתונים</string>
+    <string name="preferences_decode_QR_title">קודי QR</string>
+    <string name="preferences_device_bug_workarounds_title">באג במכשיר דרכים לעקיפת הבעיה</string>
+    <string name="preferences_disable_continuous_focus_summary">השתמש רק במצב רגיל פוקוס</string>
+    <string name="preferences_disable_continuous_focus_title">המיקוד לא רציפה</string>
+    <string name="preferences_disable_exposure_title">אין חשיפה</string>
+    <string name="preferences_front_light_auto">אוטומטי</string>
+    <string name="preferences_front_light_off">לא פעיל</string>
+    <string name="preferences_front_light_on">פעיל</string>
+    <string name="preferences_front_light_summary">משפר את הסריקה בתאורה נמוכה בטלפונים מסוימים, אך עשוי לגרום לסנוור. לא עובד בכל הטלפונים.</string>
+    <string name="preferences_front_light_title">השתמש באור הקדמי</string>
+    <string name="preferences_general_title">הגדרות כלליות</string>
+    <string name="preferences_invert_scan_summary">סרוק ברקודים לבן על רקע שחור. לא זמין על התקנים מסוימים.</string>
+    <string name="preferences_invert_scan_title">היפוך לסרוק</string>
+    <string name="preferences_name">הגדרות</string>
+    <string name="preferences_play_beep_title">צפצוף</string>
+    <string name="preferences_remember_duplicates_summary">אחסן מספר סריקות של אותו הברקוד בהיסטוריה</string>
+    <string name="preferences_remember_duplicates_title">זכור כפילויות</string>
+    <string name="preferences_result_title">הגדרות תוצאה</string>
+    <string name="preferences_scanning_title">בעת סריקת ברקודים, קודד\u2026</string>
+    <string name="preferences_search_country">חיפוש הארץ</string>
+    <string name="preferences_supplemental_summary">נסה למצא מידע נוסף על תוכן הברקוד</string>
+    <string name="preferences_supplemental_title">מצא מידע נוסף</string>
+    <string name="preferences_try_bsplus">נסה סורק ברקודים+</string>
+    <string name="preferences_try_bsplus_summary">משופר עם תכונות וממשק חדשים</string>
+    <string name="preferences_vibrate_title">רטט</string>
+    <string name="pull_to_refresh_pull_label">משוך לרענון…</string>
+    <string name="pull_to_refresh_refreshing_label">טוען…</string>
+    <string name="pull_to_refresh_release_label">שחרר לרענון…</string>
+    <string name="result_address_book">נמצא מידע של איש קשר</string>
+    <string name="result_calendar">נמצא אירוע</string>
+    <string name="result_email_address">נמצאה כתובת דוא"ל</string>
+    <string name="result_geo">נמצאו קואורדינטות גיאוגרפיות</string>
+    <string name="result_isbn">נמצא ספר</string>
+    <string name="result_product">נמצא מוצר</string>
+    <string name="result_sms">נמצאה כתובת הודעה</string>
+    <string name="result_tel">נמצא מספר טלפון</string>
+    <string name="result_text">נמצא טקסט</string>
+    <string name="result_uri">נמצאה כתובת אינטרנט</string>
+    <string name="result_wifi">נמצאו הגדרות רשת אל חוטית</string>
+    <string name="sbc_name">Google חיפוש ספרים</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"חיפוש"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="wifi_changing_network">בקשת חיבור לרשת \u2026</string>
+    <string name="wifi_ssid_label">שם רשת</string>
+    <string name="wifi_type_label">סוג</string>
+</resources>

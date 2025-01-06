@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+ <RelativeLayout
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"  >
+
+    <EditText
+        android:id="@+id/location_entry_location_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_toStartOf="@+id/l2_btn"
+        android:hint="Location"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textCapCharacters|textCapWords"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="@dimen/normal_font_size" />
+
+     <Button
+         android:id="@+id/l2_btn"
+         style="@style/ButtonText"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:layout_marginStart="2dp"
+         android:layout_marginTop="2dp"
+         android:layout_marginEnd="2dp"
+         android:layout_marginBottom="2dp"
+         android:background="@drawable/btn_yellow"
+         android:minWidth="50dp"
+         android:text="+"
+         android:textColor="#FFF" />
+
+ </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6" >
+			<ScrollView 
+			    android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                >
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*" >
+
+                <TableRow>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_span="3" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Block"
+                            android:visibility="gone"
+                            android:textColor="#000"
+                            android:textSize="18dp" />
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="3" >
+
+                        <EditText
+                            android:id="@+id/location_entry_bloc_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Block"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="@dimen/normal_font_size" />
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press1"
+                        android:text="1" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press2"
+                        android:text="2" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press3"
+                        android:text="3" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press4"
+                        android:text="4" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press5"
+                        android:text="5" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press6"
+                        android:text="6" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press7"
+                        android:text="7" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press8"
+                        android:text="8" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press9"
+                        android:text="9" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="pressBack"
+                        android:text="BK" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="press0"
+                        android:text="0" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="pressC"
+                        android:text="C" />
+                </TableRow>
+                
+                <TableRow>
+					<CheckBox
+					    android:id="@+id/keyboard_chk"
+					    android:layout_width="wrap_content"
+					    android:layout_height="36dp"
+					    android:layout_marginRight="5dp"
+					    android:layout_alignParentEnd="true"
+					    android:text="Keyboard Popup"
+					    android:textColor="#fff"
+					    android:textSize="@dimen/xxxxsmall_font_size" />
+				</TableRow>
+                
+                 <TableRow>
+					<CheckBox
+					    android:id="@+id/skipEdit_chk"
+					    android:layout_width="wrap_content"
+					    android:layout_height="36dp"
+					    android:layout_marginRight="5dp"
+					    android:layout_alignParentEnd="true"
+					    android:text="Skip Location Edit"
+					    android:textColor="#fff"
+					    android:textSize="@dimen/xxxxsmall_font_size" />
+				</TableRow>
+                <TableRow>
+					<CheckBox
+					    android:id="@+id/clearSticky_chk"
+					    android:layout_width="wrap_content"
+					    android:layout_height="36dp"
+					    android:layout_marginRight="5dp"
+					    android:layout_alignParentEnd="true"
+					    android:text="Clear Location"
+					    android:textColor="#fff"
+					    android:textSize="@dimen/xxxxsmall_font_size" />
+				</TableRow>
+            </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".2"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Prefix"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/location_entry_prefix"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </ListView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Dir"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/location_entry_directions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".2"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Suffix"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/location_entry_suffix"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer" >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_yellow"
+            android:onClick="cancelAction"
+            android:text="Cancel" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue"
+            android:onClick="pressClear"
+            android:text="Clear" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue"
+            android:onClick="acceptAction"
+            android:text="Accept" />
+    </LinearLayout>
+
+</LinearLayout>

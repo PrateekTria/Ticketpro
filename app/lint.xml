@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="DefaultLocale" severity="ignore">
+        <ignore path="src/com/ticket/pro/screen/WriteTicketScreen.java" />
+    </issue>
+    <issue id="ExtraTranslation" severity="warning" />
+    <issue id="MissingTranslation" severity="warning" />
+    <issue id="SetJavaScriptEnabled" severity="ignore">
+        <ignore path="src/com/ticket/pro/screen/PrintPreviewScreen.java" />
+        <ignore path="src/com/ticket/pro/screen/WriteTicketScreen.java" />
+    </issue>
+</lint>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_listview"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_listview"
+        android:minHeight="150dp"
+
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:padding="7dp"
+            android:layout_width="0dp"
+            android:background="@drawable/border"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/photo_row_view_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+
+                android:src="@drawable/preview" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <CheckBox
+                    android:id="@+id/photo_row_print_chk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Print"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/xxxxsmall_font_size"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/photo_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/photo_row_print_chk"
+                    android:layout_alignParentStart="true"
+                    android:text="Make Sticky"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/xxxxsmall_font_size"
+                    android:visibility="visible" />
+                <Spinner
+                    android:id="@+id/photo_row_citation_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/photo_row_date_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Date/Time"
+                android:textColor="#fff"
+
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <TextView
+                android:id="@+id/photo_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="VLPR"
+                android:visibility="gone"
+                android:textColor="#fff"
+
+                android:textSize="@dimen/xxxsmall_font_size" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/photo_row_retake_btn"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/btn_yellow"
+                    android:minWidth="50dp"
+                    android:text="Retake"
+                    android:textColor="#FFF" />
+
+                <Button
+                    android:id="@+id/photo_row_delete_btn"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/btn_yellow"
+                    android:minWidth="50dp"
+                    android:text="Delete"
+                    android:textColor="#FFF" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dp"
+        android:background="@color/white"
+        />
+</LinearLayout>

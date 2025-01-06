@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/lookup_menu_1" android:icon="@drawable/icon"
+		android:title="Select Make Vehicle" />
+
+	<item android:id="@+id/lookup_menu_2" android:icon="@drawable/icon"
+		android:title="Select Expiry Date" />
+</menu>

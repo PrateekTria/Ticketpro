@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.lpr.camera.AutoFocusManager$2","classAnnotations":[],"interfaces":["java.lang.Runnable"],"superClasses":["java.util.TimerTask","java.lang.Object"]}

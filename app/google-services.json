@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1058104561041",
+    "firebase_url": "https://ticketpro-467f8.firebaseio.com",
+    "project_id": "ticketpro-467f8",
+    "storage_bucket": "ticketpro-467f8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058104561041:android:557d4cf5c6a36562",
+        "android_client_info": {
+          "package_name": "com.ticketpro.parking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058104561041-251upbas4gog284c00jgpempldcom0av.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ticketpro.parking",
+            "certificate_hash": "aac746a559e02b111f8af9e618d1a8483094e4ef"
+          }
+        },
+        {
+          "client_id": "1058104561041-g06kti2vbu1mqlovlki3ifhgbiskj4m1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ticketpro.parking",
+            "certificate_hash": "5a10ab79e19f7444aee774ca5b5f222f8af77eb0"
+          }
+        },
+        {
+          "client_id": "1058104561041-gqfmdtbt8ivioovqt72g31gujsg776me.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbIvnI30yq2Y6AlydiVYX9t6y6Hvs3RJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058104561041-gqfmdtbt8ivioovqt72g31gujsg776me.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

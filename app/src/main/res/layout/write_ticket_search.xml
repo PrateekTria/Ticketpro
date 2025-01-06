@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/common_search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@+id/keyboard_chk"
+            android:hint="Search"
+            android:inputType="textCapCharacters|textCapWords"
+            android:singleLine="true"
+            android:textSize="@dimen/normal_font_size" />
+
+        <CheckBox
+            android:id="@+id/keyboard_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:text="KB"
+            android:textColor="#fff"
+            android:textSize="@dimen/xxxxsmall_font_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_new"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/search_extra_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/btn_blue"
+            android:text="Add New"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/savedLocation"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_yellow"
+            android:text="Clear Saved Location"
+            android:textColor="#fff"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/common_search_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

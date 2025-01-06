@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_banner" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:text="Printer Settings"
+            android:textColor="#FFF"
+            android:textSize="@dimen/xxxsmall_font_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/voice_memo_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Printer Type"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <Spinner
+            android:id="@+id/communication_method_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Print File"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <Spinner
+            android:id="@+id/file_to_print_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:background="@drawable/btn_yellow"
+            android:onClick="BluetootPrinter"
+            android:text="Bluetooth Printers"
+            android:textColor="#ffffff" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:background="@drawable/btn_yellow"
+            android:onClick="TCPIPPrinter"
+            android:text="TCP/IP Printers"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/printer_settings_printer_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Selected Printer : NA"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/normal_font_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/debug_mode_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Debug Mode"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <CheckBox
+                android:id="@+id/show_printdialog_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Dialog"
+                android:textSize="@dimen/xxxsmall_font_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/printing_status_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:padding="2dp"
+            android:text="Status"
+            android:textColor="#ffff00"
+            android:textSize="@dimen/xxxxsmall_font_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_footer"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/print_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_yellow"
+            android:text="Test Print"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/save_setting_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_blue"
+            android:text="Save"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <!-- Bottom bar Ends here -->
+
+</RelativeLayout>

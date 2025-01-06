@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.util.MyLocationReceiver","classAnnotations":[],"interfaces":[],"superClasses":["android.content.BroadcastReceiver","java.lang.Object"]}

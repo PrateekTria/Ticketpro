@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:background="@drawable/background_screen">
+
+	<!-- Header starts--> 
+   	<include layout="@layout/header"/>
+	<!-- Header ends-->
+
+
+	<!-- Top bar Start here -->
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/background_banner"
+	    android:orientation="horizontal" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentStart="true"
+			android:padding="5dp"
+			android:text="Pictures"
+			android:textColor="#ffffff"
+			android:textSize="@dimen/xxxsmall_font_size" />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:orientation="horizontal">
+
+			<CheckBox
+				android:visibility="gone"
+				android:id="@+id/chk_sticky_photo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:text=" SP  " />
+
+			<TextView
+				android:id="@+id/photos_citation_number_textview"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="6dp"
+				android:paddingBottom="6dp"
+				android:text="#"
+				android:textColor="#ffffff"
+				android:textSize="@dimen/xxxsmall_font_size" />
+
+
+			<ImageView
+				android:id="@+id/voice_search_icon"
+				android:layout_width="@dimen/voice_search_icon_size"
+				android:layout_height="@dimen/voice_search_icon_size"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+				android:clickable="true"
+				android:onClick="enableVoiceMode"
+				android:src="@drawable/voice_search_disabled"
+				android:visibility="gone" />
+
+		</LinearLayout>	
+
+	</RelativeLayout>
+	<!-- Top bar Ends here-->
+
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1" >
+
+	<LinearLayout android:id="@+id/photos_list" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+	</LinearLayout>
+	</ScrollView>
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_footer"
+	    android:padding="5dp" >
+
+	<Button
+	    style="@style/ButtonText"
+	    android:layout_width="wrap_content"
+	    android:layout_height="@dimen/button_height"
+	    android:layout_alignParentStart="true"
+	    android:background="@drawable/btn_yellow"
+	    android:onClick="backAction"
+	    android:text="Back"
+	    android:textColor="#FFF" />
+
+		<Button
+			android:id="@+id/takeNewPicture"
+			style="@style/ButtonText"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/button_height"
+			android:layout_alignParentEnd="true"
+			android:background="@drawable/btn_blue"
+			android:onClick="takeNewPicture"
+			android:text="Take New Picture"
+			android:textColor="#FFF" />
+	  
+	</RelativeLayout>
+</LinearLayout>

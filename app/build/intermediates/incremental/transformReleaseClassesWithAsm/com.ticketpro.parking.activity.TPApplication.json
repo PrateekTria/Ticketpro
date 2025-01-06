@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.activity.TPApplication","classAnnotations":[],"interfaces":["android.content.ComponentCallbacks","android.content.ComponentCallbacks2"],"superClasses":["androidx.multidex.MultiDexApplication","android.app.Application","android.content.ContextWrapper","android.content.Context","java.lang.Object"]}

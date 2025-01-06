@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+
+	<!-- Header starts--> 
+   	<include layout="@layout/header"/>
+	<!-- Header ends-->
+
+
+	<!-- Top bar Start here -->
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_banner"
+	    android:orientation="horizontal" >
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:layout_centerVertical="true"
+		    android:padding="5dp"
+		    android:text="Chalked By Location Details"
+		    android:textColor="#ffffff"
+		    android:textSize="@dimen/xxxsmall_font_size" />
+		
+		<ImageView
+            android:id="@+id/voice_search_icon"
+            android:layout_width="@dimen/voice_search_icon_size"
+            android:layout_height="@dimen/voice_search_icon_size"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:visibility="gone"
+            android:onClick="enableVoiceMode"
+            android:src="@drawable/voice_search_disabled" />
+
+	</RelativeLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp" 
+		android:layout_weight="1"
+		android:orientation="vertical">
+	
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_marginTop="5dp"
+		    android:orientation="horizontal" >
+			
+			<TextView
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentStart="true"
+			    android:layout_centerVertical="true"
+			    android:layout_gravity="center_vertical"
+			    android:layout_weight="2.5"
+			    android:paddingLeft="5dp"
+			    android:paddingRight="0dp"
+			    android:paddingTop="5dp"
+			    android:text="Duration"
+			    android:textColor="#000"
+			    android:textSize="@dimen/xxxxsmall_font_size" />
+			
+			<Spinner
+			    android:id="@+id/chalked_duration_spinner"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:layout_marginTop="5dp"
+			    android:layout_weight="1"
+			    android:clickable="false"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:textSize="12dp" />
+		
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_marginTop="5dp"
+		    android:orientation="horizontal" >
+			
+			<TextView
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentStart="true"
+			    android:layout_centerVertical="true"
+			    android:layout_weight="2.5"
+			    android:paddingLeft="5dp"
+			    android:paddingRight="0dp"
+			    android:paddingTop="5dp"
+			    android:text="Location"
+			    android:textColor="#000"
+			    android:textSize="@dimen/xxxxsmall_font_size" />
+			
+			<EditText
+			    android:id="@+id/chalked_location_textview"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:layout_weight="1"
+			    android:background="@drawable/text_field_bkg"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:hint="NA"
+			    android:inputType="textCapCharacters|textCapWords"
+			    android:paddingBottom="5dp"
+			    android:paddingLeft="10dp"
+			    android:paddingRight="10dp"
+			    android:paddingTop="5dp"
+			    android:singleLine="true"
+			    android:textSize="@dimen/normal_font_size" >
+
+			</EditText>
+					
+		</LinearLayout>
+		
+		
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_marginTop="5dp"
+		    android:orientation="horizontal" >
+			
+			<TextView
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentStart="true"
+			    android:layout_centerVertical="true"
+			    android:layout_weight="2.5"
+			    android:paddingLeft="5dp"
+			    android:paddingRight="0dp"
+			    android:paddingTop="5dp"
+			    android:text="Time"
+			    android:textColor="#000"
+			    android:textSize="@dimen/xxxxsmall_font_size" />
+			
+			<EditText
+			    android:id="@+id/chalked_time_textview"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:layout_weight="1"
+			    android:background="@drawable/text_field_bkg"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:hint="NA"
+			    android:inputType="textCapCharacters|textCapWords"
+			    android:paddingBottom="5dp"
+			    android:paddingLeft="10dp"
+			    android:paddingRight="10dp"
+			    android:paddingTop="5dp"
+			    android:singleLine="true"
+			    android:textSize="@dimen/normal_font_size" >
+
+			</EditText>
+					
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_marginTop="5dp"
+		    android:orientation="horizontal" >
+			
+			<TextView
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentStart="true"
+			    android:layout_centerVertical="true"
+			    android:layout_weight="2.5"
+			    android:paddingLeft="5dp"
+			    android:paddingRight="0dp"
+			    android:paddingTop="5dp"
+			    android:text="Marked By"
+			    android:textColor="#000"
+			    android:textSize="@dimen/xxxxsmall_font_size" />
+			
+			<EditText
+			    android:id="@+id/location_chalk_officer"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:layout_weight="1"
+			    android:background="@drawable/text_field_bkg"
+			    android:focusable="false"
+			    android:focusableInTouchMode="false"
+			    android:hint="NA"
+			    android:inputType="textCapCharacters|textCapWords"
+			    android:paddingBottom="5dp"
+			    android:paddingLeft="10dp"
+			    android:paddingRight="10dp"
+			    android:paddingTop="5dp"
+			    android:singleLine="true"
+			    android:textSize="@dimen/normal_font_size" /> 
+					
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_marginTop="5dp"
+		    android:orientation="horizontal">
+			
+		    <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentStart="true"
+		        android:layout_centerVertical="true"
+		        android:layout_weight="2.5"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="0dp"
+		        android:paddingTop="10dp"
+		        android:text="Tire"
+		        android:textColor="#000"
+		        android:textSize="@dimen/xxxxsmall_font_size" />
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:orientation="vertical" >
+		    	
+			    <Spinner
+			        android:id="@+id/chalked_tire_spinner"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:clickable="false"
+			        android:focusable="false"
+			        android:focusableInTouchMode="false"
+			        android:textSize="12dp" />
+			
+				<RelativeLayout
+				    android:id="@+id/location_chalk_details_circle_panel"
+				    android:layout_width="150dp"
+                	android:layout_height="150dp"
+                	android:background="@drawable/tire2"
+				    android:layout_marginTop="5dp">
+				    
+				 <ImageView
+				     android:id="@+id/chalk_vehicle_c_img"
+				     android:layout_width="40dp"
+				     android:layout_height="40dp"
+				     android:minHeight="40dp"
+                     android:minWidth="40dp"
+                     android:src="@drawable/c_marker"/>
+	
+				 <ImageView
+				     android:id="@+id/chalk_vehicle_s_img"
+				     android:layout_width="40dp"
+				     android:layout_height="40dp"
+				     android:minHeight="40dp"
+                     android:minWidth="40dp"
+                     android:layout_marginLeft="50dp"
+				     android:src="@drawable/s_marker"/>
+			 
+				</RelativeLayout>
+			</LinearLayout>
+			
+		</LinearLayout>
+	</LinearLayout>
+		
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_footer"
+	    android:paddingBottom="5dp"
+	    android:paddingTop="5dp" >
+	
+			<Button
+			    style="@style/ButtonText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="@dimen/small_button_height"
+			    android:layout_alignParentStart="true"
+			    android:background="@drawable/btn_yellow"
+			    android:onClick="backAction"
+			    android:text="Back"
+			    android:textColor="#FFF" />
+			
+			
+			<Button
+			    style="@style/ButtonText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="@dimen/small_button_height"
+			    android:layout_alignParentEnd="true"
+			    android:background="@drawable/btn_blue"
+			    android:onClick="removeAction"
+			    android:text="Remove"
+			    android:textColor="#FFF" />
+	
+			<Button
+			    android:id="@+id/chalk_details_ticket_btn"
+			    style="@style/ButtonText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="@dimen/small_button_height"
+			    android:layout_alignParentEnd="false"
+			    android:layout_centerHorizontal="true"
+			    android:background="@drawable/btn_blue"
+			    android:onClick="writeTicketAction"
+			    android:text="Write Ticket"
+			    android:textColor="#FFF" />
+			
+		</RelativeLayout>
+	
+</LinearLayout>

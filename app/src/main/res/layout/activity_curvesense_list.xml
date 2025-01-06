@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_screen"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_banner" >
+
+                <TextView
+                    android:id="@+id/curvesense_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:padding="5dp"
+                    android:text="CurveSense"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/xxxsmall_font_size" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <!-- Table Header -->
+                    <TableRow
+                        android:background="@drawable/background_listview"
+                        >
+
+                        <TextView
+                            android:id="@+id/header_spaceName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Space"
+                            android:textSize="16sp"
+                            android:layout_weight="1.2"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="#FFF"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/header_plateNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Plate"
+                            android:textSize="16sp"
+                            android:layout_weight="0.8"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="5dp"
+                            android:textColor="#FFF"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/header_vioType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Viol"
+                            android:textSize="16sp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="1dp"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:layout_weight="0.5"
+                            android:textColor="#FFF"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/header_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:textSize="16sp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:layout_weight="1.5"
+                            android:textColor="#FFF"
+                            android:clickable="true" />
+
+
+                    </TableRow>
+
+                    <!-- RecyclerView for Data Rows -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_footer"
+                android:padding="3dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        style="@style/ButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height"
+                        android:background="@drawable/btn_yellow"
+                        android:onClick="backAction"
+                        android:text="Back"
+                        android:textColor="#ffffff" />
+
+                    <EditText
+                        android:id="@+id/searchText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/text_field_bkg"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:paddingRight="10dp">
+
+                    </EditText>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+

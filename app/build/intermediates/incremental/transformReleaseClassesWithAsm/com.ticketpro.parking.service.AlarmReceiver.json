@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.service.AlarmReceiver","classAnnotations":[],"interfaces":[],"superClasses":["android.content.BroadcastReceiver","java.lang.Object"]}

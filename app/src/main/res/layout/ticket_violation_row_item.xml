@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/group_header_row"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/violation_row_code_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:maxLength="300"
+            android:text="Violation"
+            android:textColor="#FFF"
+            android:textSize="@dimen/xxsmall_font_size" />
+
+        <TextView
+            android:id="@+id/violation_row_title_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="DESC"
+            android:maxLength="300"
+            android:textColor="#FFF"
+            android:textSize="@dimen/xxxxsmall_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true" >
+
+        <ImageView
+            android:id="@+id/violation_row_addcomment_imgview"
+            android:layout_width="@dimen/icon_size_width"
+            android:layout_height="@dimen/icon_size_height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/comment_add" />
+
+        <ImageView
+            android:id="@+id/violation_row_trash_imgview"
+            android:layout_width="@dimen/icon_size_width"
+            android:layout_height="@dimen/icon_size_height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/trash" />
+    </LinearLayout>
+
+</LinearLayout>

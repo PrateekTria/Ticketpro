@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/main_menu_1" android:icon="@drawable/actions"
+		android:title="Actions" />
+
+	<item android:id="@+id/main_menu_2" android:icon="@drawable/camera"
+		android:title="Photos" />
+
+	<item android:id="@+id/main_menu_3" android:icon="@drawable/special_icon"
+		android:title="Special" />
+
+	<item android:id="@+id/main_menu_4" android:icon="@drawable/voice_icon"
+		android:title="Voice" />
+
+	<item android:id="@+id/main_menu_5" android:icon="@drawable/settings_icon"
+		android:title="Admin" />
+
+</menu>

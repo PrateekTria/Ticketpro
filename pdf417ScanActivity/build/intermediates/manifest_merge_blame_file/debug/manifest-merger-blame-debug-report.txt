@@ -1,0 +1,70 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="mobi.pdf417"
+4    android:installLocation="preferExternal"
+5    android:versionCode="114"
+6    android:versionName="3.5.1" >
+7
+8    <uses-sdk android:minSdkVersion="7" />
+8-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:6:5-46
+9
+10    <supports-screens
+10-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:4:5-161
+11        android:anyDensity="true"
+11-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:4:23-48
+12        android:largeScreens="true"
+12-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:4:49-76
+13        android:normalScreens="true"
+13-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:4:77-105
+14        android:resizeable="true"
+14-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:4:106-131
+15        android:smallScreens="true" />
+15-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:4:132-159
+16
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:8:5-64
+17-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:8:22-62
+18    <uses-permission android:name="android.permission.FLASHLIGHT" />
+18-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:9:5-68
+18-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:9:22-66
+19
+20    <uses-feature android:name="android.hardware.camera" />
+20-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:11:5-59
+20-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:11:19-57
+21    <uses-feature
+21-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:12:5-94
+22        android:name="android.hardware.camera.autofocus"
+22-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:12:19-67
+23        android:required="false" />
+23-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:12:68-92
+24    <uses-feature
+24-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:13:5-90
+25        android:name="android.hardware.camera.flash"
+25-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:13:19-63
+26        android:required="false" />
+26-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:13:64-88
+27
+28    <application>
+28-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:15:5-25:19
+29        <activity
+29-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:16:9-24:20
+30            android:name="mobi.pdf417.activity.Pdf417ScanActivity"
+30-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:16:19-73
+31            android:exported="false"
+31-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:17:13-37
+32            android:screenOrientation="portrait" >
+32-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:18:13-49
+33            <intent-filter>
+33-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:19:13-23:29
+34                <action android:name="mobi.pdf417.activity.Pdf417ScanActivity" />
+34-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:20:17-81
+34-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:20:25-79
+35
+36                <category android:name="android.intent.category.DEFAULT" />
+36-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:22:17-75
+36-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/src/main/AndroidManifest.xml:22:27-73
+37            </intent-filter>
+38        </activity>
+39    </application>
+40
+41</manifest>

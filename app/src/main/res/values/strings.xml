@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="pictureIndex" type="id" />
+    <item name="pictureId" type="id" />
+    <item name="ViolationId" type="id" />
+    <item name="CommentId" type="id" />
+    <item name="TicketId" type="id" />
+    <item name="ChalkId" type="id" />
+    <item name="CitationNumber" type="id" />
+    <item name="ItemId" type="id" />
+    <item name="TicketIndex" type="id" />
+    <item name="ListIndex" type="id" />
+    <item name="NotificationId" type="id" />
+
+    <string name="app_name">ticketPRO Parking</string>
+    <string name="txt_username">Enter Username</string>
+    <string name="txt_password">Enter Password</string>
+    <string name="txt_password_for">Enter Password For Username1</string>
+    <string name="txt_welcome">Welcome To TicketPRO!</string>
+    <string name="txt_back">Back</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_enter_usr_pass">Enter Username and Password</string>
+    <string name="txt_select_user">Select Username To Login!</string>
+    <string name="desc_header">TicketPRO Header</string>
+    <string name="write_ticket">Write Ticket</string>
+    <string name="enter_plate_number">Enter Plate Number</string>
+    <string name="enter_vin_number">Enter VIN Number</string>
+    <string name="tm">TM</string>
+    <string name="gps_location">GPS Location</string>
+
+    <string name="enter_location">Enter Location</string>
+    <string name="enter_meter_no">Enter Meter Number</string>
+    <string name="violations">Violations</string>
+    <string name="comments">Comments</string>
+    <string name="drive_away">Drive Away</string>
+    <string name="warn">Warn</string>
+    <string name="print">Print</string>
+    <string name="cancel">Cancel</string>
+    <string name="tcpip_printers">TCP/IP Printers</string>
+    <string name="ip_address">IP Address</string>
+    <string name="port">Port</string>
+    <string name="save">Save</string>
+
+    <string name="zone">Zone</string>
+
+    <string name="zones">Zones</string>
+
+    <string name="users">Users</string>
+
+    <string name="ok">OK</string>
+
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Ocr dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Ocr Detector Sample</string>
+    <string name="ocr_header">Click &quot;Detect Text&quot; to detect text</string>
+    <string name="read_text">Detect Text</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="ocr_success">Text read successfully</string>
+    <string name="ocr_failure">No text captured</string>
+    <string name="ocr_error">"Error reading text: %1$s"</string>
+
+    <string name="title_activity_digital_paytech_zones">DigitalPaytechZonesActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_digital_paytech_zone_info">DigitalPaytechZoneInfoActivity</string>
+    <string name="new_mapKey">AIzaSyAnN-jCYbjfbTihaDG4237rhHkas6VKcxo</string>
+    <string name="title_activity_plate_lookup_result_advance">PlateLookupResultAdvance</string>
+    <string name="title_activity_add_mutli_comment">AddMutliCommentActivity</string>
+    <string name="title_activity_add_comment_auto">AddCommentAutoActivity</string>
+    <string name="ticketproapp_gmail_map_api_key">AIzaSyDudB5s6PceuXtP3dkMykntH1zoqjEnNxY</string>
+
+    <string name="scan">Scan</string>
+    <string name="takePhoto">Take Photo</string>
+    <string name="accept">Accept</string>
+    <string name="sortByHour">Filter By Hour</string>
+    <string name="sortByMinute">Filter By Minute</string>
+    <string name="back">Back</string>
+    <string name="send">Send</string>
+    <string name="clear">Clear</string>
+    <string name="server_error">This device is experiencing communication issues at this time that may impact Plate/permit/meter lookups, LPR, Mapping and GPS. This could be due to a poor cell coverage in this area. To avoid delays, these features will be temporarily unavailable. They will be restored as the signal improves.</string>
+    <string name="select_spacegroup">Select SpaceGroup</string>
+    <string name="select_subArea">Select SubArea</string>
+    <string name="select_spaceGroup_subArea">Select SpaceGroup/SubArea</string>
+    <string name="_ok">Ok</string>
+    <string name="spinner_title_activity">Select Activity</string>
+    <string name="spinner_title_disposition">Select Disposition</string>
+    <string name="btn_send">Send</string>
+    <string name="enter_expiry_time_to_sort">Enter expiry time to sort</string>
+    <string name="special_map_activity">Mapview</string>
+    <string name="txt_plr">Your request for LPR service is not responding right now. Please try later.</string>
+    <string name="txt_paybyphone">Your request for PayBuPhone service is not responding right now. Please try later.</string>
+    <string name="txt_parkmobile">Your request for ParkMobile service is not responding right now. Please try later.</string>
+    <string name="txt_cale">Your request for Cale service is not responding right now. Please try later.</string>
+    <string name="txt_parkeon">Your request for Parkeon service is not responding right now. Please try later.</string>
+    <string name="txt_ips">Your request for IPS service is not responding right now. Please try later.</string>
+    <string name="txt_Passport_parking">Your request for Passport parking service is not responding right now. Please try later.</string>
+    <string name="txt_Passport_mobile_now">Your request for Mobile now service is not responding right now. Please try later.</string>
+    <string name="txt_Passport_mobile_samtrans">Your request for Samtrans service is not responding right now. Please try later.</string>
+    <string name="location_updated">Location Updated</string>
+    <string name="clear_ticket_msg">Tickets from the previous day that are successfully processed will be cleared. Today\'s tickets will remain on the list. Continue?</string>
+    <string name="no_tickets_found">No tickets found to clear.</string>
+    <string name="invalid_userid">Invalid userid. Please contact support.</string>
+
+
+</resources>

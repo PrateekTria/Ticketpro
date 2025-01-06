@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.service.ParkingJobService","classAnnotations":[],"interfaces":["android.content.ComponentCallbacks","android.content.ComponentCallbacks2"],"superClasses":["android.app.job.JobService","android.app.Service","android.content.ContextWrapper","android.content.Context","java.lang.Object"]}

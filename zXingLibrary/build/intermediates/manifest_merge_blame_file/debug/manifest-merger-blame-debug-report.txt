@@ -1,0 +1,424 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright (C) 2008 ZXing authors
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9      http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.google.zxing.client.android"
+19    android:installLocation="auto"
+20    android:versionCode="88"
+21    android:versionName="4.3.2" >
+22
+23    <uses-sdk android:minSdkVersion="7" />
+23-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:32:3-44
+24
+25    <uses-permission android:name="android.permission.CAMERA" />
+25-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:22:3-62
+25-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:22:20-60
+26    <uses-permission android:name="android.permission.INTERNET" />
+26-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:23:3-64
+26-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:23:20-62
+27    <uses-permission android:name="android.permission.VIBRATE" />
+27-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:24:3-63
+27-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:24:20-61
+28    <uses-permission android:name="android.permission.FLASHLIGHT" />
+28-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:25:3-66
+28-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:25:20-64
+29    <uses-permission android:name="android.permission.READ_CONTACTS" />
+29-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:26:3-69
+29-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:26:20-67
+30    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+30-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:27:3-90
+30-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:27:20-88
+31    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+31-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:28:3-78
+31-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:28:20-76
+32    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+32-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:29:3-73
+32-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:29:20-71
+33    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+33-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:30:3-73
+33-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:30:20-71
+34
+35    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+36    <uses-feature
+36-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:35:3-82
+37        android:name="android.hardware.camera"
+37-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:35:17-55
+38        android:required="false" />
+38-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:35:56-80
+39    <uses-feature
+39-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:36:3-88
+40        android:name="android.hardware.camera.front"
+40-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:36:17-61
+41        android:required="false" />
+41-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:36:62-86
+42    <!-- TODO replace above two with next line after Android 4.2 -->
+43    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+44    <uses-feature
+44-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:39:3-92
+45        android:name="android.hardware.camera.autofocus"
+45-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:39:17-65
+46        android:required="false" />
+46-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:39:66-90
+47    <uses-feature
+47-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:40:3-88
+48        android:name="android.hardware.camera.flash"
+48-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:40:17-61
+49        android:required="false" />
+49-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:40:62-86
+50    <uses-feature android:name="android.hardware.screen.landscape" />
+50-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:41:3-67
+50-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:41:17-65
+51    <uses-feature
+51-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:42:3-80
+52        android:name="android.hardware.wifi"
+52-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:42:17-53
+53        android:required="false" />
+53-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:42:54-78
+54    <!-- This excludes Google TV, which is unfortunately included by virtue of not requiring a camera -->
+55    <uses-feature android:name="android.hardware.touchscreen" />
+55-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:44:3-62
+55-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:44:17-60
+56    <!-- TODO make this not required again after android.hardware.camera.any is available -->
+57
+58
+59    <!-- Donut-specific flags which allow us to run on any dpi screens. -->
+60    <supports-screens
+60-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:48:3-52:48
+61        android:anyDensity="true"
+61-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:52:21-46
+62        android:largeScreens="true"
+62-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:49:21-48
+63        android:normalScreens="true"
+63-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:50:21-49
+64        android:smallScreens="true"
+64-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:51:21-48
+65        android:xlargeScreens="true" />
+65-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:48:21-49
+66
+67    <application
+67-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:54:3-174:17
+68        android:allowBackup="true"
+68-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:58:16-42
+69        android:hardwareAccelerated="true"
+69-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:57:16-50
+70        android:icon="@drawable/launcher_icon"
+70-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:54:16-54
+71        android:label="@string/app_name"
+71-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:56:16-48
+72        android:logo="@drawable/launcher_icon" >
+72-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:55:16-54
+73        <activity
+73-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:59:5-102:16
+74            android:name="com.google.zxing.client.android.ScanBarcodeActivity"
+74-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:59:15-50
+75            android:clearTaskOnLaunch="true"
+75-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:61:15-47
+76            android:configChanges="orientation|keyboardHidden"
+76-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:64:15-65
+77            android:exported="true"
+77-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:63:15-38
+78            android:screenOrientation="landscape"
+78-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:60:15-52
+79            android:stateNotNeeded="true"
+79-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:62:15-44
+80            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+80-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:65:15-73
+81            android:windowSoftInputMode="stateAlwaysHidden" >
+81-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:66:15-62
+82            <intent-filter>
+82-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:67:7-70:23
+83                <action android:name="android.intent.action.MAIN" />
+83-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:68:9-60
+83-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:68:17-58
+84
+85                <category android:name="android.intent.category.DEFAULT" />
+85-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+85-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+86            </intent-filter>
+87            <intent-filter>
+87-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:71:7-74:23
+88                <action android:name="com.google.zxing.client.android.SCAN" />
+88-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:72:9-70
+88-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:72:17-68
+89
+90                <category android:name="android.intent.category.DEFAULT" />
+90-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+90-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+91            </intent-filter>
+92            <!-- Allow web apps to launch Barcode Scanner by linking to http://zxing.appspot.com/scan. -->
+93            <intent-filter>
+93-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:76:7-81:23
+94                <action android:name="android.intent.action.VIEW" />
+94-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:9-60
+94-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:17-58
+95
+96                <category android:name="android.intent.category.DEFAULT" />
+96-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+96-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+97                <category android:name="android.intent.category.BROWSABLE" />
+97-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:9-69
+97-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:19-67
+98
+99                <data
+99-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:9-92
+100                    android:host="zxing.appspot.com"
+100-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:37-69
+101                    android:path="/scan"
+101-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:70-90
+102                    android:scheme="http" />
+102-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:15-36
+103            </intent-filter>
+104            <!-- We also support a Google Product Search URL. -->
+105            <intent-filter>
+105-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:83:7-88:23
+106                <action android:name="android.intent.action.VIEW" />
+106-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:9-60
+106-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:17-58
+107
+108                <category android:name="android.intent.category.DEFAULT" />
+108-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+108-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+109                <category android:name="android.intent.category.BROWSABLE" />
+109-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:9-69
+109-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:19-67
+110
+111                <data
+111-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:9-92
+112                    android:host="www.google.com"
+112-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:37-69
+113                    android:path="/m/products/scan"
+113-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:70-90
+114                    android:scheme="http" />
+114-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:15-36
+115            </intent-filter>
+116            <!-- And the UK version. -->
+117            <intent-filter>
+117-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:90:7-95:23
+118                <action android:name="android.intent.action.VIEW" />
+118-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:9-60
+118-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:17-58
+119
+120                <category android:name="android.intent.category.DEFAULT" />
+120-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+120-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+121                <category android:name="android.intent.category.BROWSABLE" />
+121-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:9-69
+121-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:19-67
+122
+123                <data
+123-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:9-92
+124                    android:host="www.google.co.uk"
+124-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:37-69
+125                    android:path="/m/products/scan"
+125-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:70-90
+126                    android:scheme="http" />
+126-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:15-36
+127            </intent-filter>
+128            <intent-filter>
+128-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:96:7-101:23
+129                <action android:name="android.intent.action.VIEW" />
+129-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:9-60
+129-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:17-58
+130
+131                <category android:name="android.intent.category.DEFAULT" />
+131-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+131-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+132                <category android:name="android.intent.category.BROWSABLE" />
+132-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:9-69
+132-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:79:19-67
+133
+134                <data
+134-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:9-92
+135                    android:host="scan"
+135-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:37-69
+136                    android:path="/"
+136-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:70-90
+137                    android:scheme="zxing" />
+137-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:15-36
+138            </intent-filter>
+139        </activity>
+140        <activity
+140-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:103:5-106:16
+141            android:name="com.google.zxing.client.android.PreferencesActivity"
+141-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:103:15-50
+142            android:label="@string/preferences_name"
+142-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:104:15-55
+143            android:stateNotNeeded="true" >
+143-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:105:15-44
+144        </activity>
+145        <activity
+145-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:107:5-124:16
+146            android:name="com.google.zxing.client.android.encode.EncodeActivity"
+146-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:107:15-52
+147            android:exported="false"
+147-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:108:9-33
+148            android:stateNotNeeded="true" >
+148-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:109:9-38
+149            <intent-filter>
+149-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:110:7-113:23
+150                <action android:name="com.google.zxing.client.android.ENCODE" />
+150-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:111:9-72
+150-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:111:17-70
+151
+152                <category android:name="android.intent.category.DEFAULT" />
+152-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+152-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+153            </intent-filter>
+154            <intent-filter>
+154-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:114:7-118:23
+155                <action android:name="android.intent.action.SEND" />
+155-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:115:9-60
+155-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:115:17-58
+156
+157                <category android:name="android.intent.category.DEFAULT" />
+157-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+157-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+158
+159                <data android:mimeType="text/x-vcard" />
+159-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:9-92
+159-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:117:15-46
+160            </intent-filter>
+161            <intent-filter>
+161-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:119:7-123:23
+162                <action android:name="android.intent.action.SEND" />
+162-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:115:9-60
+162-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:115:17-58
+163
+164                <category android:name="android.intent.category.DEFAULT" />
+164-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+164-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+165
+166                <data android:mimeType="text/plain" />
+166-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:80:9-92
+166-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:117:15-46
+167            </intent-filter>
+168        </activity>
+169        <activity
+169-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:125:5-135:16
+170            android:name="com.google.zxing.client.android.book.SearchBookContentsActivity"
+170-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:125:15-62
+171            android:configChanges="orientation|keyboardHidden"
+171-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:130:15-65
+172            android:exported="false"
+172-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:128:15-39
+173            android:label="@string/sbc_name"
+173-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:126:15-47
+174            android:screenOrientation="landscape"
+174-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:129:15-52
+175            android:stateNotNeeded="true" >
+175-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:127:15-44
+176            <intent-filter>
+176-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:131:7-134:23
+177                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS" />
+177-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:132:9-86
+177-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:132:17-84
+178
+179                <category android:name="android.intent.category.DEFAULT" />
+179-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+179-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+180            </intent-filter>
+181        </activity>
+182        <activity
+182-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:136:5-145:16
+183            android:name="com.google.zxing.client.android.share.ShareActivity"
+183-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:136:15-50
+184            android:exported="true"
+184-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:139:15-38
+185            android:screenOrientation="user"
+185-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:138:15-47
+186            android:stateNotNeeded="true"
+186-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:137:15-44
+187            android:theme="@android:style/Theme.Light" >
+187-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:140:15-57
+188            <intent-filter>
+188-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:141:7-144:23
+189                <action android:name="com.google.zxing.client.android.SHARE" />
+189-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:142:9-71
+189-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:142:17-69
+190
+191                <category android:name="android.intent.category.DEFAULT" />
+191-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+191-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+192            </intent-filter>
+193        </activity>
+194        <activity
+194-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:146:5-154:16
+195            android:name="com.google.zxing.client.android.history.HistoryActivity"
+195-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:146:15-54
+196            android:exported="true"
+196-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:148:15-38
+197            android:label="@string/history_title"
+197-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:147:15-52
+198            android:stateNotNeeded="true" >
+198-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:149:15-44
+199            <intent-filter>
+199-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:150:7-153:23
+200                <action android:name="android.intent.action.VIEW" />
+200-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:9-60
+200-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:77:17-58
+201
+202                <category android:name="android.intent.category.DEFAULT" />
+202-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+202-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+203            </intent-filter>
+204        </activity>
+205        <activity
+205-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:155:5-163:16
+206            android:name="com.google.zxing.client.android.share.BookmarkPickerActivity"
+206-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:155:15-59
+207            android:exported="true"
+207-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:157:15-38
+208            android:label="@string/bookmark_picker_name"
+208-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:156:15-59
+209            android:stateNotNeeded="true" >
+209-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:158:15-44
+210            <intent-filter>
+210-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:159:7-162:23
+211                <action android:name="android.intent.action.PICK" />
+211-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:160:9-60
+211-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:160:17-58
+212
+213                <category android:name="android.intent.category.DEFAULT" />
+213-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+213-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+214            </intent-filter>
+215        </activity>
+216        <activity
+216-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:164:5-173:16
+217            android:name="com.google.zxing.client.android.share.AppPickerActivity"
+217-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:164:15-54
+218            android:configChanges="orientation"
+218-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:168:15-50
+219            android:exported="true"
+219-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:167:15-38
+220            android:label="@string/app_picker_name"
+220-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:165:15-54
+221            android:stateNotNeeded="true" >
+221-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:166:15-44
+222            <intent-filter>
+222-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:159:7-162:23
+223                <action android:name="android.intent.action.PICK" />
+223-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:160:9-60
+223-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:160:17-58
+224
+225                <category android:name="android.intent.category.DEFAULT" />
+225-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:9-67
+225-->/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/src/main/AndroidManifest.xml:69:19-65
+226            </intent-filter>
+227        </activity>
+228    </application>
+229
+230</manifest>

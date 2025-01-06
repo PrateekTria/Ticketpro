@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/void_reason_input_dialog_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"  
+        android:gravity="center_vertical|top"
+        android:hint="Please provide reason"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textMultiLine|textCapCharacters|textCapWords"
+        android:minLines="4"
+        android:maxLines="5" 
+        android:maxLength="90"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:singleLine="true" />
+    
+    
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/void_reason_input_dialog_cancel_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_yellow"
+            android:padding="10dp"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/void_reason_input_dialog_enter_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:padding="10dp"
+            android:text="Save" />
+    </RelativeLayout>
+
+</LinearLayout>

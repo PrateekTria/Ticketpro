@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.model.TicketViolationTemp","classAnnotations":["androidx.room.Entity"],"interfaces":["java.lang.Cloneable"],"superClasses":["java.lang.Object"]}

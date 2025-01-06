@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/btn_yellow"
+    android:id="@+id/llHeaderAccordion"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:textSize="20dp" 
+        android:text="Ticket"
+        android:textColor="#000000" />
+
+</LinearLayout>

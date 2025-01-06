@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/background_banner"
+	    android:orientation="horizontal" >
+
+		<TextView
+		    android:id="@+id/home_current_time_label"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:padding="5dp"
+		    android:paddingLeft="5dp"
+		    android:text="Select Violation"
+		    android:textColor="#ffffff"
+		    android:textSize="@dimen/normal_font_size" />
+		
+		<LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:orientation="horizontal">
+              
+		    <CheckBox
+			    android:id="@+id/keyboard_chk"
+			    android:layout_width="wrap_content"
+			    android:layout_height="36dp"
+			    android:layout_marginRight="5dp"
+			    android:layout_alignParentEnd="true"
+			    android:text="KB"
+			    android:textColor="#fff"
+			    android:textSize="@dimen/xxxxsmall_font_size" />
+			
+			<ImageView
+			    android:id="@+id/voice_search_icon"
+			    android:layout_width="@dimen/voice_search_icon_size"
+			    android:layout_height="@dimen/voice_search_icon_size"
+			    android:layout_alignParentEnd="true"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:clickable="true"
+			    android:onClick="enableVoiceMode"
+			    android:src="@drawable/voice_search_disabled"
+			    android:visibility="gone" />
+              
+		</LinearLayout>
+		
+	</RelativeLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:orientation="vertical" >
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+
+	        <TextView
+	            android:id="@+id/search_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentStart="true"
+	            android:paddingLeft="10dp"
+	            android:text="Search"
+	            android:textColor="#000"
+	            android:textSize="@dimen/xxsmall_font_size" />
+
+	        <EditText
+	            android:id="@+id/add_violation_search_text"
+	            android:layout_width="0dp"
+	            android:layout_height="@dimen/button_height"
+	            android:layout_alignParentStart="true"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginRight="5dp"
+	            android:layout_weight="1"
+	            android:background="@drawable/text_field_bkg"
+	            android:hint="Violation Name/Code"
+	            android:inputType="textCapCharacters|textCapWords"
+	            android:paddingLeft="10dp"
+	            android:singleLine="true"
+	            android:textSize="@dimen/xxxsmall_font_size" />
+	    </LinearLayout>
+
+	    <ListView
+	        android:id="@+id/add_violation_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/background_listview" />
+	</LinearLayout>
+</LinearLayout>

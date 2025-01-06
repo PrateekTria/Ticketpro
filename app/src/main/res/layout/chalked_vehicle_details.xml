@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/write_ticket_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical">
+
+    <!-- Top bar Start here -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_banner"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:text="Chalk Details"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/xxxsmall_font_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chalk_details_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="5dp"
+                android:text="0/0"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <ImageView
+                android:id="@+id/voice_search_icon"
+                android:layout_width="@dimen/voice_search_icon_size"
+                android:layout_height="@dimen/voice_search_icon_size"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:onClick="enableVoiceMode"
+                android:src="@drawable/voice_search_disabled"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp">
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Plate"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_plate_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:textSize="@dimen/xxxsmall_font_size">
+            </EditText>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Make"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_make_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Color"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_color_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Zone"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_zone_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Meter"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_meter_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+
+
+        </TableRow>
+
+
+        <TableRow android:layout_width="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="ET"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_elapsed_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Time"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_time_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="User"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_marked_officer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Loc"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_location_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="0dp"
+                android:text="Notes"
+                android:textColor="#000"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <EditText
+                android:id="@+id/chalk_details_notes_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="NA"
+                android:inputType="textCapCharacters|textCapWords"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/xxxsmall_font_size">
+
+            </EditText>
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/chalk_details_picture_btn"
+                style="@style/smallButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_icon_size"
+                android:layout_margin="1dp"
+                android:background="@drawable/btn_blue"
+                android:onClick="takePictureAction"
+                android:text="Take Picture" />
+
+            <Button
+                android:id="@+id/chalk_details_comments_btn"
+                style="@style/smallButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_icon_size"
+                android:layout_margin="1dp"
+                android:background="@drawable/btn_blue"
+                android:onClick="commentsAction"
+                android:text="Comments" />
+
+            <Button
+                android:id="@+id/chalk_details_ticket_btn"
+                style="@style/smallButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_icon_size"
+                android:layout_margin="1dp"
+                android:background="@drawable/btn_blue"
+                android:onClick="writeTicketAction"
+                android:text="Write Ticket" />
+
+            <Button
+                android:id="@+id/chalk_details_view_map"
+                style="@style/smallButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_icon_size"
+                android:layout_margin="1dp"
+                android:background="@drawable/btn_blue"
+                android:onClick="viewOnMapAction"
+                android:text="View on Map" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/chalk_details_tire_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="9dp" />
+
+            <RelativeLayout
+                android:id="@+id/chalked_vehicle_details_circle_panel"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/tire2">
+
+                <ImageView
+                    android:id="@+id/chalk_vehicle_c_img"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:minWidth="26dp"
+                    android:minHeight="26dp"
+                     android:src="@drawable/c_marker" />
+
+                <ImageView
+                    android:id="@+id/chalk_vehicle_s_img"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="50dp"
+                    android:minWidth="26dp"
+                    android:minHeight="26dp"
+                    android:src="@drawable/s_marker" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/background_footer"
+        android:gravity="bottom"
+        android:padding="1dp">
+
+        <Button
+            android:id="@+id/chalk_details_back_btn"
+            style="@style/smallButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/search_icon_size"
+
+            android:layout_margin="1dp"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/chalk_details_remove"
+            style="@style/smallButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/search_icon_size"
+            android:layout_centerInParent="true"
+
+            android:layout_margin="1dp"
+            android:background="@drawable/btn_blue"
+            android:onClick="removeEntryAction"
+            android:text="Remove" />
+
+        <Button
+            android:id="@+id/chalk_details_print"
+            style="@style/smallButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/search_icon_size"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/btn_blue"
+            android:onClick="printAction"
+            android:text="Print" />
+
+    </RelativeLayout>
+</LinearLayout>

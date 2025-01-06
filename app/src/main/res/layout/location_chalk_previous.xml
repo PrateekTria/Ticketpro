@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:orientation="vertical" android:background="@drawable/background_screen">
+	
+	<!-- Header starts--> 
+   	<include layout="@layout/header"/>
+	<!-- Header ends-->
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="0dp" android:layout_weight="1"
+		android:orientation="vertical" android:background="@drawable/background_screen">
+
+		<RelativeLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:background="@drawable/background_banner">
+
+
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentStart="true"
+			    android:padding="5dp"
+			    android:text="Previous Chalk for METER "
+			    android:textColor="#FFF"
+			    android:textSize="@dimen/xxxxsmall_font_size" />
+				
+		</RelativeLayout>
+		
+
+
+		<ScrollView
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1" >
+		
+		<TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/location_chalk_prev_table_view">
+		
+		<TableRow android:layout_width="match_parent" android:layout_height="60dp" android:background="#f2c324">
+		
+		 </TableRow>
+		
+		
+		</TableLayout>
+		
+		
+		
+		</ScrollView>
+		
+		
+		
+		
+	</LinearLayout>
+
+
+
+
+
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_footer"
+	    android:padding="3dp" >
+
+
+
+
+		<Button
+		    style="@style/ButtonText"
+		    android:layout_width="wrap_content"
+		    android:layout_height="@dimen/small_button_height"
+		    android:layout_alignParentStart="true"
+		    android:layout_margin="5dp"
+		    android:background="@drawable/btn_yellow"
+		    android:text="Back"
+		    android:textColor="#FFF" />
+			
+
+
+		<Button
+		    style="@style/ButtonText"
+		    android:layout_width="wrap_content"
+		    android:layout_height="@dimen/small_button_height"
+		    android:layout_alignParentEnd="true"
+		    android:layout_margin="5dp"
+		    android:background="@drawable/btn_blue"
+		    android:paddingRight="5dp"
+		    android:text="Write Ticket"
+		    android:textColor="#FFF" />
+			
+	</RelativeLayout>
+</LinearLayout>

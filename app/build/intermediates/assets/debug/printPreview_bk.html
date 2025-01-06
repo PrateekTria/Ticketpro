@@ -1,0 +1,169 @@
+<html>
+<head>
+<style rel="stylesheet" type="text/css">
+body{
+	text-align:center;
+}
+
+#loader{
+	text-align:center;
+	margin-top:100px;
+}
+#preview{
+	width:100%;
+	max-width:360px;
+	text-align:center;
+}
+
+.Barcode{
+	margin:10px;
+	max-width:320px;
+	height:32px;
+	border:1px solid #ccc;
+}
+
+.ticketPhoto{
+	margin:10px;
+}
+
+.ticketPhoto img{
+	width:100%;
+}
+</style>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.qrcode.js"></script>
+<script type="text/javascript" src="qrcode.js"></script>
+<script type="text/javascript" src="jquery.barcode.js"></script>
+<title>Preview</title>
+</head>
+<body>
+	<div id="loader"><img src="loading.gif"/></div>
+	<div id="preview" style="display:block;">
+	</div>	
+</body>
+<script>
+	function loadPreview(ticketIndex){
+		var citeNum=Android.getTicketInfo('citation_number');
+		if(citeNum!="")
+			citeNum=parseInt(citeNum)+ticketIndex;
+		
+		var violation=Android.getTicketViolation(ticketIndex);
+		var violationCode=Android.getTicketViolationCode(ticketIndex);
+		
+		if(violation==null || violation=='undefined')
+			violation="NA";
+		
+		if(violationCode==null || violationCode=='undefined')
+			violationCode="NA";
+		
+		var html="";
+		html+='<h1>CITE# <span>'+citeNum+'</span></h1>';
+		html+='<div class=\"ticketPhoto\">'+Android.getPhotoImgTag()+'</div>';
+		html+='<table>';
+		html+='<tr><td valign=top>DATE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('ticket_date')+'</td></tr>';
+		
+		html+='<tr><td valign=top>MARKED</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('time_marked')+'</td></tr>';
+		
+		html+='<tr><td valign=top>BADGE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getBadge()+'</td></tr>';
+		
+		html+='<tr><td valign=top>METER</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('meter')+'</td></tr>';
+		
+		html+='<tr><td valign=top>SPACE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('space')+'</td></tr>';
+		
+		html+='<tr><td valign=top>PERMIT</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('permit')+'</td></tr>';
+		
+		html+='<tr><td valign=top>LOCATION</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getFullLocation()+'</td></tr>';
+		
+		html+='<tr><td valign=top>VIOLATION</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+violationCode+'<br/>'+violation+'</td></tr>';
+		
+		html+='<tr style=\"font-size:16px;margin-top:5px;margin-bottom:5px;font-weight:bold;\"><td valign=top>FINE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top> $'+Android.getTicketViolationFine(ticketIndex)+'</td></tr>';
+		
+		html+='<tr><td  valign=top></td>';
+		html+='<td valign=top></td>';
+		html+='<td valign=top>'+Android.getPrintMacros(ticketIndex)+'</td></tr>';
+		
+		html+='<tr style=\"font-size:16px;margin-top:5px;margin-bottom:5px;font-weight:bold;\"><td valign=top>PLATE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('plate')+'</td></tr>';
+		
+		html+='<tr><td valign=top>STATE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('state_code')+'</td></tr>';
+		
+		html+='<tr><td valign=top>EXP DATE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('expiration')+'</td></tr>';
+		
+		html+='<tr><td valign=top>VIN</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('vin')+'</td></tr>';
+		
+		html+='<tr><td valign=top>MAKE</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('make_code')+'</td></tr>';
+		
+		html+='<tr><td valign=top>BODY</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('body_code')+'</td></tr>';
+		
+		html+='<tr><td valign=top>COLOR</td>';
+		html+='<td valign=top>:</td>';
+		html+='<td valign=top>'+Android.getTicketInfo('color_code')+'</td></tr>';
+		
+		html+='<tr><td colspan=3 valign=top>OFFICER COMMENTS:<br/><span>'+Android.getTicketComments(ticketIndex)+'</span></td>';
+		html+='</tr></table>';
+		
+		html+='<div class=\"Barcode\">'+citeNum+'</div>';
+		if(Android.getTicketViolationFine(ticketIndex)!="0.00"){
+			html+='<div class=\"QRCode\">'+citeNum+'</div><br/><br/><br/>';
+		}
+		html+='<h2>'+Android.getPhotosString()+'</h2>';
+		
+		$("#preview").append(html);		
+	}
+	
+	var count=Android.getTicketsCount();
+	for(var i=0;i<count;i++){
+		loadPreview(i);
+	}
+	
+	$('#loader').css('display','none');
+	$('#preview').css('display','block');
+	
+	$('div.Barcode').each(function(){
+		$(this).barcode({code:'code39'});
+	});
+	
+	var agencyCode=Android.getAgencyCode();
+	if(agencyCode==null || agencyCode=='undefined')
+		agencyCode="";
+	
+	$('div.QRCode').each(function(){
+		var citeN=$(this).text();
+		$(this).text("");
+		$(this).qrcode({
+			text:"http://www.pticket.com/indexcit.asp?agcy="+agencyCode+"&cit="+citeN,
+			width:96,
+			height:96
+		});
+	});
+</script>
+</html>

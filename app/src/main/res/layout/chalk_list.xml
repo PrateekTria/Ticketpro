@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screen"
+    android:id="@+id/chalkLayout_linear"
+    android:orientation="vertical" >
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_screen"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_banner" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Chalked Vehicles"
+                android:textColor="#FFF"
+                android:textSize="@dimen/xxxsmall_font_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+                
+	            <TextView
+	                android:id="@+id/chalk_list_expired_textview"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:paddingBottom="5dp"
+	                android:paddingTop="5dp"
+	                android:text="Expired (0) "
+	                android:textColor="#FFF"
+	                android:textSize="@dimen/xxxsmall_font_size" />
+	            
+	            <ImageView
+	                android:id="@+id/voice_search_icon"
+	                android:layout_width="@dimen/voice_search_icon_size"
+	                android:layout_height="@dimen/voice_search_icon_size"
+	                android:clickable="true"
+	                android:onClick="enableVoiceMode"
+	                android:src="@drawable/voice_search_disabled"
+	                android:visibility="gone" />
+	            
+	            </LinearLayout>
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+         
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+	            <Spinner
+	                android:id="@+id/chalk_location_filter_spinner"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" />
+	
+	            <Spinner
+	                android:id="@+id/chalk_zone_filter_spinner"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" />
+	            
+	            <Spinner
+	                android:id="@+id/chalk_user_filter_spinner"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+            	
+            	<CheckBox
+	                android:id="@+id/chalk_expired_filter_chk"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:text="Expired"
+	                android:textColor="#ff0000"
+	                android:textSize="12dp" />
+            	
+            	<Button
+		            style="@style/ButtonText"
+		            android:layout_width="wrap_content"
+		            android:layout_height="@dimen/small_button_height"
+		            android:background="@drawable/btn_blue"
+		            android:onClick="resetFilters"
+		            android:text="Reset"
+		            android:textColor="#FFF" />
+            	
+            </LinearLayout>	
+            
+        </LinearLayout>
+
+        <com.triazine.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/pull_refresh_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TableLayout
+                android:id="@+id/location_chalk_4_table_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/background_listview" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="Plate/VIN"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="Time"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="Zone"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="Elapsed"
+                        android:textColor="#FFF" />
+                </TableRow>
+            </TableLayout>
+        </com.triazine.pulltorefresh.library.PullToRefreshScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:padding="3dp" >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_yellow"
+            android:onClick="backAction"
+            android:text="Back"
+            android:textColor="#FFF" />
+
+		<Button
+			style="@style/ButtonText"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/small_button_height"
+			android:layout_alignParentEnd="true"
+			android:background="@drawable/btn_blue"
+			android:onClick="clearAction"
+			android:text="Clear All"
+			android:textColor="#FFF" />
+
+		<Button
+			style="@style/ButtonText"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/small_button_height"
+			android:layout_centerHorizontal="true"
+			android:background="@drawable/btn_blue"
+			android:onClick="mapViewAction"
+			android:text="Map View"
+			android:textColor="#FFF" />
+        
+    </RelativeLayout>
+
+</LinearLayout> 

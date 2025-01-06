@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.parking.service.JSONRPCSecureClient","classAnnotations":[],"interfaces":[],"superClasses":["org.alexd.jsonrpc.JSONRPCClient","java.lang.Object"]}

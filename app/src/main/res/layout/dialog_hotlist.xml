@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/write_ticket_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+  
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"  >
+           <EditText
+                android:id="@+id/hotlist_Comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:padding="5dp" 
+                android:gravity="center_vertical|top"
+                android:hint="Comment"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textMultiLine|textCapCharacters|textCapWords"
+                android:maxLines="6"
+                android:minLines="4"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:singleLine="true" 
+                android:maxLength="255"
+                android:background="@drawable/text_field_bkg"/>
+            </LinearLayout>
+            
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp" 
+                android:visibility="gone"
+                android:weightSum="2"  >
+           <EditText
+                android:id="@+id/hotlist_BeginDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:padding="5dp" 
+                android:layout_weight="1" 
+                android:maxLines="1" 
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Begin Date"
+                android:inputType="textCapCharacters|textCapWords" 
+                android:paddingLeft="3dp"
+                android:paddingRight="0dp"
+                android:editable="false"
+                android:textSize="@dimen/normal_font_size" />
+
+           <EditText
+                android:id="@+id/hotlist_EndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:padding="5dp" 
+                android:layout_weight="1"
+                android:maxLines="1" 
+                android:background="@drawable/text_field_bkg"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="End Date"
+                android:inputType="textCapCharacters|textCapWords" 
+                android:paddingLeft="3dp"
+                android:paddingRight="0dp"
+                android:textSize="@dimen/normal_font_size" />
+            </LinearLayout>
+         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bottom_hotlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_footer" 
+            android:weightSum="3"
+            android:padding="3dp" >
+	        <Button
+	            style="@style/ButtonText"
+	            android:id="@+id/btnCancel"
+	            android:layout_width="match_parent"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content" 
+	            android:layout_centerVertical="true"
+	            android:text="@string/back" 
+	            android:background="@drawable/btn_yellow">
+	        </Button>
+	        <Button
+	            style="@style/ButtonText"
+	            android:id="@+id/btnClear"
+	            android:layout_width="match_parent"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:text="@string/clear"
+	            android:background="@drawable/btn_blue">
+	        </Button>
+	        <Button
+	            style="@style/ButtonText"
+	            android:id="@+id/btnAccept"
+	            android:layout_width="match_parent"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentEnd="true"
+	            android:layout_centerVertical="true" 
+	            android:text="@string/send"
+	            android:background="@drawable/btn_blue">
+	        </Button>
+	    </LinearLayout>
+</LinearLayout>

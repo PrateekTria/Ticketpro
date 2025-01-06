@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ticketpro.parking",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 50,
+      "versionName": "4.1.301",
+      "outputFile": "TicketPro-Parking2024-v4.1.298-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

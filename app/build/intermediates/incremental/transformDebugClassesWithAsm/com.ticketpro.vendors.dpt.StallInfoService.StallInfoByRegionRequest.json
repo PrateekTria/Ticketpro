@@ -1,0 +1,1 @@
+{"className":"com.ticketpro.vendors.dpt.StallInfoService.StallInfoByRegionRequest","classAnnotations":[],"interfaces":["org.ksoap2.serialization.KvmSerializable"],"superClasses":["com.ticketpro.vendors.dpt.StallInfoService.StallSoapRequest","java.lang.Object"]}

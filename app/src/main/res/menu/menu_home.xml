@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/full_sync_menu"
+        android:icon="@drawable/sync"
+        android:title="Full Synchronization"/>
+
+    <item
+        android:id="@+id/debug_off_menu"
+        android:icon="@drawable/log_disabled"
+        android:title="Debug OFF"/>
+
+    <item
+        android:id="@+id/test_printer_menu"
+        android:icon="@drawable/print_setup"
+        android:title="Test Printer"/>
+
+    <item
+        android:id="@+id/activity_printer_menu"
+        android:icon="@drawable/print_setup"
+        android:title="Activity"/>
+
+    <item
+        android:id="@+id/test_network_menu"
+        android:icon="@drawable/test_network"
+        android:title="Test Network"/>
+
+    <item
+        android:id="@+id/backup_menu"
+        android:icon="@drawable/db"
+        android:title="Backup Database" />
+
+    <item
+        android:id="@+id/advance_paper_menu"
+        android:icon="@drawable/print_setup"
+        android:title="Advance Paper"/>
+
+    <item
+        android:id="@+id/system_backup_menu"
+        android:icon="@drawable/print_setup"
+        android:title="System Backup"/>
+
+
+</menu>

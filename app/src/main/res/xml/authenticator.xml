@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="ticketpro.parking.sync.adapter"
+    android:icon="@drawable/logo_small"
+    android:label="@string/app_name"
+    android:smallIcon="@drawable/logo_small" />

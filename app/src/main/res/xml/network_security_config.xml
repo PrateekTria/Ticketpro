@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://service.ipsmetersystems.com</domain>
+        <domain includeSubdomains="true">service.ipsmetersystems.com</domain>
+        <domain includeSubdomains="true">tracker.ticketproweb.com</domain>
+        <domain includeSubdomains="true">http://tracker.ticketproweb.com</domain>
+        <domain includeSubdomains="true">http://trackerdev.ticketproweb.com</domain>
+        <domain includeSubdomains="true">trackerdev.ticketproweb.com</domain>
+        <domain includeSubdomains="true">https://genetecapidev.ticketproweb.com</domain>
+        <domain includeSubdomains="true">genetecapidev.ticketproweb.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

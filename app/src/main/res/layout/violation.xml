@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_screen">
+    
+    <RelativeLayout
+        android:id="@+id/main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_banner" >
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:layout_centerVertical="true"
+		    android:padding="5dp"
+		    android:text="Violations"
+		    android:textColor="#ffffff"
+		    android:textSize="@dimen/xxxsmall_font_size" />
+
+		<ImageView
+            android:id="@+id/voice_search_icon"
+            android:layout_width="@dimen/voice_search_icon_size"
+            android:layout_height="@dimen/voice_search_icon_size"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:onClick="enableVoiceMode"
+            android:visibility="gone"
+            android:src="@drawable/voice_search_disabled" />
+		
+	</RelativeLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="vertical" >
+    
+    	<LinearLayout 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent"
+    	    android:orientation="vertical" 
+    	    android:id="@+id/violation_collapsable_panel">
+    
+    	</LinearLayout>
+    
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_footer"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/violation_back_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:background="@drawable/btn_yellow"
+            android:text="Back"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/violation_add_violation_btn"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_blue"
+            android:text="Add Violation"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+   
+	
+</LinearLayout>

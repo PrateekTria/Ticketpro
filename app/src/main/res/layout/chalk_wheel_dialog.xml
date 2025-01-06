@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_screen"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/chalk_tire_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/chalk_vehicle_circle_panel"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/tire2" >
+
+            <ImageView
+                android:id="@+id/chalk_vehicle_c_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:src="@drawable/c_marker" />
+
+            <ImageView
+                android:id="@+id/chalk_vehicle_s_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="50dp"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:src="@drawable/s_marker" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+        
+        <CheckBox
+	        android:id="@+id/chalk_wheel_sticky"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:text="Sticky Markers"/>
+        
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="5dp"
+	        android:layout_marginTop="10dp">
+	
+	        <Button
+	            android:id="@+id/chalk_wheel_cancel_btn"
+	            style="@style/ButtonText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentStart="true"
+	            android:background="@drawable/btn_yellow"
+	            android:minWidth="76dp"
+	            android:text="Cancel" />
+	
+	        <Button
+	            android:id="@+id/chalk_wheel_reset_btn"
+	            style="@style/ButtonText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:background="@drawable/btn_blue"
+	            android:minWidth="70dp"
+	            android:text="Reset" />
+	
+	        <Button
+	            android:id="@+id/chalk_wheel_update_btn"
+	            style="@style/ButtonText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentEnd="true"
+	            android:background="@drawable/btn_blue"
+	            android:minWidth="76dp"
+	            android:text="Update" />
+	    </RelativeLayout>
+	    
+	</LinearLayout>
+	
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_screen"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/add_location_input_dialog_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|top"
+        android:hint="@string/enter_expiry_time_to_sort"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textMultiLine|textCapCharacters|textCapWords"
+        android:lines="3"
+        android:maxLines="3"
+        android:minLines="3"
+        android:singleLine="true" >
+<requestFocus/></EditText>
+    <CheckBox
+        android:id="@+id/hourMinuteToggle"
+        android:layout_width="wrap_content"
+        android:button="@xml/custom_checkbox_white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/sortByHour"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <Button
+            android:id="@+id/add_location_input_dialog_cancel_btn"
+            style="@style/smallButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_yellow"
+            android:padding="10dp"
+            android:layout_marginEnd="@dimen/_1dp"
+            android:text="Cancel" />
+        <Button
+            android:id="@+id/clearButton"
+            style="@style/smallButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_1dp"
+            android:layout_marginRight="@dimen/_1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_yellow"
+            android:padding="10dp"
+            android:text="Clear" />
+
+        <Button
+            android:id="@+id/add_location_input_dialog_enter_btn"
+            style="@style/smallButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_1dp"
+            android:background="@drawable/btn_blue"
+            android:padding="10dp"
+            android:text="Done" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

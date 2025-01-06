@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:background="@drawable/background_screen">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_banner"
+	    android:orientation="horizontal">
+
+	    	<TextView
+	    	    android:id="@+id/home_current_time_label"
+	    	    android:layout_width="wrap_content"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_alignParentStart="true"
+	    	    android:layout_centerVertical="true"
+	    	    android:paddingBottom="5dp"
+	    	    android:paddingLeft="2dp"
+	    	    android:paddingTop="5dp"
+	    	    android:text="Comment"
+	    	    android:textColor="#ffffff"
+	    	    android:textSize="@dimen/xxxsmall_font_size" />
+			
+	      <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:orientation="horizontal">
+	    	
+	        <CheckBox
+			    android:id="@+id/keyboard_chk"
+			    android:layout_width="wrap_content"
+			    android:layout_height="36dp"
+			    android:layout_marginRight="5dp"
+			    android:text="KB"
+			    android:textColor="#fff"
+			    android:textSize="@dimen/xxxxsmall_font_size" 
+			    android:visibility="gone"/>
+	          
+			<CheckBox
+			    android:id="@+id/add_comment_private_chk"
+			    android:layout_width="wrap_content"
+			    android:layout_height="36dp"
+			    android:layout_marginRight="5dp"
+			    android:text="Private"
+			    android:textColor="#fff"
+			    android:textSize="@dimen/xxxxsmall_font_size" 
+			    android:visibility="gone"/>
+		
+			<ImageView
+			    android:id="@+id/voice_search_icon"
+			    android:layout_width="@dimen/voice_search_icon_size"
+			    android:layout_height="@dimen/voice_search_icon_size"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:clickable="true"
+			    android:onClick="enableVoiceMode"
+			    android:src="@drawable/voice_search_disabled"
+			    android:visibility="gone" />
+
+			</LinearLayout>
+			
+	</RelativeLayout>
+	<!-- Top bar Ends here-->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:orientation="vertical" >
+	 
+     <LinearLayout
+         android:id="@+id/commentTopBar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="2dp"
+         android:orientation="horizontal" 
+         android:visibility="gone">
+
+		<TextView
+		    android:id="@+id/search_label"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:padding="5dp"
+		    android:text="Search"
+		    android:textColor="#000"
+		    android:textSize="@dimen/xxsmall_font_size" />
+
+		<EditText
+		    android:id="@+id/add_comment_search_text"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentStart="true"
+		    android:layout_marginBottom="5dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_weight="1"
+		    android:background="@drawable/text_field_bkg"
+		    android:hint="Search Comments"
+		    android:inputType="textCapCharacters|textCapWords"
+		    android:padding="8dp"
+		    android:singleLine="true"
+		    android:textSize="@dimen/normal_font_size" />
+
+	   </LinearLayout>
+	 
+		<ListView
+		    android:id="@+id/add_comment_list"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:scrollbars="none"
+		    android:background="@drawable/background_listview" />
+	
+	</LinearLayout>
+	
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background_footer"
+	    android:padding="2dp" >
+ 		<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:orientation="horizontal" >
+	        <Button
+	            android:id="@+id/add_comment_btn"
+	            style="@style/ButtonTextNormal"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/button_height"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_blue"
+	            android:onClick="addCommentAction"
+	            android:text="New Comment"
+	            android:visibility="gone"
+	            android:textColor="#FFF" />
+
+	        <Button
+	            android:id="@+id/clearButton"
+	            style="@style/ButtonTextNormal"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/button_height"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_yellow"
+	            android:onClick="clearAction"
+	            android:text="Clear"
+	            android:visibility="gone"
+	            android:textColor="#FFF" />
+
+	        <Button
+	            android:id="@+id/voice_memo_btn"
+	            style="@style/ButtonTextNormal"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/button_height"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_blue"
+	            android:onClick="addVoiceAction"
+	            android:text="Voice Memo"
+	            android:visibility="gone"
+	            android:textColor="#FFF" />
+
+	        <Button
+	            android:id="@+id/back_comment_btn"
+	            style="@style/ButtonTextNormal"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/button_height"
+	            android:background="@drawable/btn_yellow"
+	            android:onClick="backAction"
+	            android:text="Back"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="#FFF"  />
+	        </LinearLayout> 
+	</RelativeLayout>
+	
+</LinearLayout>
