@@ -275,7 +275,7 @@ public class GenetecPatrollerActivity extends BaseActivityImpl {
             params.setUserId(TPApp.userId);
             params.setDeviceId(TPApp.deviceId);
             params.setPatrollerId(patrollerId);
-            params.setIsActive("Y");
+            params.setIsActive(1);
             requestPOJO.setParams(params);
             requestPOJO.setMethod("updatePatrollersActivityData");
 

@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.activity.PhotoChalkEditActivity$ImageAdapter","classAnnotations":[],"interfaces":["android.widget.Adapter","android.widget.ListAdapter","android.widget.SpinnerAdapter"],"superClasses":["android.widget.BaseAdapter","java.lang.Object"]}

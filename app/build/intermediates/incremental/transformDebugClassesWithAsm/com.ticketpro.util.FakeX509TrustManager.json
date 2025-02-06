@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.util.FakeX509TrustManager","classAnnotations":["android.annotation.SuppressLint"],"interfaces":["javax.net.ssl.TrustManager","javax.net.ssl.X509TrustManager"],"superClasses":["java.lang.Object"]}

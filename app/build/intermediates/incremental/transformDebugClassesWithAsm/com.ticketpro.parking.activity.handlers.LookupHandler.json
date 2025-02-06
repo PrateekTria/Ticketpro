@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.activity.handlers.LookupHandler","classAnnotations":[],"interfaces":["com.ticketpro.model.MeterHandler","com.ticketpro.model.PermitHandler","com.ticketpro.model.SearchVinHistoryHandler"],"superClasses":["android.os.Handler","java.lang.Object"]}

@@ -463,8 +463,9 @@ public class TicketPicture {
         return isPhotoSp;
     }
 
-    public void setPhotoSp(boolean photoSp) {
-        isPhotoSp = photoSp;
+    public void setPhotoSp(boolean value) {
+        System.out.println("Setting photoSp to: " + value);
+        isPhotoSp = value;
     }
 
     private static class InsertTicketPicture extends AsyncTask<Void, Void, Void> {

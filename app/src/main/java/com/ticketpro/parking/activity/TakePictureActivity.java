@@ -612,8 +612,59 @@ public class TakePictureActivity extends BaseActivityImpl {
                 if (activeTicket != null) {
                     //upload to customer folder if selfi
                     if (isSelfi) {
-                        saveAndSyncPicture(activeTicket, isSelfi);
+                        //saveAndSyncPicture(activeTicket, isSelfi);
+
+                        TicketPicture picture = new TicketPicture();
+                        picture.setPictureDate(new Date());
+                        picture.setCitationNumber(citationNumber);
+                        picture.setMarkPrint("N");
+                        //String[] imagePath = Objects.requireNonNull(picUri.getPath()).split("/");
+                        picture.setImagePath(picUri.getPath());
+                        picture.setImageResolution(imageResolution);
+                        picture.setTicketId(activeTicket.getTicketId());
+                        picture.setImageSize(TPUtility.getImageSize(picUri.getPath()));
+                        picture.setCustId(TPApp.custId);
+                       activeTicket.getTicketPictures().add(picture);
+                        if (isSelfi) {
+                            picture.setIsSelfi("Y");
+                        } else {
+                            picture.setIsSelfi("N");
+                        }
+
+                        //if (editTicketPictures) {
+                        try {
+            /*DatabaseHelper.getInstance().openWritableDatabase();
+            DatabaseHelper.getInstance().insertOrReplace(picture.getContentValues(), "ticket_pictures");*/
+                       //    TicketPicture.insertTicketPicture(picture);
+
+                            boolean result = false;
+                            if (isFastConnection) {
+                                result = ((PhotosBLProcessor) screenBLProcessor).updateSelfiPicture(citationNumber, picture, TakePictureActivity.this);
+                            } else {
+                                SyncData syncData = new SyncData();
+                                syncData.setActivity("INSERT");
+                                syncData.setPrimaryKey(picture.getPictureId() + "");
+                                syncData.setActivityDate(new Date());
+                                syncData.setCustId(TPApp.custId);
+                                syncData.setTableName(TPConstant.TABLE_TICKET_PICTURES);
+                                syncData.setStatus("Pending");
+                                SyncData.insertSyncData(syncData).subscribe();
+                                //DatabaseHelper.getInstance().insertOrReplace(syncData.getContentValues(), "sync_data");
+                            }
+
+                            //DatabaseHelper.getInstance().closeWritableDb();
+                        } catch (Exception e) {
+                            Log.e("TakePicture", "Error update ticket picture records " + e.getMessage());
+                        }
+                        // Clear Bitmap
+                        if (bitmap != null) {
+                            bitmap.recycle();
+                            System.gc();
+                        }
+                        setResult(RESULT_OK);
+                        finish();
                         return;
+
                     }
                     if (pictureIndex < 0) {
                         TicketPicture picture = new TicketPicture();
@@ -1084,7 +1135,7 @@ public class TakePictureActivity extends BaseActivityImpl {
     private void saveAndSyncPicture(Ticket activeTicket, boolean isSelfi) {
         TicketPicture picture = new TicketPicture();
         picture.setPictureDate(new Date());
-        picture.setCitationNumber(citationNumber);
+        picture.setCitationNumber(activeTicket.getCitationNumber());
         picture.setMarkPrint("N");
         //String[] imagePath = Objects.requireNonNull(picUri.getPath()).split("/");
         picture.setImagePath(picUri.getPath());
@@ -1092,6 +1143,8 @@ public class TakePictureActivity extends BaseActivityImpl {
         picture.setTicketId(activeTicket.getTicketId());
         picture.setImageSize(TPUtility.getImageSize(picUri.getPath()));
         picture.setCustId(TPApp.custId);
+        activeTicket.getTicketPictures().add(picture);
+        activeTicket.setPhoto_count(activeTicket.getTicketPictures().size()+1);
         if (isSelfi) {
             picture.setIsSelfi("Y");
         } else {

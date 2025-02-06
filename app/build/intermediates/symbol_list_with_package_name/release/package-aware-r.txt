@@ -3043,12 +3043,16 @@ id phone
 id phot_chalk_circle_panel
 id photo1_imageview
 id photo1_layout
+id photo1_stamp
 id photo2_imageview
 id photo2_layout
+id photo2_stamp
 id photo3_imageview
 id photo3_layout
+id photo3_stamp
 id photo4_imageview
 id photo4_layout
+id photo4_stamp
 id photo_chalk_3_table_view
 id photo_chalk_add_btn
 id photo_chalk_chalking_btn
@@ -3685,6 +3689,7 @@ layout lpr_capture
 layout lpr_map_overlay
 layout lpr_map_view
 layout lpr_notification_dialog
+layout lpr_notification_photostamp_dialog
 layout lpr_notify_logs
 layout lpr_view
 layout main

@@ -43,6 +43,7 @@ import com.ticketpro.model.Feature;
 import com.ticketpro.model.TicketComment;
 import com.ticketpro.parking.R;
 import com.ticketpro.parking.bl.ViolationBLProcessor;
+import com.ticketpro.util.SpecialCharacterFilter;
 import com.ticketpro.util.TPConstant;
 import com.ticketpro.util.TPUtility;
 
@@ -502,6 +503,7 @@ public class AddCommentActivity extends BaseActivityImpl {
             Button enterBtn = (Button) inputDlgView.findViewById(R.id.add_comment_input_dialog_enter_btn);
             inputText = (EditText) inputDlgView.findViewById(R.id.add_comment_input_dialog_text_field);
             inputText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(32)});
+            inputText.setFilters(new InputFilter[]{ new SpecialCharacterFilter() });
             inputText.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

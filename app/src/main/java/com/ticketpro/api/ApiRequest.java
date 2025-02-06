@@ -91,7 +91,6 @@ import com.ticketpro.model.ViolationGroupViolationResponse;
 import com.ticketpro.model.ViolationResponse;
 import com.ticketpro.model.VoidTicketReasonResponse;
 import com.ticketpro.model.ZonePoleModel;
-import com.ticketpro.model.ZonePoleResponse;
 import com.ticketpro.model.ZoneResponse;
 import com.ticketpro.model.chalk_response.ChalkResponse;
 import com.ticketpro.model.devicefeature.ResponseResult;
@@ -106,6 +105,7 @@ import com.ticketpro.vendors.ParkMobileZoneList;
 import com.ticketpro.vendors.cubtrack.cbt_model.CubTracZone;
 import com.ticketpro.vendors.cubtrack.cbt_model.CubtracRequest;
 import com.ticketpro.vendors.cubtrack.cbt_model.CubtracResponse;
+import com.ticketpro.vendors.offstreet.Session;
 import com.ticketpro.vendors.offstreet.OffStreetList;
 import com.ticketpro.vendors.offstreet.OffstreetReqest;
 import com.ticketpro.vendors.passport2_model.PP2TokenResponse;
@@ -157,7 +157,14 @@ public interface ApiRequest {
     Call<List<CubtracResponse>> cubtracPlatelookup(@Url String url, @Header("Authorization") String authToken, @Body CubtracRequest user);
 
     @POST()
-    Call<OffStreetList> offstreetPlatelookup(@Url String url, @Header("Authorization") String authToken, @Body OffstreetReqest reqest);
+    Call<OffStreetList> offstreetPlatelookup(@Url String url, @Header("x-api-key") String authToken, @Body OffstreetReqest reqest);
+
+    @POST()
+    Call<OffStreetList> offStreetSearch(
+            @Header("x-api-key") String apiKey,  // Add the header for the token
+            @Body OffstreetReqest request,
+            @Url String url
+    );
 
 
     @GET()

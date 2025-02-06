@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/background_screen"
     android:orientation="horizontal" >
@@ -125,15 +126,17 @@
             android:textColor="#ffffff"
             android:textSize="@dimen/xxxsmall_font_size" />
 
-        <ImageView
-            android:id="@+id/home_settings_btn"
-            android:layout_width="@dimen/icon_size_width"
-            android:layout_height="@dimen/icon_size_height"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="settingsAction"
-            android:src="@drawable/settings_icon" />
+		<ImageView
+			android:id="@+id/home_settings_btn"
+			android:layout_width="@dimen/icon_size_width"
+			android:layout_height="@dimen/icon_size_height"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:clickable="true"
+			android:focusable="true"
+			android:onClick="settingsAction"
+			android:src="@drawable/settings_icon"
+			tools:ignore="SpeakableTextPresentCheck" />
 
     </RelativeLayout>
     <!-- Bottom bar Ends here -->

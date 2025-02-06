@@ -880,11 +880,11 @@ public class ServiceHandlerImpl implements ServiceHandler {
 
                         //}
 
-                        if (!imagePath.contains("VLPR")) {
+                       // if (!imagePath.contains("VLPR")) {
                             uploadFlag = TPUtility.uploadFile(imagePath,
                                     TPConstant.FILE_UPLOAD + "/uploadfile",
                                     TPApplication.getInstance().getCustId());
-                        }
+                      //  }
                         if (!uploadFlag) {
                             TPUtility.markPendingImage(imagePath);
                             if (!Ticket.isTicketPending(citationNumber)){
@@ -926,11 +926,11 @@ public class ServiceHandlerImpl implements ServiceHandler {
 
                         //}
 
-                        if (!imagePath.contains("VLPR")) {
+                       // if (!imagePath.contains("VLPR")) {
                             uploadFlag = TPUtility.uploadFile(imagePath,
                                     TPConstant.FILE_UPLOAD + "/uploadfile",
                                     TPApplication.getInstance().getCustId());
-                        }
+                     //   }
                         if (!uploadFlag) {
                             TPUtility.markPendingImage(imagePath);
 
@@ -1457,6 +1457,9 @@ public class ServiceHandlerImpl implements ServiceHandler {
     @Override
     public boolean sendErrorLog(ArrayList<ErrorLog> errors) throws Exception {
         try {
+            if(errors.size() == 0){
+                return false;
+            }
             JSONArray errorLogs = new JSONArray();
             for (ErrorLog error : errors) {
                 errorLogs.put(error.getJSONObject());

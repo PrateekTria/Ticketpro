@@ -13,19 +13,23 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class OffstreetReqest {
-    @SerializedName("locationId")
-    @Expose
-    private String locationId;
+//    @SerializedName("locationId")
+//    @Expose
+//    private String locationId;
     @SerializedName("plate")
     @Expose
     private String plate;
 
-    public String getLocationId() {
-        return locationId;
-    }
+//    public String getLocationId() {
+//        return locationId;
+//    }
+//
+//    public void setLocationId(String locationId) {
+//        this.locationId = locationId;
+//    }
 
-    public void setLocationId(String locationId) {
-        this.locationId = locationId;
+    public OffstreetReqest(String plate) {
+        this.plate = plate;
     }
 
     public String getPlate() {

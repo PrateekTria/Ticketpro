@@ -192,7 +192,7 @@ public class TicketViewActivity extends BaseActivityImpl implements HotListHandl
                 @Override
                 public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
                     super.onReceivedError(view, request, error);
-                    log.error(error.getDescription());
+                    log.error("View error"+error.getDescription());
                 }
 
                 @Override
@@ -204,7 +204,7 @@ public class TicketViewActivity extends BaseActivityImpl implements HotListHandl
             bindDataAtLoadingTime();
 
         } catch (Exception e) {
-            log.error(TPUtility.getPrintStackTrace(e));
+            log.error("View error1"+TPUtility.getPrintStackTrace(e));
         }
     }
 

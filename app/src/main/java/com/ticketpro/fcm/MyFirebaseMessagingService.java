@@ -58,7 +58,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         String message = remoteMessage.getData().get("message");
         String messageType = remoteMessage.getData().get("messageType");
-
+        Log.e(TAG, "From1: " + remoteMessage.getData().get("messageType"));
+        Log.e(TAG, "From2: " + remoteMessage.getData().get("message"));
         if (messageType == null || messageType.isEmpty()) {
             try {
                 generateNotification(message);

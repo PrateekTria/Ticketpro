@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.util.TPSSLSocketFactory$DelegateSSLSocket","classAnnotations":[],"interfaces":["java.io.Closeable","java.lang.AutoCloseable"],"superClasses":["javax.net.ssl.SSLSocket","java.net.Socket","java.lang.Object"]}

@@ -420,6 +420,7 @@ public class WriteTicketActivity extends BaseActivityImpl implements MyTracker.A
         initTimeOut();
         setContentView(R.layout.write_ticket);
         setLogger(WriteTicketActivity.class.getName());
+        audioPlayer = new MediaPlayer();
         setBLProcessor(new WriteTicketBLProcessor((TPApplication) getApplicationContext()));
         setActiveScreen(this);
         isNetworkInfoRequired = true;
@@ -2374,7 +2375,7 @@ public class WriteTicketActivity extends BaseActivityImpl implements MyTracker.A
             violationBtn.setBackgroundResource(R.drawable.btn_yellow);
         }
 
-        photosBtn.setText("(" + activeTicket.getTicketPictures().size() + ")");
+        photosBtn.setText("(" + activeTicket.getPhoto_count() + ")");
 
         // Mark value updates completed
         isUpdatingResult = false;
@@ -3636,7 +3637,7 @@ public class WriteTicketActivity extends BaseActivityImpl implements MyTracker.A
         i.setClass(WriteTicketActivity.this, TakePictureActivity.class);
         i.putExtra("CitationNumber", activeTicket.getCitationNumber());
         i.putExtra("isSelfi", true);
-        startActivityForResult(i, REQUEST_TAKE_SELFI);
+        startActivityForResult(i, REQUEST_TAKE_PICTURE);
         return;
     }
 
@@ -4007,7 +4008,7 @@ public class WriteTicketActivity extends BaseActivityImpl implements MyTracker.A
     }
 
     public void warningAction(View view) {
-        if (activeTicket.getTicketViolations().size() == 0) {
+        if (activeTicket.getTicketViolations().isEmpty()) {
             Toast.makeText(this, "Please select violations.", Toast.LENGTH_LONG).show();
             return;
         }
@@ -4165,11 +4166,11 @@ public class WriteTicketActivity extends BaseActivityImpl implements MyTracker.A
                         }
                     }
 
-                    if (activeTicket.isLPR() && !activeTicket.getTicketPictures().isEmpty()) {
-                        activeTicket.setPhotoCount(activeTicket.getTicketPictures().size() - 1);
-                    } else {
+//                    if (activeTicket.isLPR() && !activeTicket.getTicketPictures().isEmpty()) {
+//                        activeTicket.setPhotoCount(activeTicket.getTicketPictures().size() - 1);
+//                    } else {
                         activeTicket.setPhotoCount(activeTicket.getTicketPictures().size());
-                    }
+                 //   }
                     for (TicketViolation violation : activeTicket.getTicketViolations()) {
                         if (!Ticket.checkDuplicateRecordsPlates(activeTicket.getPlate(), violation.getViolationId(), activeTicket.getTicketDate(), activeTicket.getLocation())) {
                             //Checking previous ticket data with current ticket data.
@@ -7023,7 +7024,7 @@ public class WriteTicketActivity extends BaseActivityImpl implements MyTracker.A
             /*warningBtn.setText("W (0)");
             warningBtn.setBackgroundResource(R.drawable.btn_yellow);*/
 
-            if (violations.size() == 0) {
+            if (violations.isEmpty()) {
                 activeTicket.getTicketViolations().clear();
             } else {
                 activeTicket.getTicketViolations().add(violations.get(0));
@@ -8063,7 +8064,7 @@ public class WriteTicketActivity extends BaseActivityImpl implements MyTracker.A
     private void playRecording(String audioFile) {
         playerHandler = new Handler();
         try {
-            audioPlayer = new MediaPlayer();
+//            audioPlayer = new MediaPlayer();
             audioPlayer.setDataSource(TPUtility.getVoiceMemosFolder() + audioFile);
             audioPlayer.prepare();
             audioPlayer.start();

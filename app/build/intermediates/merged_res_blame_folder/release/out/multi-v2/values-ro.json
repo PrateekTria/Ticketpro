@@ -4,6 +4,23 @@
             "outputFile": "com.ticketpro.parking.app-mergeReleaseResources-38:/values-ro/values-ro.xml",
             "map": [
                 {
+                    "source": "/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/library/build/intermediates/packaged_res/release/values-ro/values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,139,211",
+                        "endColumns": "83,71,91",
+                        "endOffsets": "134,206,298"
+                    },
+                    "to": {
+                        "startLines": "110,111,112",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "10181,10265,10337",
+                        "endColumns": "83,71,91",
+                        "endOffsets": "10260,10332,10424"
+                    }
+                },
+                {
                     "source": "/home/tspl/.gradle/caches/transforms-3/baecd9f49edecf9c50b414d357e3f82f/transformed/core-1.7.0/res/values-ro/values-ro.xml",
                     "from": {
                         "startLines": "2",
@@ -88,23 +105,6 @@
                         "startOffsets": "5725,5993,6095,6210",
                         "endColumns": "106,101,114,104",
                         "endOffsets": "5827,6090,6205,6310"
-                    }
-                },
-                {
-                    "source": "/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/library/build/intermediates/packaged_res/release/values-ro/values-ro.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,139,211",
-                        "endColumns": "83,71,91",
-                        "endOffsets": "134,206,298"
-                    },
-                    "to": {
-                        "startLines": "110,111,112",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "10181,10265,10337",
-                        "endColumns": "83,71,91",
-                        "endOffsets": "10260,10332,10424"
                     }
                 },
                 {

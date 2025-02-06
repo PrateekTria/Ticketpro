@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.dao.ParkingDatabase_Impl","classAnnotations":[],"interfaces":[],"superClasses":["com.ticketpro.parking.dao.ParkingDatabase","androidx.room.RoomDatabase","java.lang.Object"]}

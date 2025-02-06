@@ -18,13 +18,13 @@ import java.util.List;
 public class OffStreetList {
     @SerializedName("sessions")
     @Expose
-    private List<OffStreet> sessions;
+    private List<Session> sessions;
 
-    public List<OffStreet> getSessions() {
+    public List<Session> getSessions() {
         return sessions;
     }
 
-    public void setSessions(List<OffStreet> sessions) {
+    public void setSessions(List<Session> sessions) {
         this.sessions = sessions;
     }
 

@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -85,6 +86,7 @@ public class PhotosActivity extends BaseActivityImpl {
                 return;
             }
 
+
             TextView citationTextView = (TextView) findViewById(R.id.photos_citation_number_textview);
             citationTextView.setText("#" + TPUtility.prefixZeros(activeTicket.getCitationNumber(), 8));
 
@@ -111,7 +113,7 @@ public class PhotosActivity extends BaseActivityImpl {
                 }
             });
 
-            if (activeTicket.getTicketPictures().size() == 0) {
+            if (activeTicket.getTicketPictures().isEmpty()) {
                 takeNewPicture(null);
             } else {
                 displayPictures();
@@ -167,23 +169,39 @@ public class PhotosActivity extends BaseActivityImpl {
                 sp.setTag(R.id.pictureIndex, index);
                 sp.setOnCheckedChangeListener((buttonView, isChecked) -> {
                     int pictureIndex = (Integer) buttonView.getTag(R.id.pictureIndex);
+                    TicketPicture ticketPicture = activeTicket.getTicketPictures().get(pictureIndex);
+                    ticketPicture.setPhotoSp(isChecked);
+
+                    // If the checkbox is checked, save the sticky state globally
+
+
                     if (isChecked) {
-                        TicketPicture ticketPicture = activeTicket.getTicketPictures().get(pictureIndex);
+                       // TicketPicture ticketPicture = activeTicket.getTicketPictures().get(pictureIndex);
                         ticketPicture.setPhotoSp(true);
                         //TPApp.getLastPhotos().add(ticketPicture);
                         preference.putBoolean(TPConstant.PREFS_KEY_STICKY_PHOTO, TPApp.stickyPhoto);
                         TPApplication.getInstance().stickyPhoto = isChecked;
 
+                        Log.d("photosp  select>>>>>>>>",ticketPicture.isPhotoSp()+"");
+
                     }else {
-                        if (TPApp.getLastPhotos().size()>0) {
-                            TicketPicture ticketPicture = activeTicket.getTicketPictures().get(pictureIndex);
-                            ticketPicture.setPhotoSp(false);
-                            preference.putBoolean(TPConstant.PREFS_KEY_STICKY_PHOTO, false);
+
+                            // Remove the picture from last photos (if necessary)
+//                            if (TPApp.getLastPhotos().contains(ticketPicture)) {
+//                                TPApp.getLastPhotos().remove(ticketPicture);
+//                            }
+
                             TPApplication.getInstance().stickyPhoto = false;
-                            activeTicket.getTicketPictures().remove(pictureIndex);
+                            preference.putBoolean(TPConstant.PREFS_KEY_STICKY_PHOTO, TPApplication.getInstance().stickyPhoto);
+
+                            Log.d("photosp update >>>>>", ticketPicture.isPhotoSp() + "");
+
+                            // Optionally, remove all views and re-display the pictures to reflect changes
                             photosView.removeAllViews();
                             displayPictures();
-                        }
+                            Log.d("photosp  un-select>>>>>>>>",ticketPicture.isPhotoSp()+"");
+
+
 
                     }
                 });

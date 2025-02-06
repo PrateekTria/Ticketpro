@@ -40,6 +40,7 @@ import androidx.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.ticketpro.api.ApiRequest;
+import com.ticketpro.api.RetrofitClientOffStreet;
 import com.ticketpro.api.RetrofitServiceGenerator;
 import com.ticketpro.api.ServiceGeneratorCubTrac;
 import com.ticketpro.api.ServiceGeneratorJson001;
@@ -123,7 +124,7 @@ import com.ticketpro.vendors.dpt.PlateInfoService.PlateInfoByRegionRequest;
 import com.ticketpro.vendors.dpt.PlateInfoService.PlateInfoService;
 import com.ticketpro.vendors.dpt.PlateInfoService.PlateInfoType;
 import com.ticketpro.vendors.dpt.PlateInfoService.VectorPlateInfoType;
-import com.ticketpro.vendors.offstreet.OffStreet;
+import com.ticketpro.vendors.offstreet.Session;
 import com.ticketpro.vendors.offstreet.OffStreetList;
 import com.ticketpro.vendors.offstreet.OffstreetReqest;
 import com.ticketpro.vendors.passport2_model.PP2Plate;
@@ -139,6 +140,7 @@ import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.kobjects.base64.Base64;
 import org.ksoap2.HeaderProperty;
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.SoapFault;
@@ -208,6 +210,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
     final int LOOKUP_IPS_PLATE = 15;
     final int LOOKUP_IPS_SPACE = 16;
     final int LOOKUP_PROGRESSIVE_PLATE = 17;
+    final int LOOKUP_PARK_OFFSTREET = 18;
     private final WriteTicketActivity activity;
     private final Preference preference;
     private final Logger logpm = Logger.getLogger("LookupHandler");
@@ -354,6 +357,9 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
                     }
                 }
                 break;
+
+            case LOOKUP_PARK_OFFSTREET:
+
 
             case LOOKUP_PARK_MOBILE_SPACE:
                 String space = data.getString("SPACE");
@@ -1507,7 +1513,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
 
         valueTV.setText(values.toString());
 
-        Builder dialog = new AlertDialog.Builder(activity);
+        Builder dialog = new Builder(activity);
         dialog.setCancelable(false);
 
         dialog.setView(view);
@@ -1579,7 +1585,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
             hashMapsArray.add(hashMaps);
         }
 
-        Builder dialog = new AlertDialog.Builder(activity);
+        Builder dialog = new Builder(activity);
         dialog.setCancelable(false);
         CustomAdapter adapter = new CustomAdapter(activity, hashMapsArray);
 
@@ -3452,7 +3458,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
                         List<CubTracZone> zoneList = response.body();
                         if (zoneList!=null && zoneList.size()>0){
                             WriteTicketActivity.ItemAdapter adapter = new WriteTicketActivity.ItemAdapter(activity, zoneList);
-                            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                            Builder builder = new Builder(activity);
                             builder.setTitle("Select Zone");
                             builder.setAdapter(adapter, (dialog, which) -> {
                                 CubTracZone selectedItem = zoneList.get(which);
@@ -3622,7 +3628,8 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
 
     }
 
-    private void lookupOffstreet(String plate) {
+    private void offStreetSearch(String plate){
+
         progressDialog = new ProgressDialog(activity);
         progressDialog.setMessage("Looking OffStreet");
         progressDialog.setCancelable(false);
@@ -3633,88 +3640,100 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
             }
         });
         progressDialog.show();
-
         if (activity.isServiceAvailable) {
-            if (!(TPApp.enableParkMobile && Feature.isFeatureAllowed(Feature.PARK_MOBILE))) {
-                return;
+//            if (!(TPApp.enableParkMobile && Feature.isFeatureAllowed(Feature.PARK_MOBILE))) {
+//                progressDialog.dismiss();
+//                return;
+//            }
+            final VendorServiceConfig config = VendorService.getServiceConfig(VendorService.OFFSTREET_PLATE_SEARCH, TPApp.deviceId, "/");
+            Map<String, String> paramsMap;
+            String serviceURL = "";
+            String token = "";
+            try{
+                if(config.getParamsMap() != null){
+                    paramsMap = config.getParamsMap();
+                     serviceURL = config.getServiceURL();
+                     token = paramsMap.get("token");
+                }
+            }catch (Exception e){
+                e.printStackTrace();
             }
 
-            this.plate = plate;
-            final VendorServiceConfig config = VendorService.getServiceConfig(VendorService.OFFSTREET_PLATE_SEARCH, TPApp.deviceId, "/");
-            Map<String, String> paramsMap = config.getParamsMap();
-            String user = paramsMap.get("User");
-            String password = paramsMap.get("Password");
-            String serviceURL = config.getServiceURL();
-            String token = paramsMap.get("token");
 
-            OffstreetReqest cubtracRequest = new OffstreetReqest();
-            cubtracRequest.setLocationId("cesarchavez");
-            cubtracRequest.setPlate(plate);
-            ApiRequest apiRequest = ServiceOffstreet.createService(ApiRequest.class);
-            apiRequest.offstreetPlatelookup(serviceURL,token,cubtracRequest).enqueue(new retrofit2.Callback<OffStreetList>() {
-                @Override
-                public void onResponse(Call<OffStreetList> call, Response<OffStreetList> response) {
-                    progressDialog.dismiss();
 
-                    if (response.isSuccessful() && response.code()==200){
-                        List<OffStreet> sessions = response.body().getSessions();
-                        if (sessions!=null && sessions.size()>0){
-                            if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
-                                try {
-                                    MobileNowLog log = new MobileNowLog();
-                                    log.setCustId(TPApp.custId);
-                                    log.setDeviceId(TPApp.deviceId);
-                                    log.setUserId(TPApp.userId);
-                                    log.setRequestDate(new Date());
-                                    log.setServiceMode("Prod");
-                                    log.setPlate_number(plate);
-                                    log.setRequestParams("Offstreet " + " Request: " +plate);
-                                    log.setResponseText("True " + plate);
-                                    //log.setResponseText("True " + plate);
-                                    MobileNowLog.insertMobileNowLog(log);
-                                    CSVUtility.writeMobileLogCSV(log);
-                                    ArrayList<MobileNowLog> logs = new ArrayList<>();
-                                    logs.add(log);
-                                    WriteTicketNetworkCalls.sendMobileNogLogs(logs);
-                                } catch (Exception e) {
-                                    //log.error("Error " + TPUtility.getPrintStackTrace(e));
-                                    e.printStackTrace();
-                                }
-                            }
-                            OffStreet offStreet = sessions.get(0);
-                            ___displayOffstreet(offStreet);
-                        }else {
-                            progressDialog.dismiss();
-                            processPlateLookupQueue(plate);
-                            if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
-                                try {
-                                    MobileNowLog log = new MobileNowLog();
-                                    log.setCustId(TPApp.custId);
-                                    log.setDeviceId(TPApp.deviceId);
-                                    log.setUserId(TPApp.userId);
-                                    log.setRequestDate(new Date());
-                                    log.setServiceMode("Prod");
-                                    log.setPlate_number(plate);
-                                    log.setRequestParams("Offstreet " + " Request: " +plate);
-                                    log.setResponseText("false " + plate);
-                                    //log.setResponseText("True " + plate);
-                                    MobileNowLog.insertMobileNowLog(log);
-                                    CSVUtility.writeMobileLogCSV(log);
-                                    ArrayList<MobileNowLog> logs = new ArrayList<>();
-                                    logs.add(log);
-                                    WriteTicketNetworkCalls.sendMobileNogLogs(logs);
-                                } catch (Exception e) {
-                                    //log.error("Error " + TPUtility.getPrintStackTrace(e));
-                                    e.printStackTrace();
-                                }
+
+        ApiRequest apiService = RetrofitClientOffStreet.getClient().create(ApiRequest.class);
+
+        // Create the request object
+        OffstreetReqest request = new OffstreetReqest(plate);
+
+
+        // Make the API call
+      //  Call<OffStreetList> call = apiService.offStreetSearch(apiKey, request);
+        apiService.offStreetSearch(token, request,serviceURL).enqueue(new retrofit2.Callback<OffStreetList>() {
+            @Override
+            public void onResponse(Call<OffStreetList> call, Response<OffStreetList> response) {
+                progressDialog.dismiss();
+
+                if (response.isSuccessful() && response.code()==200){
+                    OffStreetList offStreetList = response.body();
+                    if (offStreetList.getSessions()!=null && offStreetList.getSessions().size()>0){
+                        if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
+                            try {
+                                MobileNowLog log = new MobileNowLog();
+                                log.setCustId(TPApp.custId);
+                                log.setDeviceId(TPApp.deviceId);
+                                log.setUserId(TPApp.userId);
+                                log.setRequestDate(new Date());
+                                log.setServiceMode("Prod");
+                                log.setPlate_number(plate);
+                                log.setRequestParams("Offstreet " + " Request: " +plate);
+                                log.setResponseText("True " + plate);
+                                //log.setResponseText("True " + plate);
+                                MobileNowLog.insertMobileNowLog(log);
+                                CSVUtility.writeMobileLogCSV(log);
+                                ArrayList<MobileNowLog> logs = new ArrayList<>();
+                                logs.add(log);
+                                WriteTicketNetworkCalls.sendMobileNogLogs(logs);
+                            } catch (Exception e) {
+                                //log.error("Error " + TPUtility.getPrintStackTrace(e));
+                                e.printStackTrace();
                             }
                         }
 
+                        ___displayOffstreet(offStreetList.getSessions().get(0));
+                    }else {
+                        progressDialog.dismiss();
+                        processPlateLookupQueue(plate);
+                        if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
+                            try {
+                                MobileNowLog log = new MobileNowLog();
+                                log.setCustId(TPApp.custId);
+                                log.setDeviceId(TPApp.deviceId);
+                                log.setUserId(TPApp.userId);
+                                log.setRequestDate(new Date());
+                                log.setServiceMode("Prod");
+                                log.setPlate_number(plate);
+                                log.setRequestParams("Offstreet " + " Request: " +plate);
+                                log.setResponseText("false " + plate);
+                                //log.setResponseText("True " + plate);
+                                MobileNowLog.insertMobileNowLog(log);
+                                CSVUtility.writeMobileLogCSV(log);
+                                ArrayList<MobileNowLog> logs = new ArrayList<>();
+                                logs.add(log);
+                                WriteTicketNetworkCalls.sendMobileNogLogs(logs);
+                            } catch (Exception e) {
+                                //log.error("Error " + TPUtility.getPrintStackTrace(e));
+                                e.printStackTrace();
+                            }
+                        }
                     }
-                }
 
-                @Override
-                public void onFailure(Call<OffStreetList> call, Throwable t) {
+                }
+            }
+
+            @Override
+            public void onFailure(Call<OffStreetList> call, Throwable t) {
                     progressDialog.dismiss();
                     processPlateLookupQueue(plate);
                     if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
@@ -3739,17 +3758,145 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
                             e.printStackTrace();
                         }
                     }
-                }
-            });
+            }
+        });
 
-        }else {
-            progressDialog.dismiss();
-            processPlateLookupQueue(plate);
-        }
-
+    }else {
+        progressDialog.dismiss();
+        processPlateLookupQueue(plate);
+    }
     }
 
-    private void ___displayOffstreet(OffStreet offStreet){
+//    private void lookupOffstreet(String plate) {
+//        progressDialog = new ProgressDialog(activity);
+//        progressDialog.setMessage("Looking OffStreet");
+//        progressDialog.setCancelable(false);
+//        progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//            }
+//        });
+//        progressDialog.show();
+//
+//      //  if (activity.isServiceAvailable) {
+////            if (!(TPApp.enableParkMobile && Feature.isFeatureAllowed(Feature.PARK_MOBILE))) {
+////                return;
+////            }
+//
+//            this.plate = plate;
+//            final VendorServiceConfig config = VendorService.getServiceConfig(VendorService.OFFSTREET_PLATE_SEARCH, TPApp.deviceId, "/");
+//         //   Map<String, String> paramsMap = config.getParamsMap();
+//        //    String user = paramsMap.get("User");
+//        //    String password = paramsMap.get("Password");
+//            String serviceURL = "https://public.offstreet.io/v1.5/search";
+//            String token = "17a877bf-b997-499e-beeb-8b52b8b4c5d5";
+//
+//            OffstreetReqest cubtracRequest = new OffstreetReqest();
+//          //  cubtracRequest.setLocationId("cesarchavez");
+//            cubtracRequest.setPlate(plate);
+//            ApiRequest apiRequest = ServiceOffstreet.createService(ApiRequest.class);
+//            apiRequest.offstreetPlatelookup(serviceURL,token,cubtracRequest).enqueue(new retrofit2.Callback<OffStreetList>() {
+//                @Override
+//                public void onResponse(Call<OffStreetList> call, Response<OffStreetList> response) {
+//                    progressDialog.dismiss();
+//
+//                    if (response.isSuccessful() && response.code()==200){
+//                        List<Session> sessions = response.body().getSessions();
+//                        if (sessions!=null && sessions.size()>0){
+//                            if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
+//                                try {
+//                                    MobileNowLog log = new MobileNowLog();
+//                                    log.setCustId(TPApp.custId);
+//                                    log.setDeviceId(TPApp.deviceId);
+//                                    log.setUserId(TPApp.userId);
+//                                    log.setRequestDate(new Date());
+//                                    log.setServiceMode("Prod");
+//                                    log.setPlate_number(plate);
+//                                    log.setRequestParams("Offstreet " + " Request: " +plate);
+//                                    log.setResponseText("True " + plate);
+//                                    //log.setResponseText("True " + plate);
+//                                    MobileNowLog.insertMobileNowLog(log);
+//                                    CSVUtility.writeMobileLogCSV(log);
+//                                    ArrayList<MobileNowLog> logs = new ArrayList<>();
+//                                    logs.add(log);
+//                                    WriteTicketNetworkCalls.sendMobileNogLogs(logs);
+//                                } catch (Exception e) {
+//                                    //log.error("Error " + TPUtility.getPrintStackTrace(e));
+//                                    e.printStackTrace();
+//                                }
+//                            }
+//                            Session offStreet = sessions.get(0);
+//                            ___displayOffstreet(offStreet);
+//                        }else {
+//                            progressDialog.dismiss();
+//                            processPlateLookupQueue(plate);
+//                            if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
+//                                try {
+//                                    MobileNowLog log = new MobileNowLog();
+//                                    log.setCustId(TPApp.custId);
+//                                    log.setDeviceId(TPApp.deviceId);
+//                                    log.setUserId(TPApp.userId);
+//                                    log.setRequestDate(new Date());
+//                                    log.setServiceMode("Prod");
+//                                    log.setPlate_number(plate);
+//                                    log.setRequestParams("Offstreet " + " Request: " +plate);
+//                                    log.setResponseText("false " + plate);
+//                                    //log.setResponseText("True " + plate);
+//                                    MobileNowLog.insertMobileNowLog(log);
+//                                    CSVUtility.writeMobileLogCSV(log);
+//                                    ArrayList<MobileNowLog> logs = new ArrayList<>();
+//                                    logs.add(log);
+//                                    WriteTicketNetworkCalls.sendMobileNogLogs(logs);
+//                                } catch (Exception e) {
+//                                    //log.error("Error " + TPUtility.getPrintStackTrace(e));
+//                                    e.printStackTrace();
+//                                }
+//                            }
+//                        }
+//
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(Call<OffStreetList> call, Throwable t) {
+//                    progressDialog.dismiss();
+//                    processPlateLookupQueue(plate);
+//                    if (Feature.isFeatureAllowed(Feature.PARK_SEARCH_TRACK)) {
+//                        try {
+//                            MobileNowLog log = new MobileNowLog();
+//                            log.setCustId(TPApp.custId);
+//                            log.setDeviceId(TPApp.deviceId);
+//                            log.setUserId(TPApp.userId);
+//                            log.setRequestDate(new Date());
+//                            log.setServiceMode("Prod");
+//                            log.setPlate_number(plate);
+//                            log.setRequestParams("OffStreet " + " Request: " +plate);
+//                            log.setResponseText("fail " + t.getMessage());
+//                            //log.setResponseText("True " + plate);
+//                            MobileNowLog.insertMobileNowLog(log);
+//                            CSVUtility.writeMobileLogCSV(log);
+//                            ArrayList<MobileNowLog> logs = new ArrayList<>();
+//                            logs.add(log);
+//                            WriteTicketNetworkCalls.sendMobileNogLogs(logs);
+//                        } catch (Exception e) {
+//                            //log.error("Error " + TPUtility.getPrintStackTrace(e));
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+//            });
+//
+//     //   }
+//
+////        else {
+////            progressDialog.dismiss();
+//         //   processPlateLookupQueue(plate);
+//    //    }
+//
+//    }
+
+    private void ___displayOffstreet(Session offStreet){
         activity.runOnUiThread(() -> {
             try {
                 StringBuilder message = new StringBuilder();
@@ -3780,7 +3927,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
                 Builder dialog = new Builder(activity);
                 dialog.setCancelable(false);
                 dialog.setView(view);
-                dialog.setTitle("Offstreet\nPlate Info: " + plate);
+                dialog.setTitle("Offstreet\nPlate Info: " + StringUtil.getDisplayString(offStreet.getPlate()));
                 dialog.setPositiveButton("Close", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -3916,6 +4063,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
             featureNames.add(Feature.CALE);
             featureNames.add(Feature.CALE2);
             featureNames.add(Feature.PARKEON);
+            featureNames.add(Feature.PARK_OFFSTREET);
             featureNames.add(Feature.PARK_CUBTRAC);
 
             plateLookupQueue = new LinkedList<>();
@@ -4124,7 +4272,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
                         }
                     }
 
-                    if (Feature.PARK_OFFSTEER.equalsIgnoreCase(feature.getFeature())) {
+                    if (Feature.PARK_OFFSTREET.equalsIgnoreCase(feature.getFeature())) {
                         if (TPApp.enableOffStreet) {
                             plateLookupQueue.add(new AsyncCallback() {
                                 @Override
@@ -4133,7 +4281,8 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
 
                                         logpm.info("lookupOffstreet");
                                     }
-                                    lookupOffstreet(plate);
+                                    offStreetSearch(plate);
+                                  //  lookupOffstreet(plate);
                                 }
                             });
                         }
@@ -4794,7 +4943,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
     }
 
     private void selectIPSSubAreaOrGroup(final String spaceStr) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this.activity);
+        Builder builder = new Builder(this.activity);
         View headerView = LayoutInflater.from(this.activity).inflate(R.layout.dialog_header, null);
         final TextView titleView = headerView.findViewById(R.id.header_title);
         titleView.setText(activity.getText(R.string.select_spaceGroup_subArea));
@@ -5019,7 +5168,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
 
         final String[] objects;
         objects = vendorItemArrayList.toArray(new String[vendorItemArrayList.size()]);
-        final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        final Builder builder = new Builder(activity);
         builder.setTitle("Select Zone");
         builder.setItems(objects, (dialog, which) -> {
             String object = objects[which];
@@ -5031,7 +5180,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
     }
 
     private void noRecordFoundDialog(String str) {
-        AlertDialog.Builder confirmBuilder = new AlertDialog.Builder(activity);
+        Builder confirmBuilder = new Builder(activity);
         confirmBuilder.setTitle("Space info for " + str)
                 .setMessage("Space not found")
                 .setCancelable(true)
@@ -5091,7 +5240,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
             wv.setBackgroundColor(android.graphics.Color.BLACK);
             wv.getSettings().setDefaultTextEncodingName("utf-8");*/
 
-            AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+            Builder dialog = new Builder(activity);
             dialog.setCancelable(false);
             dialog.setView(view);
             dialog.setTitle("Samtrans\nSpace info for " + spaceName);
@@ -6247,7 +6396,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
     }
 
     public void selectIPSSpaceGroup(final String space, final String spaceGroup) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this.activity);
+        Builder builder = new Builder(this.activity);
         View headerView = LayoutInflater.from(this.activity).inflate(R.layout.dialog_header, null);
         final TextView titleView = headerView.findViewById(R.id.header_title);
         if (spaceGroup.equalsIgnoreCase("spaceGroup"))
@@ -6780,7 +6929,7 @@ public class LookupHandler extends Handler implements MeterHandler, PermitHandle
                 try {
                     final List<HeaderProperty> headerList = new ArrayList<>();
                     String authString = user + ":" + password;
-                    headerList.add(new HeaderProperty("Authorization", "Basic " + org.kobjects.base64.Base64.encode(authString.getBytes())));
+                    headerList.add(new HeaderProperty("Authorization", "Basic " + Base64.encode(authString.getBytes())));
                     androidHttpTransport.call(SOAP_ACTION, envelope, headerList);
                     /*new Handler().postDelayed(new Runnable() {
                         @Override

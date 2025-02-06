@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.util.SSLHttpClient","classAnnotations":[],"interfaces":["org.apache.http.client.HttpClient"],"superClasses":["org.apache.http.impl.client.DefaultHttpClient","org.apache.http.impl.client.AbstractHttpClient","java.lang.Object"]}

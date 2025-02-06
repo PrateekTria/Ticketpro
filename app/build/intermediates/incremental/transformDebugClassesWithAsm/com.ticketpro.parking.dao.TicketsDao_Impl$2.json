@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.dao.TicketsDao_Impl$2","classAnnotations":[],"interfaces":[],"superClasses":["androidx.room.EntityDeletionOrUpdateAdapter","androidx.room.SharedSQLiteStatement","java.lang.Object"]}

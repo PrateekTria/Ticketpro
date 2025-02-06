@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.service.TPSyncService","classAnnotations":[],"interfaces":["android.content.ComponentCallbacks","android.content.ComponentCallbacks2"],"superClasses":["android.app.Service","android.content.ContextWrapper","android.content.Context","java.lang.Object"]}

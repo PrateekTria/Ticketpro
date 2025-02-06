@@ -3,7 +3,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
-    archivesBaseName = "TicketPro-Parking2024-v4.1.298"
+    archivesBaseName = "TicketPro_Parking2025_v4.1.303"
     signingConfigs {
         debug {
             storeFile file('/home/tspl/Desktop/parking/TicketPro Parking_28_02_2024/Parking.jks')
@@ -17,10 +17,10 @@ android {
 
     defaultConfig {
         applicationId "com.ticketpro.parking"
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode = "2"
-        versionName = "4.1.301"
+        versionName = "4.1.303"
         multiDexEnabled true
     }
 

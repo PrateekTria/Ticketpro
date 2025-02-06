@@ -183,7 +183,7 @@ public class Feature {
     public static final String PASSPORT_PARKING2 = "PASSPORTPARKING2";
     public static final String PARK_SP_PLUS = "PARK_SP_PLUS";
     public static final String PARK_CUBTRAC = "PARK_CUBTRAC";
-    public static final String PARK_OFFSTEER = "park_offStreet";
+    public static final String PARK_OFFSTREET = "PARK_OFFSTREET";
     public static final String PARK_CURBSENSE = "PARK_CURBSENSE";
     public static final String PARK_ZONEPOLE = "PARK_ZONEPOLE";
 

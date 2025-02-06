@@ -32,7 +32,7 @@ public class ServiceOffstreet {
 
     private static Retrofit.Builder builder =
             new Retrofit.Builder()
-                    .baseUrl("https://public.offstreet.io/v1.5/sessions/")
+                    .baseUrl("https://public.offstreet.io/v1.5/search/")
                     .addConverterFactory(GsonConverterFactory.create(gson));
 
 

@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.vendors.dpt.PaystationInfoService.PaystationStatusBySerialRequest","classAnnotations":[],"interfaces":["org.ksoap2.serialization.KvmSerializable"],"superClasses":["com.ticketpro.vendors.dpt.PaystationInfoService.PaystationSoapRequest","java.lang.Object"]}

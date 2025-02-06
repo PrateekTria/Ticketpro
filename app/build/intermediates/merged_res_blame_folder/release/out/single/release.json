@@ -864,12 +864,12 @@
         "source": "com.ticketpro.parking.app-main-41:/drawable-hdpi/ic_logo.png"
     },
     {
-        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_black.xml.flat",
-        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_black.xml"
-    },
-    {
         "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_arrow_down.png.flat",
         "source": "com.ticketpro.parking.app-main-41:/drawable/arrow_down.png"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_btn_black.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/drawable/btn_black.xml"
     },
     {
         "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-mdpi_c_marker_selected.png.flat",
@@ -1582,6 +1582,10 @@
     {
         "merged": "com.ticketpro.parking.app-merged_res-40:/drawable_border.xml.flat",
         "source": "com.ticketpro.parking.app-main-41:/drawable/border.xml"
+    },
+    {
+        "merged": "com.ticketpro.parking.app-merged_res-40:/layout_lpr_notification_photostamp_dialog.xml.flat",
+        "source": "com.ticketpro.parking.app-main-41:/layout/lpr_notification_photostamp_dialog.xml"
     },
     {
         "merged": "com.ticketpro.parking.app-merged_res-40:/drawable-anydpi_db_upload.png.flat",

@@ -9,13 +9,16 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.ArrayMap;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +34,7 @@ import com.bumptech.glide.Glide;
 import com.gdacciaro.iOSDialog.iOSDialogBuilder;
 import com.ticketpro.model.ChalkVehicle;
 import com.ticketpro.model.CustomerInfo;
+import com.ticketpro.model.DeviceInfo;
 import com.ticketpro.model.LPRNotify;
 import com.ticketpro.model.Ticket;
 import com.ticketpro.model.TicketComment;
@@ -42,6 +46,7 @@ import com.ticketpro.parking.R;
 import com.ticketpro.parking.activity.ChalkedVehicleDetailsActivity;
 import com.ticketpro.parking.activity.LPRNotifyActivity;
 import com.ticketpro.parking.activity.LocationChalkDetailsActivity;
+import com.ticketpro.parking.activity.MainActivity;
 import com.ticketpro.parking.activity.PhotoChalkDetailsActivity;
 import com.ticketpro.parking.activity.TPApplication;
 import com.ticketpro.parking.activity.TPApplication.TicketSource;
@@ -57,9 +62,20 @@ import org.apache.log4j.Logger;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 //import android.util.ArrayMap;
 
@@ -139,7 +155,7 @@ public class NotificationHandler {
         try {
             final LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            inputDlgView = layoutInflater.inflate(R.layout.lpr_notification_dialog, null, false);
+            inputDlgView = layoutInflater.inflate(R.layout.lpr_notification_photostamp_dialog, null, false);
 
             notificationDialog = new Dialog(getRunningActivity());
             notificationDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -178,6 +194,15 @@ public class NotificationHandler {
                         .setText(DateUtil.getStringFromDate(lprNotify.getLastSeen()));
                 ((TextView) inputDlgView.findViewById(R.id.zone_textview))
                         .setText(StringUtil.getDisplayString(lprNotify.getZone()));
+
+                ((TextView) inputDlgView.findViewById(R.id.photo1_stamp))
+                        .setText("( "+DateUtil.getStringFromDate(lprNotify.getFirstChalkTime())+" )");
+                ((TextView) inputDlgView.findViewById(R.id.photo2_stamp))
+                        .setText("( "+DateUtil.getStringFromDate(lprNotify.getFirstChalkTime())+" )");
+                ((TextView) inputDlgView.findViewById(R.id.photo3_stamp))
+                        .setText("( "+DateUtil.getStringFromDate(lprNotify.getLastSeen())+" )");
+                ((TextView) inputDlgView.findViewById(R.id.photo4_stamp))
+                        .setText("( "+DateUtil.getStringFromDate(lprNotify.getLastSeen())+" )");
             } catch (Exception e) {
                 log.error(TPUtility.getPrintStackTrace(e));
 
@@ -200,7 +225,7 @@ public class NotificationHandler {
 
                 photo1ImageView.setClickable(true);
                 photo1ImageView.setOnClickListener(view -> {
-                    notificationDialog.dismiss();
+                    //   notificationDialog.dismiss();
 
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
@@ -232,7 +257,7 @@ public class NotificationHandler {
                 photo2ImageView.setClickable(true);
                 photo2ImageView.setOnClickListener(view -> {
 
-                    notificationDialog.dismiss();
+                    //  notificationDialog.dismiss();
 
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
@@ -260,7 +285,7 @@ public class NotificationHandler {
                 photo3ImageView.setClickable(true);
                 photo3ImageView.setOnClickListener(view -> {
 
-                    notificationDialog.dismiss();
+                    //   notificationDialog.dismiss();
 
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
@@ -288,7 +313,7 @@ public class NotificationHandler {
                 photo4ImageView.setClickable(true);
                 photo4ImageView.setOnClickListener(view -> {
 
-                    notificationDialog.dismiss();
+                    //   notificationDialog.dismiss();
 
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
@@ -341,6 +366,7 @@ public class NotificationHandler {
                     ticket.setTicketSource(TicketSource.LPR_NOTIFICATION);
                     ticket.setLprNotificationId(lprNotify.getNotificationId());
                     ticket.setPhoto_count(photocount);
+                    ticket.setIsLPR("Y");
                     ticket.setChalkTime(DateUtil.getStringFromDate4(lprNotify.getFirstChalkTime()));
                     ticket.setChalkLastSeen(DateUtil.getStringFromDate4(lprNotify.getLastSeen()));
 
@@ -418,10 +444,52 @@ public class NotificationHandler {
                     ImageView photo3ImageView = ((ImageView) inputDlgView.findViewById(R.id.photo3_imageview));
                     ImageView photo4ImageView = ((ImageView) inputDlgView.findViewById(R.id.photo4_imageview));
 
-                    addLPRImage(ticket, photo1ImageView, lprNotify.getPhoto1(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto1()));
-                    addLPRImage(ticket, photo2ImageView, lprNotify.getPhoto2(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto2()));
-                    addLPRImage(ticket, photo3ImageView, lprNotify.getPhoto3(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto3()));
-                    addLPRImage(ticket, photo4ImageView, lprNotify.getPhoto4(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto4()));
+
+                    if(!lprNotify.getPhoto1().contains("http")){
+                        //  String filename = getFileNameFromUrl(lprNotify.getPhoto1());
+                        addLPRImage(ticket, photo1ImageView, lprNotify.getPhoto1(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto1()));
+
+                    }else
+                    {
+                        addLPRImage(ticket, photo1ImageView, lprNotify.getPhoto1(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto1()));
+
+                    }
+
+                    if(!lprNotify.getPhoto2().contains("http")){
+                        //  String filename = getFileNameFromUrl(lprNotify.getPhoto2());
+                        addLPRImage(ticket, photo2ImageView, lprNotify.getPhoto2(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto2()));
+
+                    }else
+                    {
+                        addLPRImage(ticket, photo2ImageView, lprNotify.getPhoto2(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto2()));
+
+                    }
+
+                    if(!lprNotify.getPhoto3().contains("http")){
+                        // String filename = getFileNameFromUrl(lprNotify.getPhoto3());
+                        addLPRImage(ticket, photo3ImageView, lprNotify.getPhoto3(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto3()));
+
+                    }else
+                    {
+                        addLPRImage(ticket, photo3ImageView, lprNotify.getPhoto3(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto3()));
+
+                    }
+
+                    if(!lprNotify.getPhoto4().contains("http")){
+                        //  String filename = getFileNameFromUrl(lprNotify.getPhoto4());
+                        addLPRImage(ticket, photo4ImageView, lprNotify.getPhoto4(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto4()));
+
+                    }else
+                    {
+                        addLPRImage(ticket, photo4ImageView, lprNotify.getPhoto4(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto4()));
+
+                    }
+//                        addLPRImage(ticket, photo1ImageView, lprNotify.getPhoto1(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto1()));
+//                        addLPRImage(ticket, photo2ImageView, lprNotify.getPhoto2(), lprNotify.getFirstChalkTime(), getCustomerImagesURL(lprNotify.getPhoto2()));
+//                        addLPRImage(ticket, photo3ImageView, lprNotify.getPhoto3(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto3()));
+//                        addLPRImage(ticket, photo4ImageView, lprNotify.getPhoto4(), lprNotify.getLastSeen(), getCustomerImagesURL(lprNotify.getPhoto4()));
+
+
                     TPApp.setStickyViolation(null);
                     TPApp.setStickyComment(null);
                     TPApp.stickyViolations = false;
@@ -470,7 +538,7 @@ public class NotificationHandler {
             Button deleteButton = (Button) inputDlgView.findViewById(R.id.delete_button);
             deleteButton.setOnClickListener(view -> deleteNotification(lprNotify.getNotificationId()));
 
-            if (TPApp.getUserInfo() == null) {
+            if (TPApp.getUserInfo() == null || TPApp.getActiveDutyReport()==null || TPApp.getActiveDutyInfo().getAllowTicket().equalsIgnoreCase("N")) {
                 closeButton.setVisibility(View.VISIBLE);
                 cancelBtn.setVisibility(View.GONE);
                 writeBtn.setVisibility(View.GONE);
@@ -485,24 +553,55 @@ public class NotificationHandler {
         }
     }
 
-
-    private void addLPRImage(Ticket ticket, ImageView photo1ImageView, String imageFile, Date pictureDate, String url) {
+    private void addLPRImage1(Ticket ticket, ImageView photo1ImageView, String imageFile, Date pictureDate, String url) {
         if (StringUtil.isEmpty(imageFile) || photo1ImageView == null) {
             return;
         }
 
-        String imagePath = ticket.getCitationNumber() + "-VLPR-" + imageFile;//TPUtility.getTicketsFolder() +ticket.getCitationNumber()+"-VLPR-"+ imageFile;
+        DeviceInfo deviceInfo = TPApp.getDeviceInfo();
+        long photoNumber = deviceInfo.getCurrentPhotoNumber() + 1;
+        deviceInfo.setCurrentPhotoNumber(photoNumber);
+
+        String imagePath = ticket.getCitationNumber() + "-VLPR-" + photoNumber+".jpg";  // Save as a new file
+
+        // If imageFile is a Base64 string, decode it and save it to disk
+        if (imageFile.startsWith("data:image")) {
+            try {
+                // Extract Base64 part from the data URL (if it starts with "data:image")
+                String base64Image = imageFile.split(",")[1];
+
+                // Decode Base64 to byte array
+                byte[] decodedBytes = Base64.getDecoder().decode(base64Image);
+
+                // Create a file output stream to save the image
+                try (FileOutputStream fos = new FileOutputStream(imagePath)) {
+                    fos.write(decodedBytes);
+                    fos.flush();
+                }
+
+                // Set the image resolution and size (you might need to use some image processing library to get the dimensions)
+                // For now, let's just set the image size to a placeholder
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                // Handle exception (e.g., log or notify user)
+                return;
+            }
+        } else {
+            // If imageFile is not a Base64 string, just proceed with it as is
+            //   picture.setImageSize(TPUtility.getImageSize(imagePath));
+        }
 
         TicketPicture picture = new TicketPicture();
         picture.setCitationNumber(ticket.getCitationNumber());
         picture.setTicketId(ticket.getTicketId());
         picture.setImagePath(imagePath);
         picture.setCustId(ticket.getCustId());
-        picture.setDownloadImageUrl(url);
+        picture.setDownloadImageUrl(url);  // Optional: Use the URL for download if needed
         picture.setImageName(imagePath);
         picture.setSyncStatus("L");
-        //picture.setMarkPrint("Y");
         picture.setMarkPrint("N");
+
         if (pictureDate == null) {
             picture.setPictureDate(new Date());
         } else {
@@ -510,21 +609,133 @@ public class NotificationHandler {
         }
 
         picture.setLprNotification("Y");
-        picture.setLprImageName(ticket.getCitationNumber() + "-VLPR-" + imageFile);
-		
+        picture.setLprImageName(imagePath);
 
-		
-		/*Bitmap bitmap = photo1ImageView.getDrawingCache();
-		if(bitmap != null){
-			try{
-				bitmap.compress(CompressFormat.JPEG, 90, new FileOutputStream(imagePath));
-				picture.setImageResolution(bitmap.getWidth() + "x" + bitmap.getHeight());
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		}
-		picture.setImageSize(TPUtility.getImageSize(imagePath));*/
         ticket.getTicketPictures().add(picture);
+    }
+
+
+    private void addLPRImage(Ticket ticket, ImageView photo1ImageView, String imageFile, Date pictureDate, String url) throws IOException {
+        if (StringUtil.isEmpty(imageFile) || photo1ImageView == null) {
+            return;
+        }
+
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        // Submit the task to the executor
+        executor.submit(new Runnable() {
+            @Override
+            public void run() {
+                Bitmap bitmap = null;
+                String imagePath = "";
+                String filename1 = getFileNameFromUrl(imageFile);
+
+                try {
+                    // Open a connection to the URL
+                    URL url1 = new URL(imageFile);
+                    HttpURLConnection connection = (HttpURLConnection) url1.openConnection();
+                    connection.setDoInput(true);
+                    connection.connect();
+
+                    // Download the image into an InputStream
+                    InputStream inputStream = connection.getInputStream();
+
+                    // Decode the InputStream into a Bitmap
+                    bitmap = BitmapFactory.decodeStream(inputStream);
+                    inputStream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return; // Return early if there's an error fetching the image
+                }
+
+                if (bitmap != null) {
+                    // Generate image path and save the bitmap to a file
+                    DeviceInfo deviceInfo = TPApp.getDeviceInfo();
+                    long photoNumber = deviceInfo.getCurrentPhotoNumber() + 1;
+                    deviceInfo.setCurrentPhotoNumber(photoNumber);
+
+                    imagePath = ticket.getCitationNumber() + "-VLPR-" + filename1;  // Path for the image
+                    File directory = new File(TPUtility.getLPRImagesFolder());
+
+                    // Check if the directory exists, if not, create it
+                    if (!directory.exists()) {
+                        boolean dirsCreated = directory.mkdirs(); // Make sure the parent directories are created
+                        if (!dirsCreated) {
+                            Log.e("ImageSave", "Failed to create directory: " + directory.getAbsolutePath());
+                            return; // Return early if directory creation fails
+                        }
+                    }
+
+                    File file1 = new File(directory, imagePath);
+
+                    // Check if the file exists already
+                    if (file1.exists()) {
+                        Log.i("ImageSave", "File already exists: " + file1.getAbsolutePath());
+
+                        // File exists, but we still want to add the picture to the list
+                        // You can either skip saving or overwrite the file. For now, let's skip saving.
+                        // You could also choose to overwrite with file1.delete() or other logic here.
+                    } else {
+                        // Create the file if it doesn't exist
+                        boolean fileCreated = false;
+                        try {
+                            fileCreated = file1.createNewFile();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        if (!fileCreated) {
+                            Log.e("ImageSave", "Failed to create file: " + file1.getAbsolutePath());
+                            return; // Return early if file creation fails
+                        }
+
+                        try (FileOutputStream fos = new FileOutputStream(file1)) {
+                            // Compress and save the bitmap as a JPEG file
+                            boolean isCompressed = bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+                            if (!isCompressed) {
+                                Log.e("ImageSave", "Failed to compress the bitmap.");
+                            } else {
+                                fos.flush();
+                                Log.i("ImageSave", "Image saved successfully: " + file1.getAbsolutePath());
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    // Create URI for the saved file
+                    Uri picUri = Uri.fromFile(file1);  // Create URI pointing to the saved file
+                    Log.i("ImageSave", "URI: " + picUri.toString());
+
+                    // Create and populate the TicketPicture object
+                    TicketPicture picture = new TicketPicture();
+                    picture.setCitationNumber(ticket.getCitationNumber());
+                    picture.setTicketId(ticket.getTicketId());
+                    picture.setImagePath(String.valueOf(file1));
+                    picture.setCustId(ticket.getCustId());
+                    picture.setImageName(imagePath);
+                    picture.setSyncStatus("P");
+                    picture.setnPictureCount(photocount);
+                    picture.setMarkPrint("N");  // Set whether it should be marked for printing (N = No)
+
+                    // Set picture date (either provided date or current date)
+                    if (pictureDate == null) {
+                        picture.setPictureDate(new Date());
+                    } else {
+                        picture.setPictureDate(pictureDate);
+                    }
+
+                    // Set LPR notification and LPR image name
+                    picture.setLprNotification("Y");
+                    picture.setLprImageName(ticket.getCitationNumber() + "-VLPR-" + imageFile);
+
+                    // Add the picture to the ticket (even if file exists)
+                    ticket.getTicketPictures().add(picture);
+                } else {
+                    Log.e("ImageSave", "Bitmap is null, failed to download image.");
+                }
+
+            }
+        });
     }
 
     public void deleteNotification(final String notificationId) {
@@ -754,6 +965,17 @@ public class NotificationHandler {
         }
     }
 
+    public static String getFileNameFromUrl(String url) {
+        try {
+            URI uri = new URI(url);
+            Path path = Paths.get(uri.getPath());
+            return path.getFileName().toString(); // Returns the file name from the path
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     private String getCustomerImagesURL(String filename) {
         CustomerInfo customerInfo = TPApp.getCustomerInfo();
         String contentFolder = customerInfo.getContentFolder();
@@ -761,7 +983,11 @@ public class NotificationHandler {
             contentFolder = customerInfo.getCustId() + "";
         }
 
-        return TPConstant.IMAGES_URL + "/" + contentFolder + "/" + filename;
+        if(filename.contains("http")){
+            return filename;
+        }else{
+            return TPConstant.IMAGES_URL + "/" + contentFolder + "/" + filename;
+        }
     }
 
     private void lazyLoadImage(String url, String photoName, ImageView imageView) {
@@ -778,7 +1004,7 @@ public class NotificationHandler {
             @Override
             public void success(String data) {
                 downloadCount--;
-				
+
 				/*if(downloadCount <= 0 && inputDlgView!=null){
 					Button writeBtn = (Button) inputDlgView.findViewById(R.id.write_button);
 					writeBtn.setEnabled(true);
@@ -827,7 +1053,7 @@ public class NotificationHandler {
                 public void onClick(View view) {
                     imageDialog.dismiss();
 
-                    showLPRNotify(lprNotify);
+                    //  showLPRNotify(lprNotify);
                 }
             });
 
@@ -948,5 +1174,7 @@ public class NotificationHandler {
     public void setRemoveCallback(CallbackHandler removeCallback) {
         this.removeCallback = removeCallback;
     }
+
+
 
 }

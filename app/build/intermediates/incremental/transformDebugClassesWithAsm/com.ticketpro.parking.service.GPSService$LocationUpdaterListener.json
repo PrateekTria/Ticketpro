@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.service.GPSService$LocationUpdaterListener","classAnnotations":[],"interfaces":["android.location.LocationListener"],"superClasses":["java.lang.Object"]}

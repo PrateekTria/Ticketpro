@@ -1,16 +1,13 @@
-#Wed Dec 18 18:19:36 IST 2024
-base.0=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
-base.1=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/global_synthetics_dex/release/classes.dex
-base.2=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
-base.3=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/dex/release/mergeDexRelease/classes3.dex
-base.4=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/dex/release/mergeDexRelease/classes4.dex
+#Thu Feb 06 17:04:52 IST 2025
+base.0=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+base.1=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
+base.2=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/intermediates/dex/release/mergeDexRelease/classes3.dex
+base.3=/home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/intermediates/dex/release/mergeDexRelease/classes4.dex
 path.0=classes.dex
-path.1=classes.dex
-path.2=classes2.dex
-path.3=classes3.dex
-path.4=classes4.dex
+path.1=classes2.dex
+path.2=classes3.dex
+path.3=classes4.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
-renamed.4=classes5.dex

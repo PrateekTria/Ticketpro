@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.activity.BaseActivityImpl$1","classAnnotations":[],"interfaces":[],"superClasses":["com.twotechnologies.n5library.client.BarcodeDataListener","com.twotechnologies.n5library.common.a","android.content.BroadcastReceiver","java.lang.Object"]}

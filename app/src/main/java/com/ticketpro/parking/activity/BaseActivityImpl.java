@@ -871,21 +871,21 @@ public abstract class BaseActivityImpl extends Activity
         try {
             int where = sharedpreferences.getInt("where", 0);
             if (where == 1) {
-                SERVICE_URL = "https://tpwebservicesdev24.ticketproweb.com/index.php/service/genericv1";
-                RX_SERVICE_URL = "https://tpwebservicesdev24.ticketproweb.com/index.php/";
-                ASSETS_URL = "hhttps://tpwebservicesdev24.ticketproweb.com/assets/customers";
-                UPDATE_URL = "https://tpwebservicesdev24.ticketproweb.com/updates";
-                IMAGES_URL = "https://tpwebservicesdev24.ticketproweb.com/images/customers";
+                SERVICE_URL = "https://tpwebservicesdev.ticketproweb.com/public/index.php/service/genericv1";
+                RX_SERVICE_URL = "https://tpwebservicesdev.ticketproweb.com/public/index.php/";
+                ASSETS_URL = "hhttps://tpwebservicesdev.ticketproweb.com/public/assets/customers";
+                UPDATE_URL = "https://tpwebservicesdev.ticketproweb.com/public/updates";
+                IMAGES_URL = "https://tpwebservicesdev.ticketproweb.com/public/images/customers";
                 LPR_URL = "http://lprdev.ticketproweb.com/LPRWcfService/LPRService.svc?wsdl";
                 FIREBASE_DB_URL = "http://trackerdev.ticketproweb.com:8081/api/";
                 IS_DEVELOPMENT_BUILD = true;
             }
             if (where == 2) {
-                SERVICE_URL = "https://tpwebservicestage.ticketproweb.com/public/index.php/service";
-                RX_SERVICE_URL = "https://tpwebservicestage.ticketproweb.com/public/index.php/";
-                ASSETS_URL = "https://tpwebservicestage.ticketproweb.com/public/assets/customers";
-                UPDATE_URL = "https://tpwebservicestage.ticketproweb.com/public/updates";
-                IMAGES_URL = "https://tpwebservicestage.ticketproweb.com/public/images/customers";
+                SERVICE_URL = "https://tpwebservicesstage24.ticketproweb.com/public/index.php/service";
+                RX_SERVICE_URL = "https://tpwebservicesstage24.ticketproweb.com/public/index.php/";
+                ASSETS_URL = "https://tpwebservicesstage24.ticketproweb.com/public/assets/customers";
+                UPDATE_URL = "https://tpwebservicesstage24.ticketproweb.com/public/updates";
+                IMAGES_URL = "https://tpwebservicesstage24.ticketproweb.com/public/images/customers";
                 LPR_URL = "http://lprdev.ticketproweb.com/LPRWcfService/LPRService.svc?wsdl";
                 FIREBASE_DB_URL = "http://trackerdev.ticketproweb.com:8081/api/";
                 IS_STAGING_BUILD = true;

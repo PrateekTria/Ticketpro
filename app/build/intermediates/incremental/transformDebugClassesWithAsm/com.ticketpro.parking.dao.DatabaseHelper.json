@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.dao.DatabaseHelper","classAnnotations":[],"interfaces":["java.lang.AutoCloseable"],"superClasses":["android.database.sqlite.SQLiteOpenHelper","java.lang.Object"]}

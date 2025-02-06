@@ -32,16 +32,16 @@ com.ticketpro.parking.app-jetified-play-services-maps-17.0.1-30 /home/tspl/.grad
 com.ticketpro.parking.app-lifecycle-runtime-2.3.1-31 /home/tspl/.gradle/caches/transforms-3/f3dafec0f2ab1ff0b075867430b8b3d5/transformed/lifecycle-runtime-2.3.1/res
 com.ticketpro.parking.app-jetified-annotation-experimental-1.3.0-32 /home/tspl/.gradle/caches/transforms-3/fec0b9aafd27f727dffa85d7d5765c89/transformed/jetified-annotation-experimental-1.3.0/res
 com.ticketpro.parking.app-coordinatorlayout-1.1.0-33 /home/tspl/.gradle/caches/transforms-3/ff53bd483671989a2735faa175619167/transformed/coordinatorlayout-1.1.0/res
-com.ticketpro.parking.app-res-34 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/generated/crashlytics/res/release
-com.ticketpro.parking.app-google-services-35 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/generated/res/google-services/release
-com.ticketpro.parking.app-pngs-36 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/generated/res/pngs/release
-com.ticketpro.parking.app-resValues-37 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/generated/res/resValues/release
-com.ticketpro.parking.app-mergeReleaseResources-38 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.ticketpro.parking.app-mergeReleaseResources-39 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.ticketpro.parking.app-merged_res-40 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/build/intermediates/merged_res/release
-com.ticketpro.parking.app-main-41 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/src/main/res
-com.ticketpro.parking.app-release-42 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/app/src/release/res
-com.ticketpro.parking.app-packaged_res-43 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/gpslibrary/build/intermediates/packaged_res/release
-com.ticketpro.parking.app-packaged_res-44 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/library/build/intermediates/packaged_res/release
-com.ticketpro.parking.app-packaged_res-45 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/pdf417ScanActivity/build/intermediates/packaged_res/release
-com.ticketpro.parking.app-packaged_res-46 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2024/zXingLibrary/build/intermediates/packaged_res/release
+com.ticketpro.parking.app-res-34 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/generated/crashlytics/res/release
+com.ticketpro.parking.app-google-services-35 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/generated/res/google-services/release
+com.ticketpro.parking.app-pngs-36 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/generated/res/pngs/release
+com.ticketpro.parking.app-resValues-37 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/generated/res/resValues/release
+com.ticketpro.parking.app-mergeReleaseResources-38 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.ticketpro.parking.app-mergeReleaseResources-39 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.ticketpro.parking.app-merged_res-40 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/build/intermediates/merged_res/release
+com.ticketpro.parking.app-main-41 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/src/main/res
+com.ticketpro.parking.app-release-42 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/app/src/release/res
+com.ticketpro.parking.app-packaged_res-43 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/gpslibrary/build/intermediates/packaged_res/release
+com.ticketpro.parking.app-packaged_res-44 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/library/build/intermediates/packaged_res/release
+com.ticketpro.parking.app-packaged_res-45 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/pdf417ScanActivity/build/intermediates/packaged_res/release
+com.ticketpro.parking.app-packaged_res-46 /home/tspl/Desktop/parking/TicketPro Parkingtpweb/TicketPro Parking_28_02_2025/zXingLibrary/build/intermediates/packaged_res/release

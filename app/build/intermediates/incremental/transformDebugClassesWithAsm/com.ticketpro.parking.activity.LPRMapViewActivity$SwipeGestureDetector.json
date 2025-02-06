@@ -1,1 +1,0 @@
-{"className":"com.ticketpro.parking.activity.LPRMapViewActivity$SwipeGestureDetector","classAnnotations":[],"interfaces":["android.view.GestureDetector$OnContextClickListener","android.view.GestureDetector$OnDoubleTapListener","android.view.GestureDetector$OnGestureListener"],"superClasses":["android.view.GestureDetector$SimpleOnGestureListener","java.lang.Object"]}

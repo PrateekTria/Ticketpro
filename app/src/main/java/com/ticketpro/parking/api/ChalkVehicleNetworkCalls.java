@@ -52,6 +52,9 @@ public class ChalkVehicleNetworkCalls {
             Params params = new Params();
             ArrayList<DeviceInfo> deviceInfo = new ArrayList<>();
             deviceInfo.add(TPApplication.getInstance().getDeviceInfo());
+            if(deviceInfo == null || deviceInfo.isEmpty()){
+                return;
+            }
             params.setDevices(deviceInfo);
             requestPOJO = new RequestPOJO();
             requestPOJO.setParams(params);

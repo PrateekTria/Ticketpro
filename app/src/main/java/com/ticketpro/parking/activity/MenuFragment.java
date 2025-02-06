@@ -325,7 +325,7 @@ public class MenuFragment extends Fragment{
 			extrasMenu.getSubMenus().add(m391);
 		}if(Feature.isFeatureAllowed(Feature.PARK_CUBTRAC)){
 			extrasMenu.getSubMenus().add(m392);
-		}if(Feature.isFeatureAllowed(Feature.PARK_OFFSTEER)){
+		}if(Feature.isFeatureAllowed(Feature.PARK_OFFSTREET)){
 			extrasMenu.getSubMenus().add(m393);
 		}if(Feature.isFeatureAllowed(Feature.PARK_CURBSENSE)){
 			extrasMenu.getSubMenus().add(m394);

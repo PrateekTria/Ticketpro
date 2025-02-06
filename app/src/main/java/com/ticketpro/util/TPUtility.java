@@ -718,6 +718,8 @@ public class TPUtility {
         return comments;
     }
 
+
+
     public static String getExpiration(String expString) {
         if (expString == null || expString.length() <= 2)
             return expString;
@@ -1858,14 +1860,25 @@ public class TPUtility {
 
                 if (ticket.getTicketPictures().size() > 0) {
                     if (ticket.isLPR()) {
-                        template = template.replaceAll("\\{LPR_IMAGE\\}",
-                                "<img src=\"file://" + ticket.getTicketPictures().get(0).getImagePath() + "\"/>");
+                        for (int i = 0; i < ticket.getTicketPictures().size(); i++) {
+                            TicketPicture pic = ticket.getTicketPictures().get(i);
+                            if (pic.getImagePath().contains("LPR")) {
+                                template = template.replaceAll("\\{LPR_IMAGE" + (i + 1) + "\\}",
+                                        "<img src=\"file://" + ticket.getTicketPictures().get(i).getImagePath() + "\"/>");
+                            }
+                        }
                         //"<img src=\"" + Uri.fromFile(new File(ticket.getTicketPictures().get(0).getImagePath())) + "\"/>");
                     }
-
+                    boolean u4524ImageIncluded = false;
                     for (int i = 0; i < ticket.getTicketPictures().size(); i++) {
                         TicketPicture pic = ticket.getTicketPictures().get(i);
-                        if (!pic.getImagePath().contains("LPR")) {
+                        if (pic.getImagePath().contains("U"+TPApp.userId ) && !u4524ImageIncluded) {
+                            // Add the U4524 image only once
+                            template = template.replaceAll("\\{TICKET_IMAGE" + (i + 1) + "\\}",
+                                    "<img src=\"file://" + pic.getImagePath() + "\"/>");
+                            u4524ImageIncluded = true; // Set the flag to true after adding the image
+                        } else if (!pic.getImagePath().contains("LPR") && !pic.getImagePath().contains("U4524")) {
+                            // Add the other images as normal, except for "LPR" and "U4524"
                             template = template.replaceAll("\\{TICKET_IMAGE" + (i + 1) + "\\}",
                                     "<img src=\"file://" + pic.getImagePath() + "\"/>");
                         }
@@ -1886,7 +1899,10 @@ public class TPUtility {
                 //template = template.replaceAll("\\{TICKET_IMAGE5\\}", "");
                 // template = template.replaceAll("\\{TICKET_IMAGE6\\}", "");
                 // Empty Tokens
-                template = template.replaceAll("\\{LPR_IMAGE\\}", "");
+                template = template.replaceAll("\\{LPR_IMAGE1\\}", "");
+                template = template.replaceAll("\\{LPR_IMAGE2\\}", "");
+                template = template.replaceAll("\\{LPR_IMAGE3\\}", "");
+                template = template.replaceAll("\\{LPR_IMAGE4\\}", "");
                 template = template.replaceAll("\\{TICKET_IMAGE1\\}", "");
                 template = template.replaceAll("\\{TICKET_IMAGE2\\}", "");
                 template = template.replaceAll("\\{TICKET_IMAGE3\\}", "");
@@ -2032,21 +2048,31 @@ public class TPUtility {
             template = template.replaceAll("\\{COMMENT1\\}", "");
             template = template.replaceAll("\\{COMMENT2\\}", "");
 
-            if (ticket.isVoided()) {
+            ArrayList<PrintMacro> macros1 = PrintMacro.getPrintMacros();
+            if (ticket.isVoided() && !macros1.isEmpty()) {
                 String voidMsg = PrintMacro.getPrintMacroMessageByName("VOIDMSG");
                 template = template.replaceAll("\\{VOIDMSG\\}", voidMsg);
             } else {
                 template = template.replaceAll("\\{VOIDMSG\\}", "");
             }
 
-            if (ticket.isWarn()) {
+            if (ticket.isWarn() && !macros1.isEmpty()) {
                 String warnMsg = PrintMacro.getPrintMacroMessageByName("WARNMSG");
-                template = template.replaceAll("\\{WARNMSG\\}", warnMsg);
+
+                // Log the value of warnMsg for debugging
+                Log.d("TicketParsing", "WARNMSG: " + warnMsg);
+
+                if (warnMsg != null) {
+                    template = template.replaceAll("\\{WARNMSG\\}", warnMsg);
+                } else {
+                    template = template.replaceAll("\\{WARNMSG\\}", "");
+                }
             } else {
                 template = template.replaceAll("\\{WARNMSG\\}", "");
             }
 
-            if (ticket.getTicketPictures().size() > 0) {
+
+            if (!ticket.getTicketPictures().isEmpty() && !macros1.isEmpty()) {
                 String photoMsg = PrintMacro.getPrintMacroMessageByName("PHOTOMSG");
                 template = template.replaceAll("\\{PHOTOMSG\\}", photoMsg);
             } else {
@@ -2134,12 +2160,12 @@ public class TPUtility {
                 e.printStackTrace();
             }
 
-            if (ticket.getTicketPictures().size() > 0) {
+            if (!ticket.getTicketPictures().isEmpty()) {
                 if (ticket.isLPR()) {
                     for (int i = 0; i < ticket.getTicketPictures().size(); i++) {
                         TicketPicture pic = ticket.getTicketPictures().get(i);
                         if (pic.getImagePath().contains("LPR")) {
-                            template = template.replaceAll("\\{LPR_IMAGE\\}",
+                            template = template.replaceAll("\\{LPR_IMAGE" + (i + 1) + "\\}",
                                     "<img src=\"file://" + ticket.getTicketPictures().get(i).getImagePath() + "\"/>");
                         }
                     }
@@ -2161,7 +2187,10 @@ public class TPUtility {
                     "<div class=\"BARCODE\">" + TPUtility.prefixZeros(ticket.getCitationNumber(), 8) + "</div>");
 
             // Empty Tokens
-            template = template.replaceAll("\\{LPR_IMAGE\\}", "");
+            template = template.replaceAll("\\{LPR_IMAGE1\\}", "");
+            template = template.replaceAll("\\{LPR_IMAGE2\\}", "");
+            template = template.replaceAll("\\{LPR_IMAGE3\\}", "");
+            template = template.replaceAll("\\{LPR_IMAGE4\\}", "");
             template = template.replaceAll("\\{TICKET_IMAGE1\\}", "");
             template = template.replaceAll("\\{TICKET_IMAGE2\\}", "");
             template = template.replaceAll("\\{TICKET_IMAGE3\\}", "");

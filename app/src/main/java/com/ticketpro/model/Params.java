@@ -162,7 +162,7 @@ public class Params {
 
     @SerializedName("isActive")
     @Expose
-    private String isActive;
+    private int isActive;
 
 
     /*@SerializedName("plate_type")
@@ -527,11 +527,11 @@ public class Params {
         this.date = date;
     }
 
-    public String getIsActive() {
+    public int getIsActive() {
         return isActive;
     }
 
-    public void setIsActive(String isActive) {
+    public void setIsActive(int isActive) {
         this.isActive = isActive;
     }
 
